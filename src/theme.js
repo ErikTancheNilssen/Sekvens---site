@@ -1,9 +1,5 @@
 import { transparentize, hsl, darken } from "polished";
 import gray from "gray-percentage";
-import {
-  MOBILE_MEDIA_QUERY,
-  TABLET_MEDIA_QUERY
-} from "typography-breakpoint-constants";
 
 const p1 = "#5D103F";
 const p2 = "#8A1F60";
