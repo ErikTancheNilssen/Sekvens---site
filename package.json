@@ -46,17 +46,14 @@
   "scripts": {
     "clean": "rimraf .cache public",
     "start:app": "npm run develop",
-    "start:lambda": "netlify-lambda serve src/lambda",
     "start": "run-p start:**",
     "build:app": "npm run clean && gatsby build",
-    "build:lambda": "netlify-lambda build src/lambda",
     "build": "run-p build:**",
     "develop": "npm run clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build:storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages"
   },
   "devDependencies": {
@@ -69,7 +66,6 @@
     "@storybook/react": "^5.1.9",
     "@storybook/storybook-deployer": "^2.8.1",
     "http-proxy-middleware": "^0.19.1",
-    "netlify-lambda": "^1.4.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.15.3",
     "rimraf": "^2.6.2"
