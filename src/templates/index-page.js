@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import { Grid, Column } from "../components/Grid.js";
-import { Box, Text } from "rebass";
+import { Box, Text, Link } from "rebass";
 
 export const IndexPageTemplate = ({
   title,
@@ -20,13 +20,13 @@ export const IndexPageTemplate = ({
       <Grid>
         <Column columns={[1, 1, 3]}>
           <h6>
-            <Link to="/">sekvens.</Link>
+            <Link href="/">sekvens.</Link>
           </h6>
         </Column>
         <Column columns={[3, 3, 9]}>
           <Text textAlign="right">
             {pages.map(({ node: { frontmatter, fields } }) => (
-              <Link key={fields.slug} to={fields.slug || "/"}>
+              <Link key={fields.slug} href={fields.slug || "/"}>
                 {frontmatter.title}
               </Link>
             ))}
