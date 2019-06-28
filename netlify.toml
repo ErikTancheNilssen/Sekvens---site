@@ -3,4 +3,4 @@
   command = "yarn run build"
 [build.environment]
   YARN_VERSION = "1.16.0"
-  YARN_FLAGS = "--silent"
+  YARN_FLAGS = "--no-ignore-optional"
