@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: master
-
+publish_mode: editorial_workflow
 media_folder: static/images
 public_folder: /images
 
@@ -14,6 +14,75 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Introduction", name: "introduction", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Blocks"
+        name: "blocks"
+        widget: "list"
+        types: 
+          - label: "List"
+            name: "functionsList"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Introduction", name: "introduction", widget: "text"}
+              - label: "Functions"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "markdown"}
+                  - {label: "Image", name: "image", widget: "image" }
 
+          - label: "Functions "
+            name: "functionsBlock"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Introduction", name: "introduction", widget: "text"}
+              - label: "Functions"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "markdown"}
+                  - label: "Link:"
+                    widget: "relation"
+                    collection: "pages"
+                    searchFields: ["title", "slug"]
+                    valueField: "title"
+                    displayFields: ["title", "slug"]
+
+          - label: "Compact Functions"
+            name: "functionsCompactBlock"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Introduction", name: "introduction", widget: "text"}
+              - label: "Functions"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "markdown"}
+                  - label: "Link:"
+                    widget: "relation"
+                    collection: "pages"
+                    searchFields: ["title", "slug"]
+                    valueField: "title"
+                    displayFields: ["title", "slug"]
+          - label: "Solutions"
+            name: "solutions"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Introduction", name: "introduction", widget: "text"}
+              - label: "Solutions"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Introduction", name: "introduction", widget: "text"}
+                  - {label: "List", name: "body", widget: "markdown"}
+            
