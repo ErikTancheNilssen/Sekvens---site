@@ -4,7 +4,7 @@ import { IndexPageTemplate } from "../../templates/index-page";
 
 const IndexPagePreview = all => {
   const data = all.entry.getIn(["data"]).toJS();
-
+  debugger;
   if (data) {
     return (
       <IndexPageTemplate
@@ -21,6 +21,13 @@ const IndexPagePreview = all => {
   } else {
     return <div>Loading...</div>;
   }
+};
+
+IndexPagePreview.propTypes = {
+  entry: PropTypes.shape({
+    getIn: PropTypes.func
+  }),
+  getAsset: PropTypes.func
 };
 
 export default IndexPagePreview;
