@@ -119,7 +119,7 @@ ul {
 }
 
   .color {
-    color:  ${({ theme: { colors } }) => colors.p1};
+    color:  ${({ theme: { colors } }) => colors.p3};
   }
 
   .mono {
