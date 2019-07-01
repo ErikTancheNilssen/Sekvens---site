@@ -26,8 +26,8 @@ collections:
             widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string"}
-              - {label: "Introduction", name: "introduction", widget: "text"}
-              - label: "Functions"
+              - {label: "Introduction", name: "introduction", required: false,  widget: "text"}
+              - label: "Items"
                 name: "items"
                 widget: "list"
                 fields:
@@ -40,13 +40,13 @@ collections:
             widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string"}
-              - {label: "Introduction", name: "introduction", widget: "text"}
+              - {label: "Introduction", name: "introduction", required: false,  widget: "text"}
               - label: "Functions"
                 name: "items"
                 widget: "list"
                 fields:
                   - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Description", name: "description", widget: "markdown"}
+                  - {label: "Description", name: "description", required: false, widget: "markdown"}
                   - label: "Link:"
                     widget: "relation"
                     collection: "pages"
@@ -59,7 +59,7 @@ collections:
             widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string"}
-              - {label: "Introduction", name: "introduction", widget: "text"}
+              - {label: "Introduction", name: "introduction",  required: false, widget: "text"}
               - label: "Functions"
                 name: "items"
                 widget: "list"
@@ -77,7 +77,7 @@ collections:
             widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string"}
-              - {label: "Introduction", name: "introduction", widget: "text"}
+              - {label: "Introduction", name: "introduction", required: false,  widget: "text"}
               - label: "Solutions"
                 name: "items"
                 widget: "list"

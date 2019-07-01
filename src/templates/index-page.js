@@ -1,18 +1,16 @@
 import React from "react";
 
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 import Layout from "../components/Layout";
 import { Grid, Column } from "../components/Grid.js";
-import { Box, Text, Link } from "rebass";
+import { Box, Text } from "rebass";
 
-export const IndexPageTemplate = ({
+export const PageTemplate = ({
   title,
   heading,
   subheading,
-  mainpitch,
-  description,
-  intro,
+  introduction,
   pages
 }) => (
   <div>
@@ -20,13 +18,13 @@ export const IndexPageTemplate = ({
       <Grid>
         <Column columns={[1, 1, 3]}>
           <h6>
-            <Link href="/">sekvens.</Link>
+            <Link to="/">sekvens.</Link>
           </h6>
         </Column>
         <Column columns={[3, 3, 9]}>
           <Text textAlign="right">
             {pages.map(({ node: { frontmatter, fields } }) => (
-              <Link key={fields.slug} href={fields.slug || "/"}>
+              <Link key={fields.slug} to={fields.slug || "/"}>
                 {frontmatter.title}
               </Link>
             ))}
@@ -36,9 +34,40 @@ export const IndexPageTemplate = ({
       <Grid>
         <Column>
           <h2>{title}</h2>
+          <p>{introduction}</p>
         </Column>
       </Grid>
     </Box>
+    <Grid>
+      <Column columns={[1, 1, 2]}>
+        <img alt="" src="" />
+        <h5 className="color">1</h5>
+        <p>
+          Velg produkt du ønsker å trykke opp eller last opp ditt eget dokument.
+        </p>
+      </Column>
+      <Column columns={[1, 1, 2]}>
+        <img alt="" src="" />
+        <h5 className="color">1</h5>
+        <p>
+          Velg produkt du ønsker å trykke opp eller last opp ditt eget dokument.
+        </p>
+      </Column>
+      <Column columns={[1, 1, 2]}>
+        <img alt="" src="" />
+        <h5 className="color">1</h5>
+        <p>
+          Velg produkt du ønsker å trykke opp eller last opp ditt eget dokument.
+        </p>
+      </Column>
+      <Column columns={[1, 1, 2]}>
+        <img alt="" src="" />
+        <h5 className="color">1</h5>
+        <p>
+          Velg produkt du ønsker å trykke opp eller last opp ditt eget dokument.
+        </p>
+      </Column>
+    </Grid>
   </div>
 );
 
@@ -47,16 +76,13 @@ const IndexPage = ({ data }) => {
     markdownRemark: { frontmatter },
     allMarkdownRemark
   } = data;
-
   return (
     <Layout>
-      <IndexPageTemplate
+      <PageTemplate
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        introduction={frontmatter.introduction}
         pages={allMarkdownRemark.edges}
       />
     </Layout>
@@ -66,7 +92,7 @@ const IndexPage = ({ data }) => {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
+  query PageByID($id: String!) {
     allMarkdownRemark(filter: { frontmatter: { hide: { ne: true } } }) {
       edges {
         node {
@@ -79,24 +105,14 @@ export const pageQuery = graphql`
         }
       }
     }
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
 
         heading
         subheading
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            text
-          }
-          heading
-          description
-        }
+
+        introduction
       }
     }
   }

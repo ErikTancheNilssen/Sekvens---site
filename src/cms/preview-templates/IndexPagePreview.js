@@ -1,33 +1,22 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { IndexPageTemplate } from "../../templates/index-page";
+import { PageTemplate } from "../../templates/index-page.js";
+import Wrap from "../../wrap-with-provider.js";
 
-const IndexPagePreview = all => {
-  const data = all.entry.getIn(["data"]).toJS();
-  debugger;
-  if (data) {
-    return (
-      <IndexPageTemplate
-        image={data.image}
-        title={data.title}
-        heading={data.heading}
-        subheading={data.subheading}
-        description={data.description}
-        intro={data.intro || { blurbs: [] }}
-        mainpitch={data.mainpitch || {}}
-        pages={[]}
-      />
-    );
-  } else {
-    return <div>Loading...</div>;
-  }
+const PagePreview = ({ entry, getAsset, widgetFor }) => {
+  const image = entry.getIn(["data", "image"]);
+
+  return (
+    <Wrap
+      element={
+        <PageTemplate
+          html={widgetFor("body") || null}
+          title={entry.getIn(["data", "title"]) || ""}
+          image={image ? getAsset(image).path : ""}
+          pages={[]}
+        />
+      }
+    />
+  );
 };
 
-IndexPagePreview.propTypes = {
-  entry: PropTypes.shape({
-    getIn: PropTypes.func
-  }),
-  getAsset: PropTypes.func
-};
-
-export default IndexPagePreview;
+export default PagePreview;
