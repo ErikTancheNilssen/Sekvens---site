@@ -78,13 +78,7 @@ const IndexPage = ({ data }) => {
   } = data;
   return (
     <Layout>
-      <PageTemplate
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        introduction={frontmatter.introduction}
-        pages={allMarkdownRemark.edges}
-      />
+      <PageTemplate {...frontmatter} pages={allMarkdownRemark.edges} />
     </Layout>
   );
 };
@@ -108,10 +102,8 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-
         heading
         subheading
-
         introduction
       }
     }
