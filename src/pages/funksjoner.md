@@ -14,6 +14,7 @@ blocks:
           zz
           zz
           zz
+        link: Den følelsen du får av å bruke Sekvens!
         title: xxx
     type: functionsBlock
 ---
