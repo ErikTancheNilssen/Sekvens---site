@@ -58,8 +58,8 @@ collections:
                     widget: "relation"
                     collection: "pages"
                     searchFields: ["title", "slug"]
-                    valueField: "title"
-                    displayFields: ["title", "slug"]
+                    valueField: "id"
+                    displayFields: ["slug", "title"]
 
           - label: "Compact Functions"
             name: "functionsCompactBlock"
@@ -76,9 +76,9 @@ collections:
                   - label: "Link:"
                     widget: "relation"
                     collection: "pages"
-                    searchFields: ["title", "slug"]
-                    valueField: "title"
-                    displayFields: ["title", "slug"]
+                    searchFields: ["slug"]
+                    valueField: "{{slug}}"
+                    displayFields: [ "slug"]
           - label: "Solutions"
             name: "solutions"
             widget: "object"
