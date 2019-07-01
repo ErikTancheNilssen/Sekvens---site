@@ -40,18 +40,21 @@ export const PageTemplate = ({ title, introduction, blocks = [], pages }) => (
         </Column>
         <Column>
           <Flex>
-            {items.map(
-              ({ title, description, image: { publicURL, name } }, index) => (
-                <Box>
-                  <Image mb={3} height="160px" alt={name} src={publicURL} />
-                  <Heading my={3} fontSize={6} color="p3">
-                    {index + 1}
-                  </Heading>
-                  <h5>{title}</h5>
-                  <p>{description}</p>
-                </Box>
-              )
-            )}
+            {items.map(({ title, description, image = {} }, index) => (
+              <Box>
+                <Image
+                  mb={3}
+                  height="160px"
+                  alt={image.name}
+                  src={image.publicURL}
+                />
+                <Heading my={3} fontSize={6} color="p3">
+                  {index + 1}
+                </Heading>
+                <h5>{title}</h5>
+                <p>{description}</p>
+              </Box>
+            ))}
           </Flex>
         </Column>
       </Grid>
