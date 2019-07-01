@@ -15,7 +15,6 @@ blocks:
           zz
           zz
         title: xxx
-        undefined: Den følelsen du får av å bruke Sekvens!
     type: functionsBlock
 ---
 Has to have a body? sss
