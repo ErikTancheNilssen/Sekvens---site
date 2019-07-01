@@ -1,6 +1,5 @@
 ---
 templateKey: page
-hide: true
 title: Den følelsen du får av å bruke Sekvens!
 date: 2019-07-01T10:53:41.221Z
 introduction: Endelig en helhetlig løsning for trykksaker.
@@ -20,5 +19,10 @@ blocks:
         title: Fjerde skritt er enda enklere enn det første
         image: /images/package.png
     title: Slik fungerer det
+    introduction: |
+      asdasd
+      asdasdsd
+      asdadsasd
     type: functionsList
 ---
+
