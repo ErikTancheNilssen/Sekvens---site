@@ -11,6 +11,12 @@ blocks:
       - description: Sekvens ber din leder godkjenne bestilling (valgfritt)
         title: Andre skritt er valgfritt
         image: /images/human.png
+      - description: 'Sekvens trykker, pakker og sender produktet til mottakerene.'
+        title: Tredje skritt trenger du ikke tenke på
+        image: /images/printer.png
+      - description: Faktura sendes ut som avtalt. Rapporter kan hentes ut i Sekvens.
+        title: Fjerde skritt er enda enklere enn det første
+        image: /images/package.png
     title: Slik fungerer det
     introduction: none
     type: functionsList
