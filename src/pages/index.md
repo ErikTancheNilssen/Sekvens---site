@@ -19,10 +19,7 @@ blocks:
         title: Fjerde skritt er enda enklere enn det første
         image: /images/package.png
     title: Slik fungerer det
-    introduction: |
-      asdasd
-      asdasdsd
-      asdadsasd
+    introduction: ''
     type: functionsList
 ---
 
