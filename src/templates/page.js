@@ -4,7 +4,10 @@ import { graphql, Link } from "gatsby";
 
 import Layout from "../components/Layout";
 import { Grid, Column } from "../components/Grid.js";
-import { Flex, Box, Text, Heading, Image } from "rebass";
+import functionsList from "../components/FunctionsList.js";
+import { Box, Text } from "rebass";
+
+const blockTypes = { functionsList };
 
 export const PageTemplate = ({ title, introduction, blocks = [], pages }) => (
   <div>
@@ -32,33 +35,10 @@ export const PageTemplate = ({ title, introduction, blocks = [], pages }) => (
         </Column>
       </Grid>
     </Box>
-    {blocks.map(({ title, introduction, items }) => (
-      <Grid mt={6}>
-        <Column>
-          <h2>{title}</h2>
-          {!!introduction && <h6>{introduction}</h6>}
-        </Column>
-        <Column>
-          <Flex>
-            {items.map(({ title, description, image = {} }, index) => (
-              <Box>
-                <Image
-                  mb={3}
-                  height="160px"
-                  alt={image.name}
-                  src={image.publicURL}
-                />
-                <Heading my={3} fontSize={6} color="p3">
-                  {index + 1}
-                </Heading>
-                <h5>{title}</h5>
-                <p>{description}</p>
-              </Box>
-            ))}
-          </Flex>
-        </Column>
-      </Grid>
-    ))}
+    {blocks.map(props => {
+      const Item = blockTypes[props.type];
+      return <Item {...props} />;
+    })}
   </div>
 );
 
@@ -92,6 +72,7 @@ export const pageQuery = graphql`
       }
     }
     markdownRemark(id: { eq: $id }) {
+      html
       frontmatter {
         title
         introduction
