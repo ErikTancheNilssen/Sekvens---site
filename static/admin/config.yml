@@ -47,19 +47,19 @@ collections:
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Introduction", name: "introduction", required: false,  widget: "text"}
+              - label: "Link"
+                name: "link"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", required: false, widget: "string"}
+                  - {label: "Link", name: "link",  required: false, widget: "string"}
+                  - {label: "External", name: "ext", widget: "boolean", required: false, default: false}
               - label: "Functions"
                 name: "items"
                 widget: "list"
                 fields:
                   - {label: "Title", name: "title", widget: "string"}
                   - {label: "Description", name: "description", required: false, widget: "markdown"}
-                  - label: "Link:"
-                    name: "link"
-                    widget: "relation"
-                    collection: "pages"
-                    searchFields: ["title", "slug"]
-                    valueField: "id"
-                    displayFields: ["slug", "title"]
 
           - label: "Compact Functions"
             name: "functionsCompactBlock"
