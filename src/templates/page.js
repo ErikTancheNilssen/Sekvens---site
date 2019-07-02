@@ -9,7 +9,12 @@ import { Box, Text } from "rebass";
 
 const blockTypes = { functionsList };
 
-export const PageTemplate = ({ title, introduction, blocks = [], pages }) => (
+export const PageTemplate = ({
+  title,
+  introduction,
+  blocks = [],
+  pages = []
+}) => (
   <div>
     <Box bg="p4">
       <Grid>
@@ -35,9 +40,9 @@ export const PageTemplate = ({ title, introduction, blocks = [], pages }) => (
         </Column>
       </Grid>
     </Box>
-    {blocks.map(props => {
+    {(blocks || []).map(props => {
       const Item = blockTypes[props.type];
-      return <Item {...props} />;
+      return Item ? <Item {...props} /> : null;
     })}
   </div>
 );
