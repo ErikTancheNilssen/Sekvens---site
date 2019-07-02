@@ -4,6 +4,7 @@ title: Den følelsen du får av å bruke Sekvens!
 date: 2019-07-01T10:53:41.221Z
 introduction: Endelig en helhetlig løsning for trykksaker
 image: /images/iphone8.png
+hide: true
 blocks:
   - items:
       - description: Velg produkt du ønsker å trykke opp eller last opp ditt eget dokument.
