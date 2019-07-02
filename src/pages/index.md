@@ -56,7 +56,7 @@ blocks:
           Du drar nytte av våre gode avtaler med Norges største distributørerer.
         title: Direkte distribusjon
     link:
-      ext: true
+      ext: false
       link: /funksjoner/
       text: Se alle funksjoner
     title: >-
