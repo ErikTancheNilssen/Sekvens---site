@@ -2,7 +2,9 @@
 templateKey: page
 title: Funksjoner
 date: 2019-06-29T08:33:44.323Z
-introduction: INTRODUCTION
+introduction: >-
+  Visittkort, profilartikler, brevark, rollups, bannere, beachflagg konvolutter
+  & brosjyrer.
 hide: false
 blocks:
   - title: zzz
