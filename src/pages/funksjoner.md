@@ -3,7 +3,7 @@ templateKey: page
 title: Funksjoner
 date: 2019-06-29T08:33:44.323Z
 introduction: INTRODUCTION
-hide: true
+hide: false
 blocks:
   - title: zzz
     introduction: |-
