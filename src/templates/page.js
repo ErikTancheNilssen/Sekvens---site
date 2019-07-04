@@ -4,10 +4,10 @@ import { graphql, Link } from "gatsby";
 
 import Layout from "../components/Layout";
 import { Grid, Column } from "../components/Grid.js";
-import functionsList from "../components/FunctionsList.js";
-import { Box, Text } from "rebass";
-
-const blockTypes = { functionsList };
+import Blocks from "../components/Blocks.js";
+import Footer from "../components/Footer.js";
+import Menu from "../components/Menu.js";
+import { Box } from "rebass";
 
 export const PageTemplate = ({
   title,
@@ -16,21 +16,10 @@ export const PageTemplate = ({
   pages = []
 }) => (
   <div>
-    <Box bg="p4">
+    <Box bg="p4" mb={7}>
       <Grid>
-        <Column columns={[1, 1, 3]}>
-          <h6>
-            <Link to="/">sekvens.</Link>
-          </h6>
-        </Column>
-        <Column columns={[3, 3, 9]}>
-          <Text textAlign="right">
-            {pages.map(({ node: { frontmatter, fields } }) => (
-              <Link key={fields.slug} to={fields.slug || "/"}>
-                {frontmatter.title}
-              </Link>
-            ))}
-          </Text>
+        <Column columns={[4, 4, 12]}>
+          <Menu pages={pages} />
         </Column>
       </Grid>
       <Grid>
@@ -40,10 +29,8 @@ export const PageTemplate = ({
         </Column>
       </Grid>
     </Box>
-    {(blocks || []).map(props => {
-      const Item = blockTypes[props.type];
-      return Item ? <Item {...props} /> : null;
-    })}
+    <Blocks blocks={blocks} />
+    <Footer pages={pages} />
   </div>
 );
 
@@ -53,7 +40,7 @@ const IndexPage = ({ data }) => {
     allMarkdownRemark
   } = data;
   return (
-    <Layout>
+    <Layout {...frontmatter}>
       <PageTemplate {...frontmatter} pages={allMarkdownRemark.edges} />
     </Layout>
   );
@@ -85,6 +72,11 @@ export const pageQuery = graphql`
           title
           introduction
           type
+          link {
+            link
+            text
+            ext
+          }
           items {
             title
             description

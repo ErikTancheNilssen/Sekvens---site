@@ -21,7 +21,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Introduction", name: "introduction", widget: "text", required: false}
-      - {label: "Hide", name: "hide", widget: "boolean" , default: false}
+      - {label: "Hide", name: "hide", widget: "boolean", required: false,  default: false}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - label: "Blocks"
@@ -48,6 +48,7 @@ collections:
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Introduction", name: "introduction", required: false,  widget: "text"}
+              - {label: "Compact", name: "compact", widget: "boolean", required: false, default: false}
               - label: "Link"
                 name: "link"
                 widget: "object"
@@ -61,25 +62,6 @@ collections:
                 fields:
                   - {label: "Title", name: "title", widget: "string"}
                   - {label: "Description", name: "description", required: false, widget: "markdown"}
-
-          - label: "Compact Functions"
-            name: "functionsCompactBlock"
-            widget: "object"
-            fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Introduction", name: "introduction",  required: false, widget: "text"}
-              - label: "Functions"
-                name: "items"
-                widget: "list"
-                fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Description", name: "description", widget: "markdown"}
-                  - label: "Link:"
-                    widget: "relation"
-                    collection: "pages"
-                    searchFields: ["slug"]
-                    valueField: "{{slug}}"
-                    displayFields: [ "slug"]
           - label: "Solutions"
             name: "solutions"
             widget: "object"

@@ -25,11 +25,11 @@ h1, h2, h3, h4, h5, h6{
 }
 h1{
     font-size: 6.25rem;
-    line-height: 1em;
+    line-height: 1.2em;
 }
 h2{
     font-size: 3.75rem;
-    line-height: 1em;
+    line-height: 1.19em;
 }
 h3{
     font-size: 3rem; 

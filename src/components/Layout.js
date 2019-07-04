@@ -3,14 +3,14 @@ import Helmet from "react-helmet";
 
 import useSiteMetadata from "./SiteMetadata";
 
-const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata();
+const TemplateWrapper = ({ title, introduction, children }) => {
+  const { siteTitle, description } = useSiteMetadata();
   return (
     <>
       <Helmet>
         <html lang="en" />
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        <title>{`${title} : ${siteTitle}`}</title>
+        <meta name="description" content={introduction || description} />
 
         <link
           rel="apple-touch-icon"
