@@ -23,4 +23,4 @@ blocks:
         title: Bestille produkter fra ditt varelager
     type: functionsBlock
 ---
-Has to have a body?
+
