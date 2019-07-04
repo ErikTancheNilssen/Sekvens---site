@@ -7,10 +7,10 @@ introduction: >-
   & brosjyrer.
 hide: false
 blocks:
-  - title: Funksjoner
-    introduction: >-
-      Visittkort, profilartikler, brevark, rollups, bannere, beachflagg
-      konvolutter & brosjyrer.
+  - title: zzz
+    introduction: |-
+      zzz
+      zz
     items:
       - description: En helt kort beskrivelse av funksjonen.
         link: Funksjoner
