@@ -24,7 +24,7 @@ blocks:
     type: functionsBlock
   - items:
       - title: Sekvens Standard
-        introduction: xxx
+        introduction: ''
         body: |-
           * Bestille trykksaker
           * Bestille produkter fra ditt varelager
