@@ -6,7 +6,8 @@ introduction: >-
   & brosjyrer.
 hide: false
 blocks:
-  - title: Funksjoner
+  - compact: true
+    title: Funksjoner
     introduction: >-
       Visittkort, profilartikler, brevark, rollups, bannere, beachflagg
       konvolutter & brosjyrer.
