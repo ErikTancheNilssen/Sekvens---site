@@ -3,7 +3,7 @@ templateKey: page
 title: Funksjoner
 introduction: >-
   Visittkort, profilartikler, brevark, rollups, bannere, beachflagg konvolutter
-  & brosjyrer…..
+  & brosjyrer
 hide: false
 blocks:
   - compact: true
