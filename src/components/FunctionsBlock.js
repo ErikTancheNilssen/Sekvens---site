@@ -1,23 +1,31 @@
 import React from "react";
-import { Flex, Box, Image, Heading } from "rebass";
-import { Column } from "./Grid.js";
+import { Image, Heading } from "rebass";
+import { Grid, Column } from "./Grid.js";
 
 import styled from "styled-components";
 
 const LineBreaker = styled.p`
   white-space: pre-line;
+  margin: 0;
 `;
 
-const Bottom = styled(Flex)`
+const Bottom = styled(Grid)`
   z-index: -1;
   position: relative;
 `;
 
-const FunctionsBlock = ({ title, introduction, type, items, link }) => (
+const FunctionsBlock = ({
+  title,
+  introduction,
+  type,
+  items,
+  link,
+  compact
+}) => (
   <Column p={5} pt={0}>
-    <Bottom mt={-7} p={5} flexWrap="wrap" bg="p4_15">
+    <Bottom mt={-7} py={7} px={6} bg="p4_15">
       {items.map(({ title, description, image }, index) => (
-        <Box p={5} key={index} width={0.5}>
+        <Column key={index} columns={compact ? [4, 4, 4] : [4, 4, 6]}>
           {!!image && (
             <Image
               mb={3}
@@ -26,11 +34,14 @@ const FunctionsBlock = ({ title, introduction, type, items, link }) => (
               src={image.publicURL}
             />
           )}
-          <Heading color="p2" as="h4" mb={3}>
+          <Heading
+            fontSize={compact ? [2, 2, 3] : [3, 3, 4]}
+            mb={compact ? 2 : 3}
+          >
             {title}
           </Heading>
           {!!description && <LineBreaker>{description}</LineBreaker>}
-        </Box>
+        </Column>
       ))}
     </Bottom>
   </Column>

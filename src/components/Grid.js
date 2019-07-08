@@ -1,25 +1,26 @@
 import React from "react";
 
 import styled from "styled-components";
-import { grid, layout } from "styled-system";
+import { grid, layout, border, padding } from "styled-system";
 import { Box } from "rebass";
 
 const GridSection = styled(Box)`
   display: grid;
   grid-template-rows: auto;
-  margin-left: auto;
+  margin-left: auto; 
   margin-right: auto;
 
   ${layout}
   ${grid}
+  ${border}
 `;
 
 const StyledBox = styled(Box)`
   ${grid}
+  ${border}
 `;
 
 GridSection.defaultProps = {
-  padding: [2, 2, 3],
   maxWidth: [1440],
   gridColumnGap: [4, 4, 5],
   gridRowGap: [4, 4, 5],

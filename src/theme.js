@@ -7,7 +7,7 @@ const p3 = "#FEC2AD";
 const p4 = "#FEDACE";
 
 export default {
-  fontSizes: [12, 14, 16, 21, 25, 32, 48, 64],
+  fontSizes: [12, 14, 16, 21, 25, 32, 48, 50, 64],
   maxWidth: 1440,
   colors: {
     p1,

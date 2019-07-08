@@ -1,16 +1,19 @@
 import React from "react";
 import { Grid, Column } from "./Grid.js";
-import { Link } from "gatsby";
-import { Heading, Flex } from "rebass";
-
 import styled from "styled-components";
-
 import Menu from "./Menu.js";
 
 const ETN = styled.h5`
   font-size: 1rem;
   font-weight: 100;
   text-align: right;
+  a {
+    color: black;
+    background: transparent;
+    &:hover {
+      color: ${({ theme: { colors } }) => colors.p1};
+    }
+  }
 `;
 
 const Footer = ({ pages }) => (

@@ -1,9 +1,16 @@
+development_overrides:
+  # run file-system backend for local development
+  backend:
+    name: file-system
+    api_root: /api
+  # reset 'editorial_workflow' if enabled, since it breaks in file-system mode
+  # publish_mode: ''
 backend:
   name: git-gateway
   branch: master
-publish_mode: editorial_workflow
-media_folder: static/images
-public_folder: /images
+#publish_mode: editorial_workflow
+media_folder: static/assets
+public_folder: /assets
 
 collections:
   - name: "pages"
@@ -19,15 +26,19 @@ collections:
           default: "page",
         }
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Introduction", name: "introduction", widget: "text", required: false}
       - {label: "Hide", name: "hide", widget: "boolean", required: false,  default: false}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
       - label: "Blocks"
         name: "blocks"
         widget: "list"
         types: 
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Introduction", name: "introduction", required: false,  widget: "text"}
+              - {label: "Image", name: "image", widget: "image", required: false}
           - label: "List"
             name: "functionsList"
             widget: "object"
@@ -39,7 +50,7 @@ collections:
                 widget: "list"
                 fields:
                   - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Description", name: "description", widget: "markdown"}
+                  - {label: "Description", name: "description", widget: "text"}
                   - {label: "Image", name: "image", widget: "image" }
 
           - label: "Functions"
@@ -61,7 +72,7 @@ collections:
                 widget: "list"
                 fields:
                   - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Description", name: "description", required: false, widget: "markdown"}
+                  - {label: "Description", name: "description", required: false, widget: "text"}
           - label: "Solutions"
             name: "solutions"
             widget: "object"
@@ -73,6 +84,7 @@ collections:
                 widget: "list"
                 fields:
                   - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Introduction", name: "introduction", widget: "text"}
-                  - {label: "List", name: "body", widget: "markdown"}
+                  - {label: "Introduction", name: "introduction", widget: "text", required: false}
+                  - {label: "List", name: "description", widget: "text"}
             
+      - {label: "Body", name: "body", widget: "markdown", required: false}

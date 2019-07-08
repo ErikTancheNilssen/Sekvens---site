@@ -12,7 +12,7 @@ const LineBreaker = styled.p`
   white-space: pre-line;
 `;
 
-const FunctionsList = ({ title, introduction, type, items }) => (
+const FunctionsList = ({ items }) => (
   <Column>
     <Grid>
       {items.map(({ title, description, image }, index) => (

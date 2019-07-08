@@ -1,6 +1,6 @@
 import React from "react";
 
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import { Grid, Column } from "../components/Grid.js";
@@ -72,6 +72,7 @@ export const pageQuery = graphql`
           title
           introduction
           type
+          compact
           link {
             link
             text
@@ -79,6 +80,7 @@ export const pageQuery = graphql`
           }
           items {
             title
+            introduction
             description
             image {
               id

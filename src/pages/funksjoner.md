@@ -25,7 +25,7 @@ blocks:
   - items:
       - title: Sekvens Standard
         introduction: ''
-        body: |-
+        description: |-
           * Bestille trykksaker
           * Bestille produkter fra ditt varelager
           * Redigere trykksaker
@@ -38,7 +38,7 @@ blocks:
           * Support på e-post, chat og telefon
       - title: Sekvens Enterprise
         introduction: 'Alle funksjoner i Standard pluss:'
-        body: |-
+        description: |-
           * Tilgangskontroll med tilpassede brukernivåer
           * Single Sign-on
           * Sekvens i din organisasjons design
@@ -48,7 +48,7 @@ blocks:
           * Profilhåndbok
       - title: Sekvens Bureau
         introduction: 'Alle funksjoner i Standard og Enterprise pluss:'
-        body: >-
+        description: >-
           En enterprise-løsning der vi fjerner vår profilering, legger inn din
           og fremdeles kan stile løsningen i din kundes drakt - om du ønsker
           det.
