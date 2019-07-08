@@ -46,7 +46,8 @@ blocks:
           * Profilhåndbok
         title: Sekvens Enterprise
         introduction: 'Alle funksjoner i Standard pluss:'
-      - description: >-
+      - active: true
+        description: >-
           En enterprise-løsning der vi fjerner vår profilering, legger inn din
           og fremdeles kan stile løsningen i din kundes drakt - om du ønsker
           det.
