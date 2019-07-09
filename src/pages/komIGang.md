@@ -3,11 +3,13 @@ templateKey: page
 title: Kom i gang
 introduction: Intro
 blocks:
-  - items:
+  - action: Kom i gang
+    items:
       - description: Maria Holte
         title: Navn
       - description: post@din-epost.no
         title: E-post
+    success: /suksess
     title: Kom i gang med Sekvens
     introduction: >-
       Fyll ut navn og e-post, så vi hjelper deg å finne den løsningen som passer
