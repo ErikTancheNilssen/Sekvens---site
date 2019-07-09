@@ -1,6 +1,6 @@
 ---
 templateKey: page
-title: Funksjoner…
+title: Funksjoner
 introduction: >-
   Visittkort, profilartikler, brevark, rollups, bannere, beachflagg konvolutter
   & brosjyrer.
