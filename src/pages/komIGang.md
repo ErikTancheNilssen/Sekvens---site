@@ -1,7 +1,7 @@
 ---
 templateKey: page
 title: Kom i gang
-introduction: Intro
+introduction: Kom i gang med Sekvens
 blocks:
   - action: Kom i gang
     items:
