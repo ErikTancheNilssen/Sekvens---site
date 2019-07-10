@@ -7,32 +7,9 @@ import { Grid, Column } from "../components/Grid.js";
 import Blocks from "../components/Blocks.js";
 import Footer from "../components/Footer.js";
 import Menu from "../components/Menu.js";
-import { Box } from "rebass";
+import PageTemplate from "./PageTemplate.js";
 
-export const PageTemplate = ({
-  title,
-  introduction,
-  blocks = [],
-  pages = []
-}) => (
-  <div>
-    <Box bg="p4" mb={7}>
-      <Grid>
-        <Column columns={[4, 4, 12]}>
-          <Menu pages={pages} />
-        </Column>
-      </Grid>
-      <Grid>
-        <Column>
-          <h2>{title}</h2>
-          {!!introduction && <h6>{introduction}</h6>}
-        </Column>
-      </Grid>
-    </Box>
-    <Blocks blocks={blocks} />
-    <Footer pages={pages} />
-  </div>
-);
+import { Box } from "rebass";
 
 const IndexPage = ({ data }) => {
   const {
@@ -73,15 +50,24 @@ export const pageQuery = graphql`
           introduction
           type
           compact
+          full
+          success
+          action
           link {
             link
             text
             ext
           }
+          image {
+            id
+            publicURL
+            name
+          }
           items {
             title
             introduction
             description
+            active
             image {
               id
               publicURL

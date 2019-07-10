@@ -1,5 +1,5 @@
 ---
-templateKey: page
+templateKey: Page
 title: Suksess!
 introduction: Du er et skritt nærmere en bedre arbeidsflyt
 hide: true
@@ -8,6 +8,7 @@ blocks:
     introduction: >-
       En av våre rådgivere vil ta kontakt med deg for å finne den beste
       løsningen for din bedrift.
-    type: hero
+    type: Hero
+    full: true
 ---
 

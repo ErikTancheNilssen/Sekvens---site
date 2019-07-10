@@ -1,5 +1,5 @@
 ---
-templateKey: page
+templateKey: Page
 title: Funksjoner
 introduction: >-
   Visittkort, profilartikler, brevark, rollups, bannere, beachflagg konvolutter
@@ -21,7 +21,7 @@ blocks:
         title: Bestille produkter fra ditt varelager
       - description: En helt kort beskrivelse av funksjonen.
         title: Bestille produkter fra ditt varelager
-    type: functionsBlock
+    type: FunctionsBlock
   - items:
       - description: |-
           * Bestille trykksaker
@@ -54,6 +54,6 @@ blocks:
         title: Sekvens Bureau
         introduction: 'Alle funksjoner i Standard og Enterprise pluss:'
     title: Løsninger
-    type: solutions
+    type: Solutions
 ---
 

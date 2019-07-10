@@ -2,7 +2,7 @@ import CMS from "netlify-cms";
 import React from "react";
 import { StyleSheetManager } from "styled-components";
 
-import PagePreview from "./preview-templates/IndexPagePreview";
+import PagePreview from "./preview-templates/PagePreview";
 
 class CSSInjector extends React.Component {
   constructor(props) {

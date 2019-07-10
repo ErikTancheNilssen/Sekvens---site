@@ -7,6 +7,7 @@ const ETN = styled.h5`
   font-size: 1rem;
   font-weight: 100;
   text-align: right;
+  line-height: 2rem;
   a {
     color: black;
     background: transparent;
@@ -17,11 +18,11 @@ const ETN = styled.h5`
 `;
 
 const Footer = ({ pages }) => (
-  <Grid>
+  <Grid my={5}>
     <Column columns={[4, 4, 5]}>
       <Menu pages={pages} />
     </Column>
-    <Column columns={[4, 4, 7]}>
+    <Column alignSelf="center" columns={[4, 4, 7]}>
       <ETN>
         <a
           rel="noopener noreferrer"

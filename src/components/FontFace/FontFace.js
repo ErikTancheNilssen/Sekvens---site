@@ -5,6 +5,8 @@ const TypographyStyle = createGlobalStyle`
 
 
 body {
+    padding: 0;
+    margin: 0;
     color:  ${({ theme: { colors } }) => colors.text};
     font-family: ${({ theme: { fonts } }) => fonts.mono};
     font-weight: normal;
@@ -51,8 +53,6 @@ h6{
 }
 
 a {
-  padding-left: .5em;
-  padding-right: .5em;
   color: ${({ theme: { colors } }) => colors.p1};
   text-decoration: none;
   background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(${({

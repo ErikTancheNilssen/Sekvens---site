@@ -13,22 +13,24 @@ const LineBreaker = styled.p`
 `;
 
 const FunctionsList = ({ items }) => (
-  <Column>
-    <Grid>
-      {items.map(({ title, description, image }, index) => (
-        <Column columns={[2, 2, 6, 3]} p={3} key={index}>
-          {!!image && (
-            <StyledImage mb={3} alt={image.name} src={image.publicURL} />
-          )}
-          <Heading my={3} fontSize={6} color="p3">
-            {index + 1}
-          </Heading>
-          <h5>{title}</h5>
-          {!!description && <LineBreaker>{description}</LineBreaker>}
-        </Column>
-      ))}
-    </Grid>
-  </Column>
+  <Grid>
+    {items.map(({ title, description, image }, index) => (
+      <Column columns={[2, 2, 6, 3]} p={3} key={index}>
+        {!!image && (
+          <StyledImage
+            mb={3}
+            alt={image.name}
+            src={image.publicURL ? image.publicURL : image}
+          />
+        )}
+        <Heading my={3} fontSize={6} color="p3">
+          {index + 1}
+        </Heading>
+        <h5>{title}</h5>
+        {!!description && <LineBreaker>{description}</LineBreaker>}
+      </Column>
+    ))}
+  </Grid>
 );
 
 export default FunctionsList;

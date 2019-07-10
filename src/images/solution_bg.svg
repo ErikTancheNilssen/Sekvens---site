@@ -1,0 +1,38 @@
+
+<svg width="328px" height="256px" viewBox="0 0 328 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Interaksjonsdesign-2.0-(current)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Funksjoner" transform="translate(-821.000000, -2283.000000)">
+            <rect  x="0" y="0" width="1920" height="3689"></rect>
+            <g id="løsninger" transform="translate(243.000000, 1744.000000)" opacity="0.264834449" stroke="#000000">
+                <g id="card-pattern" transform="translate(578.000000, 540.000000)">
+                    <g transform="translate(0.000000, 0.000000)" id="Path">
+                        <path d="M310.464631,24 L326.35199,39.88576" stroke-width="2.5"></path>
+                        <path d="M24.6620774,237.51438 L40.5494365,253.40014" stroke-width="2.5"></path>
+                        <path d="M0.831288501,237.51438 L16.718148,253.40014" stroke-width="2.5"></path>
+                        <path d="M96.1549437,237.51438 L112.042303,253.40014" stroke-width="2.5"></path>
+                        <path d="M72.3241548,237.51438 L88.2115139,253.40014" stroke-width="2.5"></path>
+                        <path d="M48.4928663,237.51438 L64.3802254,253.40014" stroke-width="2.5"></path>
+                        <path d="M167.64781,237.51438 L183.535169,253.40014" stroke-width="2.5"></path>
+                        <path d="M143.817021,237.51438 L159.70438,253.40014" stroke-width="2.5"></path>
+                        <path d="M119.985733,237.51438 L135.873092,253.40014" stroke-width="2.5"></path>
+                        <path d="M239.140676,237.51438 L255.028035,253.40014" stroke-width="2.5"></path>
+                        <path d="M215.309887,237.51438 L231.197246,253.40014" stroke-width="2.5"></path>
+                        <path d="M191.478599,237.51438 L207.365958,253.40014" stroke-width="2.5"></path>
+                        <path d="M310.633542,237.51438 L326.520902,253.40014" stroke-width="2.5"></path>
+                        <path d="M286.802754,237.51438 L302.690113,253.40014" stroke-width="2.5"></path>
+                        <path d="M262.971965,237.51438 L278.858824,253.40014" stroke-width="2.5"></path>
+                        <path d="M310.464831,0.171160232 L326.35219,16.0569202" stroke-width="2.5"></path>
+                        <path d="M310.464631,71.6572799 L326.35199,87.5430398" stroke-width="2.5"></path>
+                        <path d="M310.464631,47.8283902 L326.35199,63.7141501" stroke-width="2.5"></path>
+                        <path d="M310.633542,213.68549 L326.520902,229.57125" stroke-width="2.5"></path>
+                        <path d="M310.633542,189.8571 L326.520902,205.74286" stroke-width="2.5"></path>
+                        <path d="M310.633542,166.02871 L326.520902,181.91447" stroke-width="2.5"></path>
+                        <path d="M310.633542,142.19982 L326.520902,158.08558" stroke-width="2.5"></path>
+                        <path d="M310.633542,118.37143 L326.520902,134.25719" stroke-width="2.5"></path>
+                        <path d="M310.633542,94.5430398 L326.520902,110.4283" stroke-width="2.5"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

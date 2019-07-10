@@ -1,5 +1,5 @@
 ---
-templateKey: page
+templateKey: Page
 title: Sekvens.
 introduction: Endelig en helhetlig løsning for trykksaker
 hide: true
@@ -7,7 +7,8 @@ blocks:
   - image: /images/iphone8.png
     title: Den følelsen du får av å bruke Sekvens!
     introduction: Endelig en helhetlig løsning for trykksaker
-    type: hero
+    type: Hero
+    full: true
   - items:
       - description: Velg produkt du ønsker å trykke opp eller last opp ditt eget dokument.
         image: /images/tablet.png
@@ -23,7 +24,7 @@ blocks:
         title: Fjerde skritt er enda enklere enn det første
     title: Slik fungerer det
     introduction: ''
-    type: functionsList
+    type: FunctionsList
   - items:
       - description: >-
           Bestillingsportalen kan inne- holde både dine lagervarer og produkter
@@ -65,6 +66,6 @@ blocks:
     title: >-
       Sekvens gir deg full kontroll over produksjon, lagring og distribusjon av
       trykksaker.
-    type: functionsBlock
+    type: FunctionsBlock
 ---
 

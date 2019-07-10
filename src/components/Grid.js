@@ -1,7 +1,7 @@
 import React from "react";
 
 import styled from "styled-components";
-import { grid, layout, border, padding } from "styled-system";
+import { grid, layout, border, padding, background } from "styled-system";
 import { Box } from "rebass";
 
 const GridSection = styled(Box)`
@@ -16,8 +16,12 @@ const GridSection = styled(Box)`
 `;
 
 const StyledBox = styled(Box)`
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: contain;
   ${grid}
   ${border}
+  ${background}
 `;
 
 GridSection.defaultProps = {

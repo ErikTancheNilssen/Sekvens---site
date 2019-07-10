@@ -1,5 +1,5 @@
 ---
-templateKey: page
+templateKey: Page
 title: Kom i gang
 introduction: Kom i gang med Sekvens
 blocks:
@@ -14,6 +14,7 @@ blocks:
     introduction: >-
       Fyll ut navn og e-post, så vi hjelper deg å finne den løsningen som passer
       best for deg.
-    type: form
+    type: Form
+    full: true
 ---
 
