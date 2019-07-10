@@ -1,10 +1,15 @@
 import React from "react";
-import { Heading, Image } from "rebass";
+import { Heading, Card } from "rebass";
 import { Grid, Column } from "./Grid.js";
 
 import styled from "styled-components";
 
-const StyledImage = styled(Image)``;
+const StyledImage = styled(Card)`
+  min-height: 160px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto 90%;
+`;
 
 const LineBreaker = styled.p`
   white-space: pre-line;
@@ -16,9 +21,11 @@ const FunctionsList = ({ items }) => (
       <Column columns={[2, 2, 6, 3]} p={3} key={index}>
         {!!image && (
           <StyledImage
-            mb={3}
+            pb={3}
             alt={image.name}
-            src={image.publicURL ? image.publicURL : image}
+            backgroundImage={`url(${
+              image.publicURL ? image.publicURL : image
+            })`}
           />
         )}
         <Heading my={3} fontSize={6} color="p3">
