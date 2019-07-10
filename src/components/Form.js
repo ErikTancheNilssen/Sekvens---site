@@ -6,10 +6,6 @@ import Button from "./Button.js";
 
 import styled from "styled-components";
 
-const StyledImage = styled(Image)`
-  min-height: 160px;
-`;
-
 const LineBreaker = styled.h6`
   white-space: pre-line;
 `;
