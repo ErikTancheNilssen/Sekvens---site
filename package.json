@@ -42,7 +42,7 @@
     "clean": "rimraf .cache public",
     "start:app": "npm run develop",
     "start": "run-p start:**",
-    "build:app": "npm run clean && gatsby build",
+    "build:app": "gatsby build",
     "build": "run-p build:**",
     "develop": "npm run clean && gatsby develop",
     "serve": "gatsby serve",
