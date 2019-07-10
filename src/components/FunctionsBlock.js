@@ -21,7 +21,11 @@ const FunctionsBlock = ({
     <Column p={[0, 0, 5]}>
       <Grid mt={[0, 0, -2, -7]} py={[3, 3, 7]} px={[3, 3, 6]} bg="p4_15">
         {items.map(({ title, description, image }, index) => (
-          <Column key={index} columns={compact ? [4, 4, 4] : [4, 4, 6]}>
+          <Column
+            key={index}
+            mb={3}
+            columns={compact ? [2, 2, 4, 3] : [4, 4, 6]}
+          >
             {!!image && (
               <Image
                 mb={3}
