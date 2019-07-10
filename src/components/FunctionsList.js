@@ -7,7 +7,6 @@ import styled from "styled-components";
 const StyledImage = styled(Card)`
   min-height: 160px;
   background-repeat: no-repeat;
-  background-position: left center;
   background-size: auto 90%;
 `;
 
@@ -26,6 +25,11 @@ const FunctionsList = ({ items }) => (
             backgroundImage={`url(${
               image.publicURL ? image.publicURL : image
             })`}
+            backgroundPosition={[
+              "center center",
+              "center center",
+              "left center"
+            ]}
           />
         )}
         <Heading my={3} fontSize={6} color="p3">
