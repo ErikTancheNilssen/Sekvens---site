@@ -4,9 +4,7 @@ import { Grid, Column } from "./Grid.js";
 
 import styled from "styled-components";
 
-const StyledImage = styled(Image)`
-  min-height: 160px;
-`;
+const StyledImage = styled(Image)``;
 
 const LineBreaker = styled.p`
   white-space: pre-line;
