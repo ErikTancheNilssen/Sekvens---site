@@ -49,7 +49,7 @@ const Hero = ({ title, introduction, image, items, success, action }) => (
         {!!introduction && (
           <LineBreaker className="introduction">{introduction}</LineBreaker>
         )}
-        <form name={title} method="POST" data-netlify="true" action={success}>
+        <form name={title} method="post" data-netlify="true" action={success}>
           {items.map(({ title, description }, index) => (
             <Box my={4} key={index}>
               <Box mb={2}>
@@ -69,8 +69,18 @@ const Hero = ({ title, introduction, image, items, success, action }) => (
               </Box>
             </Box>
           ))}
+          <div hidden>
+            <label>
+              Don’t fill this out:{" "}
+              <input name="bot-field" onChange={this.handleChange} />
+            </label>
+          </div>
+          <input type="hidden" name="form-name" value={title} />
+
           <Text textAlign="right">
-            <Button as="input" type="submit" value={action} />
+            <Button as="button" type="submit">
+              {action}
+            </Button>
           </Text>
         </form>
       </TextBlock>
