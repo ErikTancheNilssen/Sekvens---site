@@ -1,15 +1,7 @@
 import React from "react";
-
 import { graphql } from "gatsby";
-
 import Layout from "../components/Layout";
-import { Grid, Column } from "../components/Grid.js";
-import Blocks from "../components/Blocks.js";
-import Footer from "../components/Footer.js";
-import Menu from "../components/Menu.js";
 import PageTemplate from "./PageTemplate.js";
-
-import { Box } from "rebass";
 
 const IndexPage = ({ data }) => {
   const {

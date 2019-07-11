@@ -1,9 +1,7 @@
 import React from "react";
 import { Heading, Text, Card, Box, Flex } from "rebass";
-import { Grid, Column } from "./Grid.js";
 import Input from "./Input.js";
 import Button from "./Button.js";
-
 import styled from "styled-components";
 
 const LineBreaker = styled.h6`

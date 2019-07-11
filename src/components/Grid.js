@@ -1,7 +1,7 @@
 import React from "react";
 
 import styled from "styled-components";
-import { grid, layout, border, padding, background } from "styled-system";
+import { grid, layout, border, background } from "styled-system";
 import { Box } from "rebass";
 
 const GridSection = styled(Box)`

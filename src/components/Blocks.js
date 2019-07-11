@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Column } from "./Grid.js";
 import { Link } from "gatsby";
-import { Heading, Box, Image } from "rebass";
+import { Heading } from "rebass";
 import styled from "styled-components";
 import FunctionsList from "../components/FunctionsList.js";
 import FunctionsBlock from "../components/FunctionsBlock.js";
@@ -14,21 +14,13 @@ const LineBreaker = styled.h6`
   white-space: pre-line;
 `;
 
-const ColourBlock = styled(Box)`
-  overflow: hidden;
-`;
-
 const TextBox = styled(Grid)`
   position: relative;
 `;
 
-const ImageBlock = styled(Column)`
-  min-height: 50vh;
-`;
-
 const Blocks = ({ blocks }) =>
   (blocks || []).map((props, index) => {
-    const { title, introduction, type, link, image, full } = props;
+    const { title, introduction, type, link, full } = props;
     const Item = blockTypes[type] || React.Fragment;
 
     return (

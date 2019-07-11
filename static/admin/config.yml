@@ -112,6 +112,12 @@ collections:
             name: "Success"
             widget: "object"
             fields:
+              - {
+              label: "Full width",
+              name: "full",
+              widget: "hidden",
+              default: true,
+              }
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Introduction", name: "introduction", required: false,  widget: "text"}
               - {label: "Back text", name: "action", widget: "string"}

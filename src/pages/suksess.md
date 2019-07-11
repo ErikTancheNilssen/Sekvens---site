@@ -8,7 +8,7 @@ blocks:
     introduction: >-
       En av våre rådgivere vil ta kontakt med deg for å finne den beste
       løsningen for din bedrift.
-    type: Hero
+    type: Success
     full: true
 ---
 

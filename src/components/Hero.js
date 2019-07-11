@@ -1,12 +1,7 @@
 import React from "react";
-import { Heading, Image, Box } from "rebass";
+import { Heading, Box } from "rebass";
 import { Grid, Column } from "./Grid.js";
-
 import styled from "styled-components";
-
-const StyledImage = styled(Image)`
-  min-height: 160px;
-`;
 
 const LineBreaker = styled.h6`
   white-space: pre-line;

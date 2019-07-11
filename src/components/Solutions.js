@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Heading } from "rebass";
+import { Heading } from "rebass";
 import { Grid, Column } from "./Grid.js";
 import Checklist from "./Checklist.js";
 import ReactMarkdown from "react-markdown";
