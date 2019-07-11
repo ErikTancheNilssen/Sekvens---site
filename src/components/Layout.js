@@ -8,6 +8,7 @@ const TemplateWrapper = ({ title, introduction, children }) => {
   return (
     <>
       <Helmet>
+        <html lang="no" />
         <title>{`${title} : ${siteTitle}`}</title>
         <meta name="description" content={introduction || description} />
         <meta property="og:type" content="business.business" />
