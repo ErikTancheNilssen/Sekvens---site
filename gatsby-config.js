@@ -3,8 +3,7 @@ var proxy = require("http-proxy-middleware");
 module.exports = {
   siteMetadata: {
     title: "Sekvens.",
-    description:
-      "This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution."
+    description: "Endelig en helhetlig løsning for trykksaker"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -69,7 +68,19 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`
       }
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Sekvens.`,
+        short_name: `Sekvens.`,
+        start_url: `/`,
+        background_color: `#FFFFFF`,
+        theme_color: `rgb(254, 218, 206)`,
+        display: `standalone`
+      }
+    },
+    `gatsby-plugin-offline`,
 
-    "gatsby-plugin-netlify" // make sure to keep it last in the array
+    "gatsby-plugin-netlify"
   ]
 };
