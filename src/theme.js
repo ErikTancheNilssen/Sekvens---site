@@ -34,7 +34,8 @@ export default {
     gray: "#3A3A3A",
     text: "rgba(0, 0, 0, 0.85)",
     subtext: "rgba(0, 0, 0, 0.6)",
-    none: "transprent"
+    none: "transprent",
+    success_bg: "#C9E2D4"
   },
   space: [0, 4, 8, 15, 30, 45, 60, 120, 256],
   fonts: {

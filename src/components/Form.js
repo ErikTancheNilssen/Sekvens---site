@@ -48,7 +48,7 @@ const Hero = ({ title, introduction, image, items, success, action }) => (
           <LineBreaker className="introduction">{introduction}</LineBreaker>
         )}
         <form name={title} method="post" data-netlify="true" action={success}>
-          {items.map(({ title, description }, index) => (
+          {(items || []).map(({ title, description }, index) => (
             <Box my={4} key={index}>
               <Box mb={2}>
                 <Text as="label" for={index + title}>

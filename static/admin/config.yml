@@ -123,6 +123,23 @@ collections:
               - {label: "Back text", name: "action", widget: "string"}
               - {label: "Back URL", name: "success", widget: "string"}
               - {label: "Image", name: "image", widget: "image", required: false}
-          
-            
+          - label: "FAQ"
+            name: "FAQ"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Introduction", name: "introduction", required: false,  widget: "text"}
+              - {
+              label: "Full width",
+              name: "full",
+              widget: "hidden",
+              default: true,
+              }
+              - label: "FAQ"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Body", name: "description", required: false, widget: "markdown"}
+                                    
       - {label: "Body", name: "body", widget: "markdown", required: false}

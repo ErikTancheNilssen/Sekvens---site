@@ -3,7 +3,7 @@ import { PageTemplate } from "../../templates/PageTemplate.js";
 import Wrap from "../../wrap-with-provider.js";
 
 const PagePreview = ({ entry, getAsset, widgetFor }) => {
-  const blocks = entry.getIn(["data", "blocks"]).toJSON();
+  const blocks = entry.getIn(["data", "blocks"]);
   return (
     <Wrap
       element={
@@ -11,7 +11,7 @@ const PagePreview = ({ entry, getAsset, widgetFor }) => {
           html={widgetFor("body") || null}
           title={entry.getIn(["data", "title"]) || ""}
           introduction={entry.getIn(["data", "introduction"]) || ""}
-          blocks={blocks}
+          blocks={blocks ? blocks.toJSON() : null}
         />
       }
     />

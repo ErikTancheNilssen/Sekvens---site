@@ -8,7 +8,17 @@ import FunctionsBlock from "../components/FunctionsBlock.js";
 import Solutions from "../components/Solutions.js";
 import Hero from "../components/Hero.js";
 import Form from "../components/Form.js";
-const blockTypes = { FunctionsList, FunctionsBlock, Solutions, Hero, Form };
+import Success from "../components/Success.js";
+import FAQ from "../components/FAQ.js";
+const blockTypes = {
+  FunctionsList,
+  FunctionsBlock,
+  Solutions,
+  Hero,
+  Form,
+  Success,
+  FAQ
+};
 
 const LineBreaker = styled.h6`
   white-space: pre-line;

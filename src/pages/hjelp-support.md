@@ -4,7 +4,7 @@ title: Hjelp & Support
 introduction: >-
   Visittkort, profilartikler, brevark, rollups, bannere, beachflagg konvolutter
   & brosjyrer.
-hide: true
+hide: false
 blocks:
   - items:
       - description: >-
@@ -120,5 +120,9 @@ blocks:
           sapien.
         title: Hvor lang leveringstid er det?
     type: FAQ
+    title: Hjelp & Support
+    introduction: >-
+      Visittkort, profilartikler, brevark, rollups, bannere, beachflagg konvolutter & brosjyrer.
+    
 ---
 

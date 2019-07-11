@@ -19,6 +19,16 @@ body {
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
     font-feature-settings: "kern", "liga", "clig", "calt";
 }
+
+::selection {
+  color: ${({ theme: { colors } }) => colors.p1};
+  background:  ${({ theme: { colors } }) => colors.p3_15};
+}
+::-moz-selection {
+  color: black;
+  background:  ${({ theme: { colors } }) => colors.p3_15};
+}
+
 h1, h2, h3, h4, h5, h6, p, hr, ul {
   margin: 0 0  ${({ theme: { space } }) => space[4] + "px"} 0;
 }
@@ -127,7 +137,7 @@ ul {
   }
 
 
-`;
+  `;
 
 const FontFace = ({ theme }) => {
   return <TypographyStyle />;
