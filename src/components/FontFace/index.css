@@ -7,6 +7,7 @@
          url('./fonts/apercu-regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+    font-display: auto;
 }
 
 @font-face {
@@ -18,11 +19,13 @@
          url('./fonts/apercu-medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
+    font-display: auto;
 }
 
 
 @font-face {
     font-family: 'apercu';
+    font-display: auto;
     src: url('./fonts/apercu-bold.eot');
     src: url('./fonts/apercu-bold.eot?#iefix') format('embedded-opentype'),
          url('./fonts/apercu-bold.woff') format('woff'),
@@ -35,6 +38,7 @@
 
 @font-face {
     font-family: 'apercu';
+    font-display: auto;
     src: url('./fonts/apercu-light.eot');
     src: url('./fonts/apercu-light.eot?#iefix') format('embedded-opentype'),
          url('./fonts/apercu-light.woff') format('woff'),
@@ -48,6 +52,7 @@
 
 @font-face {
     font-family: 'apercu mono';
+    font-display: auto;
     src: url('./fonts/apercu-mono-regular.eot');
     src: url('./fonts/apercu-mono-regular.eot?#iefix') format('embedded-opentype'),
          url('./fonts/apercu-mono-regular.woff') format('woff'),
@@ -59,6 +64,7 @@
 
 @font-face {
     font-family: 'apercu mono';
+    font-display: auto;
     src: url('./fonts/apercu-mono-bold.eot');
     src: url('./fonts/apercu-mono-bold.eot?#iefix') format('embedded-opentype'),
          url('./fonts/apercu-mono-bold.woff') format('woff'),
