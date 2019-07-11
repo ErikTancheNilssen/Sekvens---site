@@ -72,6 +72,8 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Sekvens.`,
+        lang: `no`,
+        description: `En helhetlig løsning for trykksaker`,
         short_name: `Sekvens.`,
         start_url: `/`,
         background_color: `#FFFFFF`,
