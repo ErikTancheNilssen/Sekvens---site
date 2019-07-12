@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Column } from "./Grid.js";
 import { Link } from "gatsby";
-import { Heading } from "rebass";
+import { Heading, Box } from "rebass";
 import styled from "styled-components";
 import FunctionsList from "../components/FunctionsList.js";
 import FunctionsBlock from "../components/FunctionsBlock.js";
@@ -36,7 +36,7 @@ const Blocks = ({ blocks }) =>
     const Item = blockTypes[type] || React.Fragment;
 
     return (
-      <React.Fragment key={index}>
+      <Box mb={5} key={index}>
         {!full && (
           <TextBox mt={[4, 4, 5, 7]}>
             <Column columns={[4, 4, 6]}>
@@ -70,7 +70,7 @@ const Blocks = ({ blocks }) =>
             </Column>
           )}
         </Grid>
-      </React.Fragment>
+      </Box>
     );
   });
 

@@ -14,7 +14,7 @@ export const PageTemplate = ({
   pages = []
 }) => (
   <>
-    <Box fontSize={3} pt={5} pb={4} bg={menuColor ? menuColor : "p4"}>
+    <Box fontSize={[2, 2, 3]} pt={5} pb={4} bg={menuColor ? menuColor : "p4"}>
       <Grid>
         <Column columns={[4, 4, 12]}>
           <Menu pages={pages} />
