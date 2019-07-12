@@ -133,6 +133,7 @@ blocks:
       - description: post@din-epost.no
         title: E-post
       - description: 'Fortel oss hva problem er. '
+        textarea: true
         title: Hva trenger du help til?
     success: /success
     type: Form
