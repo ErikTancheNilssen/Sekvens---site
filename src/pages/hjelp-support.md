@@ -119,10 +119,22 @@ blocks:
           dignissim dui. Nunc sed arcu vestibulum, molestie ipsum vitae, blandit
           sapien.
         title: Hvor lang leveringstid er det?
-    type: FAQ
     title: Hjelp & Support
     introduction: >-
-      Visittkort, profilartikler, brevark, rollups, bannere, beachflagg konvolutter & brosjyrer.
-    
+      Visittkort, profilartikler, brevark, rollups, bannere, beachflagg
+      konvolutter & brosjyrer.
+    type: FAQ
+  - action: Send melding
+    title: Står du fast?
+    introduction: 'Send oss melding, så kan vi hjelpe deg.'
+    items:
+      - description: Maria Holte
+        title: Navn
+      - description: post@din-epost.no
+        title: E-post
+      - description: 'Fortel oss hva problem er. '
+        title: Hva trenger du help til?
+    success: /success
+    type: Form
 ---
 
