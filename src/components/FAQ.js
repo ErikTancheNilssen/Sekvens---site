@@ -19,7 +19,7 @@ const FunctionsList = ({ items }) => {
   const open = new Set(ids);
 
   return (
-    <Grid my={5}>
+    <Grid mt={3}>
       <Column gridColumn={["1/span 4", "1/span 4", "2/span 9"]}>
         {items.map(({ title, description, image }, index) => (
           <Box key={index}>

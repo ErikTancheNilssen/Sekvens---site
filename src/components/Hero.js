@@ -12,7 +12,7 @@ const ImageBlock = styled(Column)`
 `;
 
 const Hero = ({ title, introduction, image }) => (
-  <Box bg="p4" pt={7}>
+  <Box bg="p4" mb={3} pt={[4, 4, 5, 7]}>
     <Grid>
       <Column
         gridColumn={["1/span 4", "1/span 4", "2/span 6"]}

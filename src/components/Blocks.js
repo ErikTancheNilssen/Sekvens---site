@@ -38,7 +38,7 @@ const Blocks = ({ blocks }) =>
     return (
       <React.Fragment key={index}>
         {!full && (
-          <TextBox mt={7}>
+          <TextBox mt={[4, 4, 5, 7]}>
             <Column columns={[4, 4, 6]}>
               <Heading fontSize={index === 0 ? [5, 5, 8] : [4, 4, 7]}>
                 {title}

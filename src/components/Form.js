@@ -39,7 +39,7 @@ const Hero = ({ title, introduction, image, items, success, action }) => (
       bg="p4_15"
       width={image ? [1, 1, 1, 0.5] : [1]}
     >
-      <TextBlock m={[2, 2, 3, 7]}>
+      <TextBlock m={[4, 4, 5, 7]}>
         <Heading mb={3} fontSize={[5, 5, 8]}>
           {title}
         </Heading>

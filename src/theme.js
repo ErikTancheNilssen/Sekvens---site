@@ -1,6 +1,7 @@
 import { transparentize, hsl, darken } from "polished";
 import gray from "gray-percentage";
 import box_bg from "./images/solution_bg.svg";
+import logo from "./images/logo.svg";
 const p1 = "#5D103F";
 const p2 = "#8A1F60";
 const p3 = "#FEC2AD";
@@ -42,7 +43,7 @@ export default {
     sans: "apercu, system-ui, sans-serif",
     mono: "apercu mono, Menlo, monospace"
   },
-  images: { box_bg },
+  images: { box_bg, logo },
 
   textarea: {
     outline: {
