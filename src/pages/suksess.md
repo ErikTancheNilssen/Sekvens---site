@@ -3,6 +3,7 @@ templateKey: Page
 title: Suksess!
 introduction: Du er et skritt nærmere en bedre arbeidsflyt
 hide: true
+menuColor: white
 blocks:
   - action: Tilbake til forsiden
     full: true

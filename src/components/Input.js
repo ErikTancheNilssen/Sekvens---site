@@ -19,7 +19,15 @@ ThemedInput.defaultProps = {
 };
 
 const Input = props => {
-  return <ThemedInput fontSize={3} as="input" fontFamily="sans" {...props} />;
+  console.log(props);
+  return (
+    <ThemedInput
+      fontSize={3}
+      as={props.textArea ? "textarea" : "input"}
+      fontFamily="sans"
+      {...props}
+    />
+  );
 };
 
 export default Input;

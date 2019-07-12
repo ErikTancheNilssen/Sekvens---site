@@ -1,7 +1,7 @@
 import React from "react";
 
 import styled from "styled-components";
-import { grid, layout, border, background } from "styled-system";
+import { grid, layout, border, background, space } from "styled-system";
 import { Box } from "rebass";
 
 const GridSection = styled(Box)`
@@ -14,6 +14,7 @@ const GridSection = styled(Box)`
   ${layout}
   ${grid}
   ${border}
+${space}
 `;
 
 const StyledBox = styled(Box)`
@@ -23,11 +24,12 @@ const StyledBox = styled(Box)`
   ${grid}
   ${border}
   ${background}
+${space}
 `;
 
 GridSection.defaultProps = {
   maxWidth: [1440],
-  gridColumnGap: [4, 4, 5],
+  gridColumnGap: [4, 4, 12],
   gridRowGap: [4, 4, 5],
   gridTemplateColumns: ["repeat(4, 1fr)", "repeat(4, 1fr)", "repeat(12, 1fr)"]
 };

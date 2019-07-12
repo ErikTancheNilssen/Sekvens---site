@@ -8,6 +8,8 @@ const StyledFlex = styled(Flex)`
     color: black;
     background: transparent;
     line-height: 2rem;
+    white-space: nowrap;
+
     &:hover {
       color: ${({ theme: { colors } }) => colors.p1};
     }
@@ -19,18 +21,19 @@ const List = styled(Text)`
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
 `;
 
 const Menu = props => {
   const { pages } = props;
   return (
     <StyledFlex justifyContent="space-between" alignItems="end">
-      <Heading mt="-.5rem" fontSize={5} fontWeight="400">
+      <Heading mr={4} mt="-.25rem" fontSize={5} fontWeight="400">
         <Link to="/">sekvens.</Link>
       </Heading>
       <List as="ul" textAlign="right">
         {pages.map(({ node: { frontmatter, fields } }, index) => (
-          <Box m={0} px={4} as="li" key={fields.slug + index}>
+          <Box m={0} pl={[3, 3, 4]} as="li" key={fields.slug + index}>
             <Link to={fields.slug || "/"}>{frontmatter.title}</Link>
           </Box>
         ))}

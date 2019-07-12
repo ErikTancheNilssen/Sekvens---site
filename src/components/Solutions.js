@@ -13,8 +13,9 @@ position relative;
     content: "";
     bottom: 0;
     position: absolute;
-    background: transparent url(${BG}) 100% 100% no-repeat;
-    margin-right: 2rem;
+    background: transparent url(${({ theme: { images } }) =>
+      images.box_bg}) 100% 100% no-repeat;
+    margin-right: -2rem;
     margin-bottom: -2rem;
     width: 100%;
     height: 100%;

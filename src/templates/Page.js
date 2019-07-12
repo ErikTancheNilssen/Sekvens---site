@@ -37,6 +37,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         introduction
+        menuColor
         blocks {
           title
           introduction
@@ -60,6 +61,7 @@ export const pageQuery = graphql`
             introduction
             description
             active
+            textarea
             image {
               id
               publicURL

@@ -24,7 +24,7 @@ const FunctionsBlock = ({
           <Column
             key={index}
             mb={3}
-            columns={compact ? [2, 2, 4, 3] : [4, 4, 6]}
+            columns={compact ? [2, 2, 4, 4] : [4, 4, 6]}
           >
             {!!image && (
               <Image

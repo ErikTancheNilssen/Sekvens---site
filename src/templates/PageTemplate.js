@@ -9,11 +9,12 @@ import { Box } from "rebass";
 export const PageTemplate = ({
   title,
   introduction,
+  menuColor,
   blocks = [],
   pages = []
 }) => (
   <>
-    <Box pt={5} pb={4} bg="p4">
+    <Box pt={5} pb={4} bg={menuColor ? menuColor : "p4"}>
       <Grid>
         <Column columns={[4, 4, 12]}>
           <Menu pages={pages} />

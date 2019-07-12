@@ -22,7 +22,7 @@ body {
 
 ::selection {
   color: ${({ theme: { colors } }) => colors.p1};
-  background:  ${({ theme: { colors } }) => colors.p3_15};
+  background:  ${({ theme: { colors } }) => colors.p4};
 }
 ::-moz-selection {
   color: black;

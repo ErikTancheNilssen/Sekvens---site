@@ -127,6 +127,7 @@ blocks:
   - action: Send melding
     title: Står du fast?
     introduction: 'Send oss melding, så kan vi hjelpe deg.'
+    full: true
     items:
       - description: Maria Holte
         title: Navn
@@ -135,7 +136,7 @@ blocks:
       - description: 'Fortel oss hva problem er. '
         textarea: true
         title: Hva trenger du help til?
-    success: /success
-    type: Form
+    success: /suksess
+    type: HelpForm
 ---
 

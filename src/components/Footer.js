@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Column } from "./Grid.js";
+import { Flex, Text, Box } from "rebass";
 import styled from "styled-components";
 import Menu from "./Menu.js";
 
@@ -17,21 +18,30 @@ const ETN = styled.h5`
   }
 `;
 
+const MadeByETN = styled(Box)`
+  flex-grow: 1;
+`;
+
 const Footer = ({ pages }) => (
-  <Grid my={5}>
-    <Column columns={[4, 4, 5]}>
-      <Menu pages={pages} />
-    </Column>
-    <Column alignSelf="center" columns={[4, 4, 7]}>
-      <ETN>
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="https://etngrafisk.no/"
-        >
-          Et produkt av <strong>ETN Grafisk</strong>
-        </a>
-      </ETN>
+  <Grid>
+    <Column>
+      <Flex flexWrap="wrap" my={5}>
+        <Box mb={5}>
+          <Menu pages={pages} />
+        </Box>
+
+        <MadeByETN flexGrow={1}>
+          <ETN>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://etngrafisk.no/"
+            >
+              Et produkt av <strong>ETN Grafisk</strong>
+            </a>
+          </ETN>
+        </MadeByETN>
+      </Flex>
     </Column>
   </Grid>
 );

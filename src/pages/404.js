@@ -1,13 +1,34 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from "react";
+import Layout from "../components/Layout";
+import Blocks from "../components/Blocks.js";
+import Footer from "../components/Footer.js";
+import Menu from "../components/Menu.js";
+import { Grid, Column } from "../components/Grid.js";
+import { Box, Text } from "rebass";
 
 const NotFoundPage = () => (
   <Layout>
-    <div>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </div>
-  </Layout>
-)
+    <Box pt={5} pb={4} bg="p4">
+      <Grid>
+        <Column columns={[4, 4, 12]}>
+          <Menu pages={[]} />
+        </Column>
+      </Grid>
+    </Box>
+    <Grid>
+      <Column columns={[4, 4, 12]}>
+        <Box my={7}>
+          <Text>
+            <h1>404.</h1>
 
-export default NotFoundPage
+            <p>
+              <a href="/">Tilbake til forsiden</a>
+            </p>
+          </Text>
+        </Box>
+      </Column>
+    </Grid>
+  </Layout>
+);
+
+export default NotFoundPage;

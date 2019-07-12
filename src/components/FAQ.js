@@ -20,7 +20,7 @@ const FunctionsList = ({ items }) => {
 
   return (
     <Grid my={5}>
-      <Column gridColumn={["1/span 4", "2/span 8", "2/span 8"]}>
+      <Column gridColumn={["1/span 4", "1/span 4", "2/span 9"]}>
         {items.map(({ title, description, image }, index) => (
           <Box key={index}>
             <FAQHeading

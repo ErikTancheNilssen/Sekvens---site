@@ -28,6 +28,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Introduction", name: "introduction", widget: "text", required: false}
       - {label: "Hide", name: "hide", widget: "boolean", required: false,  default: false}
+      - {label: "Menu Colour", name: "menuColor", widget: "string", required: false}      
       - label: "Blocks"
         name: "blocks"
         widget: "list"
@@ -93,6 +94,28 @@ collections:
                   - {label: "Introduction", name: "introduction", widget: "text", required: false}
                   - {label: "List", name: "description", widget: "text"}
                   - {label: "Active", name: "active", widget: "boolean", required: false,  default: false}
+
+          - label: "Help Form"
+            name: "HelpForm"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Introduction", name: "introduction", required: false,  widget: "text"}
+              - {label: "Action text", name: "action", widget: "string"}
+              - {label: "Success URL", name: "success", widget: "string"}
+              - {
+                 label: "Full width",
+                 name: "full",
+                 widget: "hidden",
+                 default: true,
+                 }
+              - label: "Fields"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "title", widget: "string"}
+                  - {label: "Value", name: "description", widget: "string"}
+                  - {label: "TextArea", name: "textarea", widget: "boolean", default: false, required: false}
           - label: "Form"
             name: "Form"
             widget: "object"
@@ -102,12 +125,19 @@ collections:
               - {label: "Action text", name: "action", widget: "string"}
               - {label: "Success URL", name: "success", widget: "string"}
               - {label: "Image", name: "image", widget: "image", required: false}
+              - {
+                 label: "Full width",
+                 name: "full",
+                 widget: "hidden",
+                 default: true,
+                 }
               - label: "Fields"
                 name: "items"
                 widget: "list"
                 fields:
                   - {label: "Name", name: "title", widget: "string"}
                   - {label: "Value", name: "description", widget: "string"}
+                  - {label: "TextArea", name: "textarea", widget: "boolean", default: false, required: false}
           - label: "Success"
             name: "Success"
             widget: "object"

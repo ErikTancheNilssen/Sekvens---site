@@ -10,6 +10,7 @@ import Hero from "../components/Hero.js";
 import Form from "../components/Form.js";
 import Success from "../components/Success.js";
 import FAQ from "../components/FAQ.js";
+import HelpForm from "../components/HelpForm.js";
 const blockTypes = {
   FunctionsList,
   FunctionsBlock,
@@ -17,7 +18,8 @@ const blockTypes = {
   Hero,
   Form,
   Success,
-  FAQ
+  FAQ,
+  HelpForm
 };
 
 const LineBreaker = styled.h6`
