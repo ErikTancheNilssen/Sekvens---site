@@ -29,7 +29,10 @@ overflow: visible;
 
 const Hero = ({ title, introduction, image, items, success, action }) => (
   <Grid overflow="hidden" py={5}>
-    <ShadowBox gridColumn={["1/span 4", "1/span 4", "2/span 9"]}>
+    <ShadowBox
+      mr={[4, 4, 4, 0]}
+      gridColumn={["1/span 4", "1/span 4", "2/span 9"]}
+    >
       <Grid bg="p1">
         <Column
           color="white"

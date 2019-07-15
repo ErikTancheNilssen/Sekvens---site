@@ -31,6 +31,7 @@ const Solutions = ({ items, compact }) => (
         borderColor="p3"
         key={index}
         p={4}
+        mr={4}
         columns={[4, 4, 6, 4]}
         bg={active ? "p4_15" : "white"}
         mb={4}
