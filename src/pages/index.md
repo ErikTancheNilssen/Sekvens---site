@@ -38,7 +38,7 @@ blocks:
     type: FunctionsList
   - items:
       - description: >-
-          Bestillingsportalen kan inne- holde både dine lagervarer og produkter
+          Bestillingsportalen kan inneholde både dine lagervarer og produkter
           med variabelt innhold - som visittkort, plakater, rollup og banner.
 
 
