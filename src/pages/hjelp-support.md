@@ -19,14 +19,24 @@ blocks:
       - description: >-
           Har du glemt passordet ditt, kan du tilbakestille det på
           innloggingssiden til Sekvens. Dersom du likevel får problemer med å
-          innloggingen kan du kontakte oss.
+          innloggingen kan du kontakte <mailto:kundeservice@etn.no>.
         title: Jeg har glemt passordet mitt.
       - description: >-
           Det er kjedelig dersom du har støtt på en feil, men vi setter pris på
           å høre om det slik at vi kan bli bedre. Du kan rapportere både feil og
           gi oss andre tilbakemeldinger på <mailto:kundeservice@etn.no>.
         title: Jeg har oppdaget en feil i Sekvens. Hvor kan jeg melde fra?
-      - description: '???'
+      - description: >-
+          Vi lagrer det minimumet av personlig informasjon som er nødvendig for
+          å opprettholde tjenesten. Personopplysninger blir behandlet
+          konfidensielt og i henhold til gjeldende lovverk.
+
+
+          Vi deler ikke personopplysninger med tredjepart. 
+
+
+          Hvis din bedrift ønsker det lager vi gjerne en individuell
+          databehandleravtale med dere.
         title: Hvordan ivaretar Sekvens mitt personvern?
       - description: >-
           Det kommer an på produktet du har bestilt. Du finner informasjon om
