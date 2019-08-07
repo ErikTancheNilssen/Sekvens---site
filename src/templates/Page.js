@@ -5,12 +5,13 @@ import PageTemplate from "./PageTemplate.js";
 
 const IndexPage = ({ data }) => {
   const {
-    markdownRemark: { frontmatter },
-    allMarkdownRemark
+    markdownRemark: { frontmatter, html },
+    allMarkdownRemark: { edges }
   } = data;
+
   return (
     <Layout {...frontmatter}>
-      <PageTemplate {...frontmatter} pages={allMarkdownRemark.edges} />
+      <PageTemplate html={html} {...frontmatter} pages={edges} />
     </Layout>
   );
 };

@@ -11,7 +11,8 @@ export const PageTemplate = ({
   introduction,
   menuColor,
   blocks = [],
-  pages = []
+  pages = [],
+  html
 }) => (
   <>
     <Box fontSize={[2, 2, 3]} pt={5} pb={4} bg={menuColor ? menuColor : "p4"}>
@@ -21,6 +22,16 @@ export const PageTemplate = ({
         </Column>
       </Grid>
     </Box>
+
+    {!!html && (
+      <Grid>
+        <Column
+          pt={5}
+          dangerouslySetInnerHTML={{ __html: html }}
+          columns={[4, 4, 12]}
+        />
+      </Grid>
+    )}
     <Blocks blocks={blocks} />
     <Footer pages={pages} />
   </>
