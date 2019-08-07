@@ -2,7 +2,7 @@
 templateKey: Page
 title: Sekvens.
 introduction: >-
-  Endelig en helhetlig løsning for produksjon, lagerhold og distribusjon av
+  Endelig en helhetlig løsning for produksjon, lagring og distribusjon av
   trykksaker.
 hide: true
 blocks:
@@ -10,7 +10,7 @@ blocks:
     image: /images/iphone8.png
     title: Den følelsen du får av å bruke Sekvens!
     introduction: >-
-      Endelig en helhetlig løsning for produksjon, lagerhold og distribusjon av
+      Endelig en helhetlig løsning for produksjon, lagring og distribusjon av
       trykksaker.
     type: Hero
   - items:
