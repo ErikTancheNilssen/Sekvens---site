@@ -1,28 +1,39 @@
 ---
 templateKey: Page
 title: Sekvens.
-introduction: Endelig en helhetlig løsning for trykksaker
+introduction: >-
+  Endelig en helhetlig løsning for produksjon, lagerhold og distribusjon av
+  trykksaker.
 hide: true
 blocks:
-  - image: /images/iphone8.png
+  - full: true
+    image: /images/iphone8.png
     title: Den følelsen du får av å bruke Sekvens!
-    introduction: Endelig en helhetlig løsning for trykksaker
+    introduction: >-
+      Endelig en helhetlig løsning for produksjon, lagerhold og distribusjon av
+      trykksaker.
     type: Hero
-    full: true
   - items:
-      - description: Velg produkt du ønsker å trykke opp eller last opp ditt eget dokument.
+      - description: >-
+          Last opp dokumentet du vil et trykke eller velg opptrykk av et
+          tidligere produkt. Oppgi antall og hvor produktet skal sendes.
         image: /images/tablet.png
         title: Første skritt er enkelt
-      - description: Sekvens ber din leder godkjenne bestilling (valgfritt)
+      - description: >-
+          Hvis du ikke har tilgang til å bestille trykksaker på organisasjonens
+          vegne sender Sekvens en forespørsel om godkjenning til din leder.
+          (valgfritt)
         image: /images/human.png
         title: Andre skritt er valgfritt
       - description: 'Sekvens trykker, pakker og sender produktet til mottakerene.'
         image: /images/printer.png
         title: Tredje skritt trenger du ikke tenke på
-      - description: Faktura sendes ut som avtalt. Rapporter kan hentes ut i Sekvens.
+      - description: >-
+          Produkter og faktura sendes ut som avtalt. Rapporter kan hentes i
+          Sekvens når du trenger det.
         image: /images/package.png
         title: Fjerde skritt er enda enklere enn det første
-    title: Slik fungerer det
+    title: 'Slik fungerer det:'
     introduction: ''
     type: FunctionsList
   - items:
