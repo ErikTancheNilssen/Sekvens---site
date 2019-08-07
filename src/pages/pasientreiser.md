@@ -6,7 +6,7 @@ introduction: >-
   informasjonsmateriell for pasientreiser. Dette er en kostnadsfri tjeneste, du
   betaler verken for materiell eller porto.
 hide: true
-menuColor: '#034584'
+menuColor: ''
 ---
 #### Kom i gang
 
