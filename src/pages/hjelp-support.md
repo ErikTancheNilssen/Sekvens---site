@@ -2,131 +2,80 @@
 templateKey: Page
 title: Hjelp & Support
 introduction: >-
-  Visittkort, profilartikler, brevark, rollups, bannere, beachflagg konvolutter
-  & brosjyrer.
+  Hvis ikke du finner svar på spørsmålet ditt under vil vi gjerne snakke med
+  deg. Skriv til kundeservice@etn.no, ring 35 90 40 60 eller chat med oss.
 hide: false
 blocks:
   - items:
       - description: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-          molestie risus quis orci commodo, porttitor tempor enim tempor. Fusce
-          mollis nisi sit amet tortor commodo fringilla. Vivamus sed rhoncus
-          lacus, quis suscipit sapien. Vestibulum at purus dapibus, placerat
-          tellus at, euismod nisl. Sed lorem neque, pretium nec eros ac,
-          tristique posuere mi. Phasellus ornare odio vel rutrum molestie. Sed
-          sollicitudin auctor accumsan. Nulla vulputate lorem at risus accumsan
-          tincidunt. Mauris imperdiet luctus nibh, sit amet tincidunt diam
-          malesuada venenatis. In hac habitasse platea dictumst. Vestibulum ante
-          ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-          Curae; Fusce scelerisque, ligula a porttitor mattis, dolor mi tempus
-          elit, vitae porttitor metus augue nec lacus.
-
-
-          Nulla accumsan diam sapien, semper elementum mi cursus sit amet.
-          Integer et auctor libero, sed tristique augue. Mauris nec iaculis
-          turpis. Nam faucibus justo quis tristique luctus. Pellentesque maximus
-          sed dolor at auctor. Curabitur ullamcorper interdum hendrerit. Proin
-          eu odio faucibus, tincidunt ex nec, tempor odio. Cras laoreet tellus
-          non luctus ornare.
-
-
-          Quisque nec nulla felis. Nulla vestibulum, libero eget faucibus
-          viverra, mi lacus feugiat purus, quis aliquet augue risus sed nulla.
-          Curabitur tincidunt lacinia dolor non blandit. Quisque porttitor
-          ultricies velit non viverra. Donec malesuada in mauris sit amet
-          varius. Duis semper elit id nibh sagittis, in laoreet augue
-          condimentum. Sed interdum tortor felis, ac laoreet massa facilisis in.
-          Aenean molestie ex auctor ipsum rutrum lacinia. Fusce fringilla
-          sagittis tincidunt. In blandit nisi nec pellentesque pulvinar.
-          Pellentesque tellus massa, facilisis euismod sem eu, aliquam volutpat
-          risus. Pellentesque a leo neque. Sed consectetur erat turpis, vel
-          volutpat tortor mattis a.
-
-
-          Aliquam feugiat, tortor et feugiat elementum, augue felis aliquam
-          lacus, tincidunt tristique libero erat a diam. Aenean quis lorem
-          blandit, eleifend mi quis, consectetur lacus. Vestibulum nec sagittis
-          sem. In posuere est at sem congue, eget posuere nisl mollis.
-          Vestibulum aliquet, elit eu vulputate euismod, nisi sem iaculis
-          sapien, id efficitur lorem erat pharetra mauris. Integer ac sapien
-          aliquet, suscipit lectus ornare, hendrerit orci. Mauris in mauris ex.
-          Vivamus sodales semper mattis. Sed euismod efficitur euismod. Integer
-          ultricies nulla sed laoreet gravida.
-
-
-          Morbi aliquam elit ac ante accumsan, vitae tempor elit facilisis.
-          Aenean vulputate massa eget eleifend ultrices. Fusce sollicitudin,
-          elit eu aliquam luctus, ex odio venenatis neque, et venenatis urna
-          tellus id magna. Fusce vehicula efficitur pellentesque. Pellentesque
-          eu ultricies quam. Fusce eu augue dui. Nulla tincidunt consequat quam
-          id dignissim. Integer felis neque, commodo et augue sed, lobortis
-          dignissim dui. Nunc sed arcu vestibulum, molestie ipsum vitae, blandit
-          sapien.
+          Hver enkelt kunde bestemmer om de vil ha prisinformasjon liggende i
+          Sekvens. Ta kontakt med ansvarlig i din bedrift for å få oversikt over
+          priser.
         title: Hvor mye koster produktene?
       - description: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-          molestie risus quis orci commodo, porttitor tempor enim tempor. Fusce
-          mollis nisi sit amet tortor commodo fringilla. Vivamus sed rhoncus
-          lacus, quis suscipit sapien. Vestibulum at purus dapibus, placerat
-          tellus at, euismod nisl. Sed lorem neque, pretium nec eros ac,
-          tristique posuere mi. Phasellus ornare odio vel rutrum molestie. Sed
-          sollicitudin auctor accumsan. Nulla vulputate lorem at risus accumsan
-          tincidunt. Mauris imperdiet luctus nibh, sit amet tincidunt diam
-          malesuada venenatis. In hac habitasse platea dictumst. Vestibulum ante
-          ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-          Curae; Fusce scelerisque, ligula a porttitor mattis, dolor mi tempus
-          elit, vitae porttitor metus augue nec lacus.
+          Du logger inn med ditt brukernavn og passord på
+          https://print.sekvens.app
+        title: Hvordan logger jeg meg inn?
+      - description: >-
+          Har du glemt passordet ditt, kan du tilbakestille det på
+          innloggingssiden til Sekvens. Dersom du likevel får problemer med å
+          innloggingen kan du kontakte oss.
+        title: Jeg har glemt passordet mitt.
+      - description: >-
+          Det er kjedelig dersom du har støtt på en feil, men vi setter pris på
+          å høre om det slik at vi kan bli bedre. Du kan rapportere både feil og
+          generelle tilbakemeldinger >>>>> HER <<<<<<.
+        title: Jeg har oppdaget en feil i Sekvens. Hvor kan jeg melde fra?
+      - description: '???'
+        title: Hvordan ivaretar Sekvens mitt personvern?
+      - description: >-
+          Det kommer an på produktet du har bestilt. Du finner informasjon om
+          estimert leveransedato inne på hvert produkt i ordrehistorikken:
 
 
-          Nulla accumsan diam sapien, semper elementum mi cursus sit amet.
-          Integer et auctor libero, sed tristique augue. Mauris nec iaculis
-          turpis. Nam faucibus justo quis tristique luctus. Pellentesque maximus
-          sed dolor at auctor. Curabitur ullamcorper interdum hendrerit. Proin
-          eu odio faucibus, tincidunt ex nec, tempor odio. Cras laoreet tellus
-          non luctus ornare.
+          1. Gå til “Min profil” fra hovedmenyen
+
+          2. Velg “Ordrehistorikk”
+
+          3. Velg Ordre for å finne leveransedato. 
 
 
-          Quisque nec nulla felis. Nulla vestibulum, libero eget faucibus
-          viverra, mi lacus feugiat purus, quis aliquet augue risus sed nulla.
-          Curabitur tincidunt lacinia dolor non blandit. Quisque porttitor
-          ultricies velit non viverra. Donec malesuada in mauris sit amet
-          varius. Duis semper elit id nibh sagittis, in laoreet augue
-          condimentum. Sed interdum tortor felis, ac laoreet massa facilisis in.
-          Aenean molestie ex auctor ipsum rutrum lacinia. Fusce fringilla
-          sagittis tincidunt. In blandit nisi nec pellentesque pulvinar.
-          Pellentesque tellus massa, facilisis euismod sem eu, aliquam volutpat
-          risus. Pellentesque a leo neque. Sed consectetur erat turpis, vel
-          volutpat tortor mattis a.
-
-
-          Aliquam feugiat, tortor et feugiat elementum, augue felis aliquam
-          lacus, tincidunt tristique libero erat a diam. Aenean quis lorem
-          blandit, eleifend mi quis, consectetur lacus. Vestibulum nec sagittis
-          sem. In posuere est at sem congue, eget posuere nisl mollis.
-          Vestibulum aliquet, elit eu vulputate euismod, nisi sem iaculis
-          sapien, id efficitur lorem erat pharetra mauris. Integer ac sapien
-          aliquet, suscipit lectus ornare, hendrerit orci. Mauris in mauris ex.
-          Vivamus sodales semper mattis. Sed euismod efficitur euismod. Integer
-          ultricies nulla sed laoreet gravida.
-
-
-          Morbi aliquam elit ac ante accumsan, vitae tempor elit facilisis.
-          Aenean vulputate massa eget eleifend ultrices. Fusce sollicitudin,
-          elit eu aliquam luctus, ex odio venenatis neque, et venenatis urna
-          tellus id magna. Fusce vehicula efficitur pellentesque. Pellentesque
-          eu ultricies quam. Fusce eu augue dui. Nulla tincidunt consequat quam
-          id dignissim. Integer felis neque, commodo et augue sed, lobortis
-          dignissim dui. Nunc sed arcu vestibulum, molestie ipsum vitae, blandit
-          sapien.
+          ![](/images/sekvens-trackingimage_preview.png)
         title: Hvor lang leveringstid er det?
+      - description: >-
+          Som regel går det fint. Kontakt
+          [kundeservice](mailto:kundeservice@etn.no) for å avbestille.
+        title: Kan jeg kansellere en bestilling?
+      - description: >-
+          Dersom det har gått mer tid enn vi har estimert kan du kontakte vår
+          [kundeservice](mailto:kundeservice@etn.no).
+        title: Hvor er varene mine?
+      - description: >-
+          Vi ønsker selvfølgelig at du blir fornøyd med produktene våre. Kontakt
+          gjerne  [kundeservice](mailto:kundeservice@etn.no) dersom du oppdager
+          manglende kvalitet på bestillingen din. 
+
+
+          Når det gjelder skrivefeil på redigerbare produkter har bruker selv
+          ansvar for å lese korrektur.
+        title: Jeg har mottatt et produkt som inneholder en feil. Hva gjør jeg?
+      - description: >-
+          Det er ikke noe problem. Gå til Min profil → Adresseinformasjon for å
+          redigere besøks- og leveringsadresse.
+        title: Kan jeg endre leveringsadressen min?
+      - description: >-
+          Ofte er fakturaadressen låst etter avtale. Kontakt
+          [kundeservice](mailto:kundeservice@etn.no)  for å endre dette.
+        title: Kan jeg oppdatere fakturaadressen?
     title: Hjelp & Support
     introduction: >-
-      Visittkort, profilartikler, brevark, rollups, bannere, beachflagg
-      konvolutter & brosjyrer.
+      Hvis ikke du finner svar på spørsmålet ditt under vil vi gjerne snakke med
+      deg. Skriv til <a
+      href="mailto:kundeservice@etn.no">kundeservice@etn.no</a>, ring <a
+      href="tel:"35904060">35 90 40 60</a> eller bruk chatten nederst til høyre
+      på denne siden.
     type: FAQ
   - action: Send melding
-    title: Står du fast?
-    introduction: 'Send oss melding, så kan vi hjelpe deg.'
     full: true
     items:
       - description: Maria Holte
@@ -136,6 +85,8 @@ blocks:
       - description: 'Fortel oss hva problem er. '
         textarea: true
         title: Hva trenger du help til?
+    title: Står du fast?
+    introduction: 'Send oss melding, så kan vi hjelpe deg.'
     success: /suksess
     type: HelpForm
 ---
