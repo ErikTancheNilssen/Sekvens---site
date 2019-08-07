@@ -14,7 +14,7 @@ blocks:
         title: Hvor mye koster produktene?
       - description: >-
           Du logger inn med ditt brukernavn og passord på
-          https://print.sekvens.app
+          <https://print.sekvens.app>
         title: Hvordan logger jeg meg inn?
       - description: >-
           Har du glemt passordet ditt, kan du tilbakestille det på
@@ -24,7 +24,7 @@ blocks:
       - description: >-
           Det er kjedelig dersom du har støtt på en feil, men vi setter pris på
           å høre om det slik at vi kan bli bedre. Du kan rapportere både feil og
-          generelle tilbakemeldinger >>>>> HER <<<<<<.
+          gi oss andre tilbakemeldinger på <mailto:kundeservice@etn.no>.
         title: Jeg har oppdaget en feil i Sekvens. Hvor kan jeg melde fra?
       - description: '???'
         title: Hvordan ivaretar Sekvens mitt personvern?
@@ -43,17 +43,17 @@ blocks:
           ![](/images/sekvens-trackingimage_preview.png)
         title: Hvor lang leveringstid er det?
       - description: >-
-          Som regel går det fint. Kontakt
-          [kundeservice](mailto:kundeservice@etn.no) for å avbestille.
+          Som regel går det fint. Kontakt <mailto:kundeservice@etn.no> for å
+          avbestille.
         title: Kan jeg kansellere en bestilling?
       - description: >-
           Dersom det har gått mer tid enn vi har estimert kan du kontakte vår
-          [kundeservice](mailto:kundeservice@etn.no).
+          <mailto:kundeservice@etn.no>.
         title: Hvor er varene mine?
       - description: >-
           Vi ønsker selvfølgelig at du blir fornøyd med produktene våre. Kontakt
-          gjerne  [kundeservice](mailto:kundeservice@etn.no) dersom du oppdager
-          manglende kvalitet på bestillingen din. 
+          gjerne  <mailto:kundeservice@etn.no> dersom du oppdager manglende
+          kvalitet på bestillingen din. 
 
 
           Når det gjelder skrivefeil på redigerbare produkter har bruker selv
@@ -65,7 +65,7 @@ blocks:
         title: Kan jeg endre leveringsadressen min?
       - description: >-
           Ofte er fakturaadressen låst etter avtale. Kontakt
-          [kundeservice](mailto:kundeservice@etn.no)  for å endre dette.
+          <mailto:kundeservice@etn.no> for å endre dette.
         title: Kan jeg oppdatere fakturaadressen?
     title: Hjelp & Support
     introduction: >-
