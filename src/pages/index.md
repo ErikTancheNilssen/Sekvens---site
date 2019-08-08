@@ -44,7 +44,9 @@ blocks:
 
           Vi lager maler slik at designet blir konsistent selv om mange ulike
           personer bestiller trykksaker med ulikt innhold.
-        title: Konsistent  visuell profil
+        title: |-
+          Konsistent 
+          visuell profil
       - description: >-
           Du bestemmer selvfølgelig hvem i din bedrift som har tilgang til å
           bestille varer.
