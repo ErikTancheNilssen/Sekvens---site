@@ -9,12 +9,12 @@ const GridSection = styled(Box)`
   grid-template-rows: auto;
   margin-left: auto; 
   margin-right: auto;
-  padding: 0 ${({ theme: { space } }) => space[3] + "px"};
+  padding: 0 ${({ theme: { space } }) => space[4] + "px"};
 
   ${layout}
   ${grid}
   ${border}
-${space}
+  ${space}
 `;
 
 const StyledBox = styled(Box)`
