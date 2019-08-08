@@ -44,9 +44,7 @@ blocks:
 
           Vi lager maler slik at designet blir konsistent selv om mange ulike
           personer bestiller trykksaker med ulikt innhold.
-        title:  >-
-          Konsistent 
-          visuell profil
+        title: Konsistent  visuell profil
       - description: >-
           Du bestemmer selvfølgelig hvem i din bedrift som har tilgang til å
           bestille varer.
@@ -54,8 +52,8 @@ blocks:
 
           Ved å samle administrasjon av alle trykksaker i Sekvens får du full
           oversikt over forbruket i hele organisasjonen.
-        title:  >-
-          Full kontroll på
+        title: |-
+          Full kontroll på 
           alle bestillinger
       - description: >-
           Lageret er i direkte forbindelse med produksjon og distribusjon - du
@@ -65,7 +63,9 @@ blocks:
 
           Du slipper forringelse av varer som følge av omlasting, støv, fukt og
           temperatursvingninger.
-        title: Enkelt lagerhold
+        title: |-
+          Enkelt 
+          lagerhold
       - description: >-
           Vi pakker og sender varene til mottakerene direkte fra vårt lager. Du
           slipper å motta en mengde varer som skal pakkes om og videresendes til
@@ -73,7 +73,9 @@ blocks:
 
 
           Du drar nytte av våre gode avtaler med Norges største distributørerer.
-        title: Direkte distribusjon
+        title: |-
+          Direkte 
+          distribusjon
     link:
       ext: false
       link: /funksjoner/
