@@ -33,7 +33,7 @@ blocks:
           Sekvens når du trenger det.
         image: /images/package.png
         title: Fjerde skritt er enda enklere enn det første
-    title: 'Slik fungerer det:'
+    title: Slik fungerer det
     introduction: ''
     type: FunctionsList
   - items:
