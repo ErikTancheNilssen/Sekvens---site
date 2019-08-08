@@ -25,11 +25,9 @@ export const PageTemplate = ({
 
     {!!html && (
       <Grid>
-        <Column
-          pt={5}
-          dangerouslySetInnerHTML={{ __html: html }}
-          columns={[4, 4, 12]}
-        />
+        <Column pt={5} columns={[4, 4, 6]}>
+          {html}
+        </Column>
       </Grid>
     )}
     <Blocks blocks={blocks} />

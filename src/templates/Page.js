@@ -9,9 +9,10 @@ const IndexPage = ({ data }) => {
     allMarkdownRemark: { edges }
   } = data;
 
+  const Body = html ? <div dangerouslySetInnerHTML={{ __html: html }} /> : null;
   return (
     <Layout {...frontmatter}>
-      <PageTemplate html={html} {...frontmatter} pages={edges} />
+      <PageTemplate html={Body} {...frontmatter} pages={edges} />
     </Layout>
   );
 };

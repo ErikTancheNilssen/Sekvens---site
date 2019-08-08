@@ -3,6 +3,7 @@ import { Grid, Column } from "./Grid.js";
 import { Link } from "gatsby";
 import { Heading, Box } from "rebass";
 import styled from "styled-components";
+import MarkDown from "react-markdown";
 import FunctionsList from "../components/FunctionsList.js";
 import FunctionsBlock from "../components/FunctionsBlock.js";
 import Solutions from "../components/Solutions.js";
@@ -21,10 +22,6 @@ const blockTypes = {
   FAQ,
   HelpForm
 };
-
-const LineBreaker = styled.h6`
-  white-space: pre-line;
-`;
 
 const TextBox = styled(Grid)`
   position: relative;
@@ -46,9 +43,7 @@ const Blocks = ({ blocks }) =>
             </Column>
             <Column gridColumn="1/span 4">
               {!!introduction && (
-                <LineBreaker className="introduction">
-                  {introduction}
-                </LineBreaker>
+                <MarkDown className="introduction" source={introduction} />
               )}
             </Column>
           </TextBox>

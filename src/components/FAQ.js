@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Heading, Flex, Box } from "rebass";
 import { Grid, Column } from "./Grid.js";
 import styled from "styled-components";
+import MarkDown from "react-markdown";
 
 const LineBreaker = styled.p`
   white-space: pre-line;
@@ -44,7 +45,7 @@ const FunctionsList = ({ items }) => {
             </FAQHeading>
             {open.has(index) && (
               <Box mt={4}>
-                {!!description && <LineBreaker>{description}</LineBreaker>}
+                {!!description && <MarkDown source={description} />}
               </Box>
             )}
           </Box>

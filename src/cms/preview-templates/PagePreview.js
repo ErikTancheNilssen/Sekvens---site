@@ -4,6 +4,7 @@ import Wrap from "../../wrap-with-provider.js";
 
 const PagePreview = ({ entry, getAsset, widgetFor }) => {
   const blocks = entry.getIn(["data", "blocks"]);
+
   return (
     <Wrap
       element={

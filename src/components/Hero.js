@@ -2,10 +2,7 @@ import React from "react";
 import { Heading, Box } from "rebass";
 import { Grid, Column } from "./Grid.js";
 import styled from "styled-components";
-
-const LineBreaker = styled.h6`
-  white-space: pre-line;
-`;
+import MarkDown from "react-markdown";
 
 const ImageBlock = styled(Column)`
   min-height: 50vh;
@@ -24,7 +21,7 @@ const Hero = ({ title, introduction, image }) => (
         </Heading>
 
         {!!introduction && (
-          <LineBreaker className="introduction">{introduction}</LineBreaker>
+          <MarkDown className="introduction" source={introduction} />
         )}
       </Column>
       {!!image && (

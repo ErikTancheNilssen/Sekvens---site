@@ -55,7 +55,7 @@ h5{
     font-size: 1.5rem; 
     line-height: 2rem;
 }
-h6{
+h6, .introduction{
     font-size: 1.25rem;
     line-height: 2rem;
     font-weight: lighter;

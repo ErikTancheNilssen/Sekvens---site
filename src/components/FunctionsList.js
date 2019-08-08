@@ -1,6 +1,7 @@
 import React from "react";
 import { Heading, Card } from "rebass";
 import { Grid, Column } from "./Grid.js";
+import MarkDown from "react-markdown";
 
 import styled from "styled-components";
 
@@ -8,10 +9,6 @@ const StyledImage = styled(Card)`
   min-height: 160px;
   background-repeat: no-repeat;
   background-size: auto 90%;
-`;
-
-const LineBreaker = styled.p`
-  white-space: pre-line;
 `;
 
 const FunctionsList = ({ items }) => (
@@ -36,7 +33,7 @@ const FunctionsList = ({ items }) => (
           {index + 1}
         </Heading>
         <h5>{title}</h5>
-        {!!description && <LineBreaker>{description}</LineBreaker>}
+        {!!description && <MarkDown source={description} />}
       </Column>
     ))}
   </Grid>

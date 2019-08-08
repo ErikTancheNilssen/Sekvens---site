@@ -80,9 +80,7 @@ blocks:
     title: Hjelp & Support
     introduction: >-
       Hvis ikke du finner svar på spørsmålet ditt under vil vi gjerne snakke med
-      deg. Skriv til <a
-      href="mailto:kundeservice@etn.no">kundeservice@etn.no</a>, ring <a
-      href="tel:"35904060">35 90 40 60</a> eller bruk chatten nederst til høyre
+      deg. Skriv til <mailto:kundeservice@etn.no>, ring [35 90 40 60](tel:35904060) eller bruk chatten nederst til høyre
       på denne siden.
     type: FAQ
   - action: Send melding
