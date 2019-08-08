@@ -9,7 +9,7 @@ const GridSection = styled(Box)`
   grid-template-rows: auto;
   margin-left: auto; 
   margin-right: auto;
-  padding: 0 ${({ theme: { space } }) => space[4] + "px"};
+  padding: 0 ${({ theme: { space } }) => space[3] + "px"};
 
   ${layout}
   ${grid}
@@ -24,12 +24,12 @@ const StyledBox = styled(Box)`
   ${grid}
   ${border}
   ${background}
-${space}
+  ${space}
 `;
 
 GridSection.defaultProps = {
   maxWidth: [1440],
-  gridColumnGap: [4, 4, 12],
+  gridColumnGap: [4, 4, 30],
   gridRowGap: [4, 4, 5],
   gridTemplateColumns: ["repeat(4, 1fr)", "repeat(4, 1fr)", "repeat(12, 1fr)"]
 };

@@ -1,10 +1,14 @@
 import React from "react";
-import { Image, Heading } from "rebass";
+import { Image, Heading, Text } from "rebass";
 import { Grid, Column } from "./Grid.js";
 
 import styled from "styled-components";
 
-const LineBreaker = styled.p`
+const Title = styled(Heading)`
+  white-space: pre-line;
+`;
+
+const Body = styled(Text)`
   white-space: pre-line;
   margin: 0;
 `;
@@ -34,14 +38,18 @@ const FunctionsBlock = ({
                 src={image.publicURL}
               />
             )}
-            <Heading
+            <Title
               color="p2"
               fontSize={compact ? [2, 2, 3] : [3, 3, 4]}
               mb={compact ? 2 : 3}
             >
               {title}
-            </Heading>
-            {!!description && <LineBreaker>{description}</LineBreaker>}
+            </Title>
+            {!!description && (
+              <Body fontSize={compact ? [1, 1, 2] : [2, 2, 3]}>
+                {description}
+              </Body>
+            )}
           </Column>
         ))}
       </Grid>

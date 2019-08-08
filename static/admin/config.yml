@@ -78,7 +78,7 @@ collections:
                 name: "items"
                 widget: "list"
                 fields:
-                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Title", name: "title", widget: "text"}
                   - {label: "Description", name: "description", required: false, widget: "text"}
           - label: "Solutions"
             name: "Solutions"

@@ -44,7 +44,9 @@ blocks:
 
           Vi lager maler slik at designet blir konsistent selv om mange ulike
           personer bestiller trykksaker med ulikt innhold.
-        title: Konsistent visuell profil
+        title:  >-
+          Konsistent 
+          visuell profil
       - description: >-
           Du bestemmer selvfølgelig hvem i din bedrift som har tilgang til å
           bestille varer.
@@ -52,7 +54,9 @@ blocks:
 
           Ved å samle administrasjon av alle trykksaker i Sekvens får du full
           oversikt over forbruket i hele organisasjonen.
-        title: Full kontroll på alle bestillinger
+        title:  >-
+          Full kontroll på
+          alle bestillinger
       - description: >-
           Lageret er i direkte forbindelse med produksjon og distribusjon - du
           slipper å håndtere mellomlagring og transport mellom produksjon, lager

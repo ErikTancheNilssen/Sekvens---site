@@ -40,7 +40,7 @@ const Solutions = ({ items, compact }) => (
           {title}
         </Heading>
         {!!introduction && (
-          <Heading color="p1" fontWeight="400" fontSize={[2, 2, 3]} mb={4}>
+          <Heading color="p1" fontWeight="400" fontSize={[1, 1, 2]} mb={4}>
             {introduction}
           </Heading>
         )}
