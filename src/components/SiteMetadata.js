@@ -8,6 +8,16 @@ const useSiteMetadata = () => {
           siteMetadata {
             siteTitle: title
             description
+            menuLinks {
+              name
+              path
+              highlight
+            }
+            footerLinks {
+              name
+              path
+              highlight
+            }
           }
         }
       }

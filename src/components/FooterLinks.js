@@ -14,14 +14,11 @@ const List = styled(Text)`
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  .highlight {
-    color: ${({ theme: { colors } }) => colors.p2};
-  }
 `;
 
 const Menu = props => {
   const { theme } = props;
-  const { menuLinks } = useSiteMetadata();
+  const { footerLinks } = useSiteMetadata();
   return (
     <StyledFlex justifyContent="space-between" alignItems="end">
       <Heading mr={2} mt="-.25rem" fontSize={5} fontWeight="300">
@@ -30,13 +27,9 @@ const Menu = props => {
         </Link>
       </Heading>
       <List fontWeight="100" as="ul" textAlign="right">
-        {menuLinks.map(({ name, path, highlight }, index) => (
+        {footerLinks.map(({ name, path, highlight }, index) => (
           <Box m={0} pl={[4, 4, 5]} as="li" key={path}>
-            <Link
-              className={highlight ? "highlight" : ""}
-              activeClassName="active"
-              to={path}
-            >
+            <Link activeClassName="active" to={path}>
               <Emojione text={name} />
             </Link>
           </Box>

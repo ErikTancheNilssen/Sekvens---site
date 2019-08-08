@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, Column } from "./Grid.js";
 import { Flex, Text, Box } from "rebass";
 import styled from "styled-components";
-import Menu from "./Menu.js";
+import Menu from "./FooterLinks.js";
 
 const ETN = styled.h5`
   font-size: 1rem;

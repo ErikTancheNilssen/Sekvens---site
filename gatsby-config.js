@@ -3,7 +3,33 @@ var proxy = require("http-proxy-middleware");
 module.exports = {
   siteMetadata: {
     title: "Sekvens.",
-    description: "Endelig en helhetlig løsning for trykksaker"
+    description: "Endelig en helhetlig løsning for trykksaker",
+    menuLinks: [
+      {
+        name: "Funksjoner",
+        path: "/funksjoner"
+      },
+      {
+        name: ":rocket: Kom i gang",
+        path: "/komIGang",
+        highlight: true
+      }
+    ],
+    footerLinks: [
+      {
+        name: "Hjelp",
+        path: "/hjelp-support"
+      },
+      {
+        name: "Funksjoner",
+        path: "/funksjoner"
+      },
+      {
+        name: ":rocket: Kom i gang",
+        path: "/komIGang",
+        highlight: true
+      }
+    ]
   },
   plugins: [
     "gatsby-plugin-react-helmet",

@@ -63,7 +63,7 @@ h6, .introduction{
 }
 
 a {
-  color: ${({ theme: { colors } }) => colors.p1};
+  color: ${({ theme: { colors } }) => colors.link};
   text-decoration: none;
   background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(${({
     theme: {
@@ -75,7 +75,7 @@ a {
   background-position: 0 85%, 100% 85%, 0 85%;
   text-decoration: none
 }
-a:hover{
+a:hover, a.active{
   background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(${({
     theme: {
       colors: { p3 }
@@ -117,8 +117,9 @@ ul {
 .button{
     font-size: .875rem;
     text-decoration: none;
-  text-transform: uppercase;
-  background: none;
+    text-transform: uppercase;
+    background: none;
+    letter-spacing: 1.25;
 }
 
 .overline {

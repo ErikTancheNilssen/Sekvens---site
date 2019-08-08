@@ -36,7 +36,8 @@ export default {
     text: "rgba(0, 0, 0, 0.85)",
     subtext: "rgba(0, 0, 0, 0.6)",
     none: "transprent",
-    success_bg: "#C9E2D4"
+    success_bg: "#C9E2D4",
+    link: "black"
   },
   space: [0, 4, 8, 15, 30, 45, 60, 120, 256],
   fonts: {
@@ -77,6 +78,7 @@ export default {
       fontWeight: 400,
       cursor: "pointer",
       border: "5px solid white",
+      letterSpacing: 1.25,
       "&:hover": {
         backgroundColor: darken(0.05, p1)
       }
@@ -89,7 +91,8 @@ export default {
       padding: "1em 2em",
       lineHeight: 1,
       fontWeight: 400,
-      cursor: "default"
+      cursor: "default",
+      letterSpacing: 1.25
     },
     hollow: {
       color: "black",
@@ -100,7 +103,8 @@ export default {
       padding: "1em 2em",
       lineHeight: 1,
       fontWeight: 400,
-      cursor: "pointer"
+      cursor: "pointer",
+      letterSpacing: 1.25
     }
   }
 };
