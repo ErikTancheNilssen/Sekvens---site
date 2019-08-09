@@ -10,6 +10,11 @@ module.exports = {
         path: "/funksjoner"
       },
       {
+        name: "Login",
+        ext: true,
+        path: "https://print.sekvens.app"
+      },
+      {
         name: ":rocket: Kom i gang",
         path: "/komIGang",
         highlight: true

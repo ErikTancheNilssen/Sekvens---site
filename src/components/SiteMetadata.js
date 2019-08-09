@@ -12,6 +12,7 @@ const useSiteMetadata = () => {
               name
               path
               highlight
+              ext
             }
             footerLinks {
               name

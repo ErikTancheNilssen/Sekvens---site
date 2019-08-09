@@ -30,15 +30,25 @@ const Menu = props => {
         </Link>
       </Heading>
       <List fontWeight="100" as="ul" textAlign="right">
-        {menuLinks.map(({ name, path, highlight }, index) => (
+        {menuLinks.map(({ name, path, highlight, ext }, index) => (
           <Box m={0} pl={[4, 4, 5]} as="li" key={path}>
-            <Link
-              className={highlight ? "highlight" : ""}
-              activeClassName="active"
-              to={path}
-            >
-              <Emojione text={name} />
-            </Link>
+            {ext ? (
+              <a
+                className={highlight ? "highlight" : ""}
+                target="_blank"
+                href={path}
+              >
+                <Emojione text={name} />
+              </a>
+            ) : (
+              <Link
+                className={highlight ? "highlight" : ""}
+                activeClassName="active"
+                to={path}
+              >
+                <Emojione text={name} />
+              </Link>
+            )}
           </Box>
         ))}
       </List>
