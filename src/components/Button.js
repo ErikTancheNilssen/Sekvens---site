@@ -7,7 +7,8 @@ const ThemedButton = styled(Base)`
   align-items: center;
   display: inline-flex;
 
-  &:focus {
+  &:focus,
+  &:hover {
     outline: none;
     border-color: ${({ theme }) => theme.colors.lightgray};
   }
@@ -24,7 +25,14 @@ const Button = props => {
   variant = props.disabled ? "disabled" : variant;
   variant = props.hollow ? "hollow" : variant;
 
-  return <ThemedButton fontFamily="sans" variant={variant} {...props} />;
+  return (
+    <ThemedButton
+      className="button"
+      fontFamily="sans"
+      variant={variant}
+      {...props}
+    />
+  );
 };
 
 export default Button;

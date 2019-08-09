@@ -80,7 +80,7 @@ export default {
       border: "5px solid white",
       letterSpacing: 1.25,
       "&:hover": {
-        backgroundColor: darken(0.05, p1)
+        background: darken(0.05, p1)
       }
     },
     disabled: {
