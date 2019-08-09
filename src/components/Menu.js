@@ -36,6 +36,7 @@ const Menu = props => {
               <a
                 className={highlight ? "highlight" : ""}
                 target="_blank"
+                rel="noopener"
                 href={path}
               >
                 <Emojione text={name} />
