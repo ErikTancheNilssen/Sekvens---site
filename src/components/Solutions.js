@@ -4,7 +4,6 @@ import { Grid, Column } from "./Grid.js";
 import Checklist from "./Checklist.js";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
-import BG from "../images/solution_bg.svg";
 
 const ShadowBox = styled(Column)`
 position relative;

@@ -56,40 +56,22 @@ const NotFoundPage = () => (
           <Grid px={0} mt={3} mb={6}>
             <InfoBox py={5} columns={[4, 4, 6]}>
               <h5>Standardmateriell</h5>
-              <a
-                href="http://print.sekvens.app/login.aspx?user=PR_standard_test&pw=2019_singlesign_test*"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://pr.no">
                 <Image src={standard} />
               </a>
               <Box mt={4}>
-                <Button
-                  as="a"
-                  href="http://print.sekvens.app/login.aspx?user=PR_standard_test&pw=2019_singlesign_test*"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Button as="a" href="https://pr.no">
                   Gå til butikk
                 </Button>
               </Box>
             </InfoBox>
             <InfoBox py={5} columns={[4, 4, 6]} bg="p3_15">
               <h5>Rekvisisjonsblokk</h5>
-              <a
-                href="http://print.sekvens.app/login.aspx?user=PR_rek_test&pw=2019_singlesign_test*"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://pr.no">
                 <Image src={rek} />
               </a>
               <Box mt={4}>
-                <Button
-                  as="a"
-                  href="http://print.sekvens.app/login.aspx?user=PR_rek_test&pw=2019_singlesign_test*"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Button as="a" href="https://pr.no">
                   Gå til butikk
                 </Button>
               </Box>

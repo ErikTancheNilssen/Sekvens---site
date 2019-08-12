@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "../components/Layout";
-import Blocks from "../components/Blocks.js";
 import Footer from "../components/Footer.js";
 import Menu from "../components/Menu.js";
 import { Grid, Column } from "../components/Grid.js";
@@ -11,7 +10,7 @@ const NotFoundPage = () => (
     <Box pt={5} pb={4} bg="p4">
       <Grid>
         <Column columns={[4, 4, 12]}>
-          <Menu pages={[]} />
+          <Menu />
         </Column>
       </Grid>
     </Box>
@@ -26,6 +25,7 @@ const NotFoundPage = () => (
             </p>
           </Text>
         </Box>
+        <Footer />
       </Column>
     </Grid>
   </Layout>

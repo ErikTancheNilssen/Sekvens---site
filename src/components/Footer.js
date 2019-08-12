@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Column } from "./Grid.js";
-import { Flex, Text, Box } from "rebass";
+import { Flex, Box } from "rebass";
 import styled from "styled-components";
 import Menu from "./FooterLinks.js";
 

@@ -4,10 +4,6 @@ import { Grid, Column } from "./Grid.js";
 import styled from "styled-components";
 import MarkDown from "react-markdown";
 
-const LineBreaker = styled.p`
-  white-space: pre-line;
-`;
-
 const FAQHeading = styled(Flex)`
   cursor: pointer;
   user-select: none;
