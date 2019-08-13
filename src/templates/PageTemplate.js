@@ -10,18 +10,21 @@ export const PageTemplate = ({
   title,
   introduction,
   menuColor,
+  noframe,
   blocks = [],
   pages = [],
   html
 }) => (
   <>
-    <Box fontSize={[2, 2, 3]} pt={5} pb={4} bg={menuColor ? menuColor : "p4"}>
-      <Grid>
-        <Column columns={[4, 4, 12]}>
-          <Menu pages={pages} />
-        </Column>
-      </Grid>
-    </Box>
+    {!noframe && (
+      <Box fontSize={[2, 2, 3]} pt={5} pb={4} bg={menuColor ? menuColor : "p4"}>
+        <Grid>
+          <Column columns={[4, 4, 12]}>
+            <Menu pages={pages} />
+          </Column>
+        </Grid>
+      </Box>
+    )}
 
     {!!html && (
       <Grid>
@@ -31,7 +34,7 @@ export const PageTemplate = ({
       </Grid>
     )}
     <Blocks blocks={blocks} />
-    <Footer pages={pages} />
+    {!noframe && <Footer pages={pages} />}
   </>
 );
 

@@ -4,6 +4,7 @@ title: Suksess!
 introduction: Du er et skritt nærmere en bedre arbeidsflyt
 hide: true
 menuColor: white
+noframe: true
 blocks:
   - action: Tilbake til forsiden
     full: true

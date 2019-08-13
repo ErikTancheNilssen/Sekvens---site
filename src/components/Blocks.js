@@ -33,7 +33,7 @@ const Blocks = ({ blocks }) =>
     const Item = blockTypes[type] || React.Fragment;
 
     return (
-      <Box mb={5} key={index}>
+      <Box key={index}>
         {!full && (
           <TextBox mt={[4, 4, 5, 7]}>
             <Column columns={[4, 4, 6]}>

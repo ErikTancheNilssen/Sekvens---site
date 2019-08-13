@@ -9,7 +9,7 @@ const LineBreaker = styled.h6`
 `;
 
 const PageBlock = styled(Flex)`
-  min-height: 80vh;
+  min-height: calc(100vh - 110px);
 `;
 
 const TextBlock = styled(Box)`
@@ -25,7 +25,6 @@ const Picture = styled(Card)`
 
 const Hero = ({ title, introduction, image, items, success, action }) => (
   <Flex
-    mb={7}
     flexDirection={[
       "column-reverse",
       "column-reverse",
@@ -88,12 +87,7 @@ const Hero = ({ title, introduction, image, items, success, action }) => (
       <Picture
         width={[1, 1, 1, 0.5]}
         backgroundSize={["70% auto", "70% auto", "70% auto", "70% 90%"]}
-        backgroundPosition={[
-          "center 10px",
-          "center 10px",
-          "center 10px",
-          "70% 90%"
-        ]}
+        backgroundPosition={["center 10px", "center 10px", "center center"]}
         backgroundImage={`url(${image.publicURL ? image.publicURL : image})`}
       />
     )}

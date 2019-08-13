@@ -40,6 +40,7 @@ export const pageQuery = graphql`
         title
         introduction
         menuColor
+        noframe
         blocks {
           title
           introduction

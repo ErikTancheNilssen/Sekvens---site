@@ -25,7 +25,7 @@ const MadeByETN = styled(Box)`
 const Footer = ({ pages }) => (
   <Grid>
     <Column>
-      <Flex flexWrap="wrap" mt={7} mb={3}>
+      <Flex flexWrap="wrap" mt={6} mb={3}>
         <Box mb={5}>
           <Menu pages={pages} />
         </Box>
