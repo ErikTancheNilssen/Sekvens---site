@@ -8,7 +8,7 @@ hide: true
 blocks:
   - full: true
     image: /images/iphone8.png
-    title: Trykksaksautomat
+    title: 'Trykk, enkelt.'
     introduction: >-
       Endelig en helhetlig løsning for produksjon, lagring og distribusjon av
       trykksaker.
