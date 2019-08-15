@@ -19,7 +19,6 @@ ThemedInput.defaultProps = {
 };
 
 const Input = props => {
-  console.log(props);
   return (
     <ThemedInput
       fontSize={3}

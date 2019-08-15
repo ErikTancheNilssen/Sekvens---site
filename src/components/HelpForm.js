@@ -27,7 +27,7 @@ overflow: visible;
   }
 `;
 
-const Hero = ({ title, introduction, image, items, success, action }) => (
+const HelpForm = ({ title, introduction, items, success, action }) => (
   <Grid overflow="hidden" py={5}>
     <ShadowBox
       mr={[4, 4, 4, 0]}
@@ -86,4 +86,4 @@ const Hero = ({ title, introduction, image, items, success, action }) => (
   </Grid>
 );
 
-export default Hero;
+export default HelpForm;

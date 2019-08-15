@@ -50,7 +50,7 @@ const Hero = ({ title, introduction, image, items, success, action }) => (
           {(items || []).map(({ title, description, textarea }, index) => (
             <Box my={4} key={index}>
               <Box mb={2}>
-                <Text as="label" for={index + title}>
+                <Text as="label" htmlFor={index + title}>
                   {title}
                 </Text>
               </Box>
