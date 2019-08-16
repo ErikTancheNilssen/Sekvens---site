@@ -60,16 +60,10 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-gtag",
       options: {
         trackingId: "UA-111431549-6",
-        head: false,
-        respectDNT: true,
-        exclude: ["/report/**"],
-        pageTransitionDelay: 0,
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        cookieDomain: "sekvens.app"
+        anonymize: true
       }
     },
     {
