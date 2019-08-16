@@ -75,7 +75,7 @@ const HelpForm = ({ title, introduction, items, success, action }) => (
             <input type="hidden" name="form-name" value={title} />
 
             <Text textAlign="right">
-              <Button as="button" type="submit">
+              <Button variant="outline" as="button" type="submit">
                 {action}
               </Button>
             </Text>

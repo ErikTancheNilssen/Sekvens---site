@@ -77,6 +77,20 @@ export default {
       lineHeight: 1,
       fontWeight: 400,
       cursor: "pointer",
+      letterSpacing: 1.25,
+      "&:hover": {
+        background: darken(0.05, p1)
+      }
+    },
+    outline: {
+      color: "rgba(255,255,255,0.87)",
+      fontFamily: "apercu, system-ui, sans-serif",
+      backgroundColor: p1,
+      borderRadius: "3em",
+      padding: "1em 2em",
+      lineHeight: 1,
+      fontWeight: 400,
+      cursor: "pointer",
       border: "5px solid white",
       letterSpacing: 1.25,
       "&:hover": {

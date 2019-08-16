@@ -39,5 +39,12 @@ blocks:
         introduction: 'Alle funksjoner i Standard og Enterprise pluss:'
     title: Løsninger
     type: Solutions
+  - action: Kontakt oss
+    full: true
+    success: mailto:kundeservice@etn.no
+    title: Hvilken løsning passer for meg?
+    introduction: >-
+       Snakk med vår salgsavdeling for å komme i gang!
+    type: Chat    
 ---
 

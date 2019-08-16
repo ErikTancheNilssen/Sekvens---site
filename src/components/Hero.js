@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Flex, Box, Card, Text } from "rebass";
+import { Heading, Flex, Card, Text } from "rebass";
 import styled from "styled-components";
 import MarkDown from "react-markdown";
 

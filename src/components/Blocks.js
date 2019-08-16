@@ -12,6 +12,8 @@ import Form from "../components/Form.js";
 import Success from "../components/Success.js";
 import FAQ from "../components/FAQ.js";
 import HelpForm from "../components/HelpForm.js";
+import Chat from "../components/Chat.js";
+
 const blockTypes = {
   FunctionsList,
   FunctionsBlock,
@@ -20,7 +22,8 @@ const blockTypes = {
   Form,
   Success,
   FAQ,
-  HelpForm
+  HelpForm,
+  Chat
 };
 
 const TextBox = styled(Grid)`
