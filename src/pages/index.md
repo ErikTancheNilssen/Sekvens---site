@@ -8,7 +8,7 @@ hide: true
 blocks:
   - full: true
     image: /images/cards.png
-    title: Enkelt
+    title: 'Trykkeri, gjort enkelt'
     introduction: >-
       Sekvens er en helhetlig løsning for produksjon, lagring og distribusjon av
       trykksaker.
