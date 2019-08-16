@@ -60,7 +60,7 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-intercom",
+      resolve: "gatsby-plugin-intercom-spa",
       options: {
         app_id: "cnz8lb75",
         skin: "sekvens website",

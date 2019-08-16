@@ -1,4 +1,5 @@
 import axios from "axios";
+import store from "store2";
 
 export const impleo = axios.create({
   baseURL: "https://api.sekvens.app"
@@ -54,8 +55,8 @@ export const logout = () => {
 };
 
 export const checkLogin = action => {
-  const token = localStorage.getItem("impleoToken");
-  const tokenExpires = Number(localStorage.getItem("impleoTokenExpires"));
+  const token = store.get("impleoToken");
+  const tokenExpires = Number(store.get("impleoTokenExpires"));
 
   return tokenExpires > new Date().valueOf() / 1000
     ? updateToken(token)
@@ -64,11 +65,10 @@ export const checkLogin = action => {
 
 export const storeToken = (token, expires) => {
   if (token) {
-    console.log(token);
-    localStorage.setItem("impleoToken", token);
-    localStorage.setItem("impleoTokenExpires", expires);
+    store.set("impleoToken", token);
+    store.set("impleoTokenExpires", expires);
   } else {
-    localStorage.removeItem("impleoToken");
-    localStorage.removeItem("impleoTokenExpires");
+    store.remove("impleoToken");
+    store.remove("impleoTokenExpires");
   }
 };
