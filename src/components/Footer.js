@@ -7,7 +7,6 @@ import Menu from "./FooterLinks.js";
 const ETN = styled(Text)`
   font-size: 1rem;
   font-weight: 100;
-  line-height: 2rem;
   a {
     color: black;
     background: transparent;
@@ -34,7 +33,7 @@ const Footer = ({ pages }) => (
           <Menu />
         </Box>
 
-        <MadeByETN flexGrow={1}>
+        <MadeByETN mb={4} flexGrow={1}>
           <ETN textAlign={["left", "left", "right"]}>
             <a
               rel="noopener noreferrer"

@@ -153,6 +153,20 @@ collections:
               - {label: "Back text", name: "action", widget: "string"}
               - {label: "Back URL", name: "success", widget: "string"}
               - {label: "Image", name: "image", widget: "image", required: false}
+          - label: "Chat"
+            name: "Chat"
+            widget: "object"
+            fields:
+              - {
+              label: "Full width",
+              name: "full",
+              widget: "hidden",
+              default: true,
+              }
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Introduction", name: "introduction", required: false,  widget: "text"}
+              - {label: "Back text", name: "action", widget: "string"}
+              - {label: "Back URL", name: "success", widget: "string"}
           - label: "FAQ"
             name: "FAQ"
             widget: "object"
