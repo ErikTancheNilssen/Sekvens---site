@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Flex, Box, Card } from "rebass";
+import { Heading, Flex, Box, Card, Text } from "rebass";
 import styled from "styled-components";
 import MarkDown from "react-markdown";
 
@@ -10,7 +10,7 @@ const ImageBlock = styled(Card)`
   background-position: 0 50%;
 `;
 
-const TextBlock = styled(Box)`
+const TextBlock = styled(Text)`
   max-width: 400px;
 `;
 
@@ -26,12 +26,11 @@ const Hero = ({ title, introduction, image }) => (
     ]}
   >
     <Flex
-      justifyContent="center"
-      alignItems="center"
+      justifyContent="flex-end"
       bg="p4_15"
       width={image ? [1, 1, 1, 0.5] : [1]}
     >
-      <TextBlock py={5} m={[4, 4, 5, 7]}>
+      <TextBlock textAlign="right" py={5} m={[4, 4, 5, 7]}>
         <Heading mb={3} fontSize={[5, 5, 8]}>
           {title}
         </Heading>
@@ -43,7 +42,7 @@ const Hero = ({ title, introduction, image }) => (
     </Flex>
     <ImageBlock
       backgroundImage={`url(${image.publicURL ? image.publicURL : image})`}
-      pt={[4, 4, 5, 7]}
+      py={[4, 4, 5, 7]}
       width={[1, 1, 1, 0.5]}
     />
   </Flex>
