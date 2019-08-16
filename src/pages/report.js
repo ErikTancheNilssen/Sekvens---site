@@ -5,7 +5,7 @@ import Footer from "../components/Footer.js";
 import Menu from "../components/Menu.js";
 import { Grid, Column } from "../components/Grid.js";
 import { Box } from "rebass";
-import Loginform from "../components/Loginform.js";
+import Loginform from "../components/LoginForm.js";
 import Orders from "../components/Orders.js";
 import { checkLogin } from "../impleo/api.js";
 

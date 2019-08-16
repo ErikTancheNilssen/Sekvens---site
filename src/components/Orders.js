@@ -4,7 +4,7 @@ import { Grid, Column } from "./Grid.js";
 
 import { getProfile, getCompanies } from "../impleo/api.js";
 
-const Loginform = ({ token }) => {
+const Orders = ({ token }) => {
   const [{ fullName }, setProfile] = useState(false);
   const [companies, setCompanies] = useState([]);
 
@@ -37,4 +37,4 @@ const Loginform = ({ token }) => {
   );
 };
 
-export default Loginform;
+export default Orders;
