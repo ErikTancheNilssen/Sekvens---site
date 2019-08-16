@@ -60,6 +60,19 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-111431549-6",
+        head: false,
+        respectDNT: true,
+        exclude: ["/report/**"],
+        pageTransitionDelay: 0,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "sekvens.app"
+      }
+    },
+    {
       resolve: "gatsby-plugin-intercom-spa",
       options: {
         app_id: "cnz8lb75",
