@@ -80,7 +80,7 @@ blocks:
           distribusjon
     link:
       ext: false
-      link: /funksjoner/
+      link: /losninger
       text: Se alle funksjoner
     title: >-
       Sekvens gir deg full kontroll over produksjon, lagring og distribusjon av
