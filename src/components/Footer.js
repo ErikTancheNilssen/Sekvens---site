@@ -1,13 +1,12 @@
 import React from "react";
 import { Grid, Column } from "./Grid.js";
-import { Flex, Box } from "rebass";
+import { Flex, Box, Text } from "rebass";
 import styled from "styled-components";
 import Menu from "./FooterLinks.js";
 
-const ETN = styled.h5`
+const ETN = styled(Text)`
   font-size: 1rem;
   font-weight: 100;
-  text-align: right;
   line-height: 2rem;
   a {
     color: black;
@@ -25,13 +24,18 @@ const MadeByETN = styled(Box)`
 const Footer = ({ pages }) => (
   <Grid>
     <Column>
-      <Flex flexWrap="wrap" mt={6} mb={3}>
+      <Flex
+        flexDirection={["column", "column", "row"]}
+        flexWrap="wrap"
+        mt={6}
+        mb={3}
+      >
         <Box mb={5}>
-          <Menu pages={pages} />
+          <Menu />
         </Box>
 
         <MadeByETN flexGrow={1}>
-          <ETN>
+          <ETN textAlign={["left", "left", "right"]}>
             <a
               rel="noopener noreferrer"
               target="_blank"

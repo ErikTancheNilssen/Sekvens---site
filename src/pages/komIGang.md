@@ -5,7 +5,7 @@ introduction: Kom i gang med Sekvens
 blocks:
   - action: Kom i gang
     full: true
-    image: /images/iphone-8.svg
+    image: /images/cards.png
     items:
       - description: Maria Holte
         title: Navn

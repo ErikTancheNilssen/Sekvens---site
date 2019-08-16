@@ -86,8 +86,7 @@ const Hero = ({ title, introduction, image, items, success, action }) => (
     {!!image && (
       <Picture
         width={[1, 1, 1, 0.5]}
-        backgroundSize={["70% auto", "70% auto", "70% auto", "70% 90%"]}
-        backgroundPosition={["center 10px", "center 10px", "center center"]}
+        backgroundSize={["cover"]}
         backgroundImage={`url(${image.publicURL ? image.publicURL : image})`}
       />
     )}

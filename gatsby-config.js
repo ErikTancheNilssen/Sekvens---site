@@ -66,7 +66,7 @@ module.exports = {
         skin: "sekvens website",
         background_color: "#FFF2ED",
         action_color: "#8A1F60",
-        includeInDevelopment: true
+        include_in_development: true
       }
     },
     "gatsby-plugin-sharp",
