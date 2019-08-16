@@ -11,6 +11,12 @@ const FAQHeading = styled(Flex)`
   border-bottom-color: ${({ theme: { colors } }) => colors.b_20};
 `;
 
+const Text = styled(Box)`
+  img {
+    max-width: 100%;
+  }
+`;
+
 const FunctionsList = ({ items }) => {
   const [ids, setOpen] = useState([]);
   const open = new Set(ids);
@@ -40,9 +46,9 @@ const FunctionsList = ({ items }) => {
               <Heading>{title}</Heading>
             </FAQHeading>
             {open.has(index) && (
-              <Box mt={4}>
+              <Text mt={4}>
                 {!!description && <MarkDown source={description} />}
-              </Box>
+              </Text>
             )}
           </Box>
         ))}
