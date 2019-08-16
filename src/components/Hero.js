@@ -4,7 +4,7 @@ import styled from "styled-components";
 import MarkDown from "react-markdown";
 
 const ImageBlock = styled(Card)`
-  min-height: 400px;
+  min-height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 50%;
