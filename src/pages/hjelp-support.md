@@ -50,7 +50,7 @@ blocks:
           3. Velg Ordre for å finne leveransedato. 
 
 
-          ![](/images/sekvens-trackingimage_preview.png)
+          ![](/images/ordre.jpg)
         title: Hvor lang leveringstid er det?
       - description: >-
           Som regel går det fint. Kontakt <mailto:kundeservice@etn.no> for å
