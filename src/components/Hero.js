@@ -1,21 +1,37 @@
 import React from "react";
-import { Heading, Box } from "rebass";
-import { Grid, Column } from "./Grid.js";
+import { Heading, Flex, Box, Card } from "rebass";
 import styled from "styled-components";
 import MarkDown from "react-markdown";
 
-const ImageBlock = styled(Column)`
-  min-height: 50vh;
+const ImageBlock = styled(Card)`
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 50%;
+`;
+
+const TextBlock = styled(Box)`
+  max-width: 400px;
 `;
 
 const Hero = ({ title, introduction, image }) => (
-  <Box bg="p4" mb={3} pt={[4, 4, 5, 7]}>
-    <Grid>
-      <Column
-        gridColumn={["1/span 4", "1/span 4", "2/span 6"]}
-        pt={[0, 0, 4]}
-        px={[2, 2, 0]}
-      >
+  <Flex
+    backgroundColor="p4"
+    pt={2}
+    flexDirection={[
+      "column-reverse",
+      "column-reverse",
+      "column-reverse",
+      "row"
+    ]}
+  >
+    <Flex
+      justifyContent="center"
+      alignItems="center"
+      bg="p4_15"
+      width={image ? [1, 1, 1, 0.5] : [1]}
+    >
+      <TextBlock py={5} m={[4, 4, 5, 7]}>
         <Heading mb={3} fontSize={[5, 5, 8]}>
           {title}
         </Heading>
@@ -23,17 +39,14 @@ const Hero = ({ title, introduction, image }) => (
         {!!introduction && (
           <MarkDown className="introduction" source={introduction} />
         )}
-      </Column>
-      {!!image && (
-        <ImageBlock
-          columns={[4]}
-          mt={[0, 0, -4]}
-          backgroundImage={`url(${image.publicURL ? image.publicURL : image})`}
-          backgroundPosition={["center", "center", " 100% 100%"]}
-        />
-      )}
-    </Grid>
-  </Box>
+      </TextBlock>
+    </Flex>
+    <ImageBlock
+      backgroundImage={`url(${image.publicURL ? image.publicURL : image})`}
+      pt={[4, 4, 5, 7]}
+      width={[1, 1, 1, 0.5]}
+    />
+  </Flex>
 );
 
 export default Hero;

@@ -14,6 +14,7 @@ const List = styled(Text)`
   margin: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   .highlight {
     color: ${({ theme: { colors } }) => colors.p2};
   }

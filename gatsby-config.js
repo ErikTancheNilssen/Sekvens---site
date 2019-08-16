@@ -6,8 +6,8 @@ module.exports = {
     description: "Endelig en helhetlig løsning for trykksaker",
     menuLinks: [
       {
-        name: "Funksjoner",
-        path: "/funksjoner"
+        name: "Løsninger",
+        path: "/losninger"
       },
       {
         name: "Login",
@@ -26,8 +26,8 @@ module.exports = {
         path: "/hjelp-support"
       },
       {
-        name: "Funksjoner",
-        path: "/funksjoner"
+        name: "Løsninger",
+        path: "/losninger"
       },
       {
         name: ":rocket: Kom i gang",
@@ -57,6 +57,16 @@ module.exports = {
       options: {
         path: `${__dirname}/src/images`,
         name: "images"
+      }
+    },
+    {
+      resolve: "gatsby-plugin-intercom",
+      options: {
+        app_id: "cnz8lb75",
+        skin: "sekvens website",
+        background_color: "#FFF2ED",
+        action_color: "#8A1F60",
+        includeInDevelopment: true
       }
     },
     "gatsby-plugin-sharp",

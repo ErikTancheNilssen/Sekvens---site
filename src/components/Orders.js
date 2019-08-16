@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Heading, Text, Box } from "rebass";
 import { Grid, Column } from "./Grid.js";
-import styled from "styled-components";
+
 import { getProfile, getCompanies } from "../impleo/api.js";
 
 const Loginform = ({ token }) => {

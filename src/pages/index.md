@@ -7,11 +7,10 @@ introduction: >-
 hide: true
 blocks:
   - full: true
-    image: /images/iphone8.png
-    title: 'Trykk, enkelt.'
+    image: /images/cards.png
+    title: 'Enkelt'
     introduction: >-
-      Endelig en helhetlig løsning for produksjon, lagring og distribusjon av
-      trykksaker.
+      En helhetlig løsning trykksaker.
     type: Hero
   - items:
       - description: >-
