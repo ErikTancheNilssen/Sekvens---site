@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Flex, Text, Box } from "rebass";
+import { format, parse } from "date-fns";
 
 import { getOrderLines } from "../impleo/api.js";
 
@@ -41,12 +42,18 @@ const OrderLines = ({ orderID }) => {
   }, [orderID]);
 
   if (!order) return null;
+  if (200 === orderID) console.log(order);
 
   const {
     date,
     deliveryCompanyname,
     externalOrderID,
     templateOrderLines,
+    reference,
+    contactPerson,
+    contactEmail,
+    contactPhone,
+    comment,
     deliveryAddress: {
       address1,
       address2,
@@ -61,14 +68,23 @@ const OrderLines = ({ orderID }) => {
   return (
     <Box ml="5" mt="3" mb="5">
       <Row value={orderID} title="ID" />
-      <Row value={date} title="Date" />
-      <Row value={deliveryCompanyname} title="Company Name" />
+      <Row value={format(parse(date), "DD.MM.YYYY")} title="Date" />
       <Row value={externalOrderID} title="Ext Order ID" />
+
+      <Row value={deliveryCompanyname} title="Company Name" />
+      <Row value={reference} title="Reference" />
+
+      <Row value={contactPerson} title="Contact" />
+      <Row value={contactEmail} title="Email" />
+      <Row value={contactPhone} title="Phone" />
+      <Row value={comment} title="Comment" />
+
       <Row value={address1} title="Address 1" />
       <Row value={address2} title="Address 2" />
       <Row value={postalCode} title="Postal Code" />
       <Row value={postalAddress} title="City" />
       <Row value={countryName} title="Country" />
+
       {templateOrderLines.map(orderLine => (
         <OrderLine key={orderLine.templateOrderLinesID} {...orderLine} />
       ))}
