@@ -63,15 +63,15 @@ blocks:
           og distribusjonssentraler.
 
 
-          Du slipper forringelse av varer som følge av omlasting, støv, fukt og
+          Du unngår forringelse av varer som følge av omlasting, støv, fukt og
           temperatursvingninger.
         title: |-
           Enkelt 
           lagerhold
       - description: >-
-          Vi pakker og sender varene til mottakerene direkte fra vårt lager. Du
-          slipper å motta en mengde varer som skal pakkes om og videresendes til
-          en rekke ulike mottakere.
+          Vi sender direkte fra lager til rett adresse i din organisasjon -
+          enten det er ulike adresser rundt om i Norge eller ulike avdelinger i
+          samme bygg. Du slipper å få varer som må pakkes om og videresendes. 
 
 
           Du drar nytte av våre gode avtaler med Norges største distributørerer.
