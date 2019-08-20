@@ -63,7 +63,7 @@ blocks:
           og distribusjonssentraler.
 
 
-          Du slipper forringelse av varer som følge av omlasting, støv, fukt og
+          Du unngår forringelse av varer som følge av omlasting, støv, fukt og
           temperatursvingninger.
         title: |-
           Enkelt 
