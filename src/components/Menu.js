@@ -26,7 +26,6 @@ const Menu = props => {
   return (
     <StyledFlex
       justifyContent="space-between"
-      alignItems="end"
       alignItems={["start", "end"]}
       flexDirection={["column", "column", "row"]}
     >

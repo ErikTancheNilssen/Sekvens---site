@@ -1,6 +1,6 @@
 /*global Intercom */
 import React from "react";
-import { Heading, Flex, Text } from "rebass";
+import { Heading, Text } from "rebass";
 import { Grid, Column } from "./Grid.js";
 import styled from "styled-components";
 import Button from "./Button.js";

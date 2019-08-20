@@ -6,7 +6,7 @@ import Menu from "../components/Menu.js";
 import { Grid, Column } from "../components/Grid.js";
 import { Box } from "rebass";
 import Loginform from "../components/LoginForm.js";
-import Orders from "../components/Orders.js";
+import Companies from "../components/Companies.js";
 import { checkLogin } from "../impleo/api.js";
 
 const Report = () => {
@@ -24,7 +24,7 @@ const Report = () => {
       <Grid>
         <Column columns={[4, 3, 8]}>
           <Box my={5}>{!loggedIn && <Loginform onLogin={setloggedIn} />}</Box>
-          <Box>{!!loggedIn && <Orders token={loggedIn} />}</Box>
+          <Box>{!!loggedIn && <Companies token={loggedIn} />}</Box>
         </Column>
       </Grid>
       <Footer />

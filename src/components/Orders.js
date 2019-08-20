@@ -1,40 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { Heading, Text, Box } from "rebass";
-import { Grid, Column } from "./Grid.js";
+import OrderLines from "./OrderLines.js";
 
-import { getProfile, getCompanies } from "../impleo/api.js";
+import { getOrders } from "../impleo/api.js";
 
-const Orders = ({ token }) => {
-  const [{ fullName }, setProfile] = useState(false);
-  const [companies, setCompanies] = useState([]);
+const Orders = ({ personID }) => {
+  const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    getProfile().then(profile => setProfile(profile));
-    getCompanies().then(companies =>
-      setCompanies(
-        (companies || [])
-          .filter(({ companyName }) => !!companyName)
-          .sort(({ companyName: a }, { companyName: b }) =>
-            a < b ? -1 : a > b ? 1 : 0
-          )
-      )
-    );
-  }, [token]);
+    getOrders(personID).then(orders => setOrders(orders));
+  }, [personID]);
 
-  return (
-    <Grid overflow="hidden" py={5}>
-      <Column>
-        <Heading>You are logged in {!!fullName && `as ${fullName}`}</Heading>
-      </Column>
-      <Column>
-        {companies.map(({ companyID, companyName }) => (
-          <Box key={companyID} py={2}>
-            <Text>{companyName}</Text>
-          </Box>
-        ))}
-      </Column>
-    </Grid>
-  );
+  return orders.map(({ orderID }) => (
+    <OrderLines key={orderID} orderID={orderID} />
+  ));
 };
 
 export default Orders;

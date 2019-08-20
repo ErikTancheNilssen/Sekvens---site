@@ -34,6 +34,40 @@ export const getCompanies = async () => {
   }
 };
 
+export const getUsers = async companyId => {
+  try {
+    const {
+      data: { items }
+    } = await impleo.get(`/api/v1/companies/${companyId}/users/`);
+    return items;
+  } catch ({ response: { data } }) {
+    return [];
+  }
+};
+
+//1265 // normal
+//1266 // Rek
+
+export const getOrders = async personid => {
+  try {
+    const {
+      data: { items }
+    } = await impleo.get(`/api/v1/users/${personid}/orders/1/999`);
+    return items;
+  } catch ({ response: { data } }) {
+    return [];
+  }
+};
+
+export const getOrderLines = async orderid => {
+  try {
+    const { data } = await impleo.get(`/api/v1/orders/${orderid}/orderlines`);
+    return data;
+  } catch ({ response: { data } }) {
+    return false;
+  }
+};
+
 export const login = async formData => {
   try {
     const {
