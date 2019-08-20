@@ -69,9 +69,9 @@ blocks:
           Enkelt 
           lagerhold
       - description: >-
-          Vi pakker og sender produktene fra vårt lager, direkte til rett
-          adresse i din organisasjon. Du slipper å motta varer som skal pakkes
-          om og videresendes. 
+          Vi sender direkte fra lager til rett adresse i din organisasjon -
+          enten det er ulike adresser rundt om i Norge eller ulike avdelinger i
+          samme bygg. Du slipper å få varer som må pakkes om og videresendes. 
 
 
           Du drar nytte av våre gode avtaler med Norges største distributørerer.
