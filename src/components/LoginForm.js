@@ -75,7 +75,11 @@ const Loginform = ({ onLogin }) => {
               </Box>
               <Box my={4}>
                 <Box mb={2}>
-                  <Text as="label" htmlFor="Password">
+                  <Text
+                    as="label"
+                    htmlFor="Password"
+                    placeholder="maria@NHO.no"
+                  >
                     Passord
                   </Text>
                 </Box>
