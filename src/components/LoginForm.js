@@ -67,7 +67,7 @@ const Loginform = ({ onLogin }) => {
                     id="Brukernavn"
                     name="username"
                     type="text"
-                    placeholder="maria@etn.no"
+                    placeholder="maria@NHO.no"
                     width={1}
                     required
                   />
