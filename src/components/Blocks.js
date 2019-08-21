@@ -55,7 +55,7 @@ const Blocks = ({ blocks }) =>
         <Item {...props} />
         <Grid>
           {!!link && link.link && (
-            <Column mt={-3} mb={3} gridColumn={[-2]}>
+            <Column mt={4} mb={3} gridColumn={[-3]}>
               <h6>
                 {link.ext ? (
                   <a rel="noopener noreferrer" target="_blank" href={link.link}>

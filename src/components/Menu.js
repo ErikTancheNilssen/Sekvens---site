@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { Text, Flex, Heading, Box } from "rebass";
+import { Text, Flex, Box } from "rebass";
 import styled from "styled-components";
 import { withTheme } from "styled-components";
 import useSiteMetadata from "./SiteMetadata";
@@ -29,12 +29,11 @@ const Menu = props => {
       alignItems={["start", "end"]}
       flexDirection={["column", "column", "row"]}
     >
-      <Heading mr={2} mt="-.25rem" fontSize={5} fontWeight="300">
-        <Link to="/">
-          <img alt="sekvens." src={theme.images.logo} />
-        </Link>
-      </Heading>
-      <List fontWeight="100" as="ul" textAlign="right">
+      <Link to="/">
+        <img alt="sekvens." src={theme.images.logo} />
+      </Link>
+
+      <List fontSize="2" fontWeight="100" as="ul" textAlign="right">
         {menuLinks.map(({ name, path, highlight, ext }, index) => (
           <Box
             m={0}

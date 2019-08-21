@@ -72,12 +72,13 @@ export default {
       color: "rgba(255,255,255,0.87)",
       fontFamily: "apercu, system-ui, sans-serif",
       backgroundColor: p1,
-      borderRadius: "3em",
-      padding: "1em 2em",
+      borderRadius: "3rem",
+      padding: "1rem 3rem",
       lineHeight: 1,
       fontWeight: 400,
       cursor: "pointer",
       letterSpacing: 1.25,
+
       "&:hover": {
         background: darken(0.05, p1)
       }

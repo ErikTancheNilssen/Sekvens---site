@@ -63,26 +63,30 @@ h6, .introduction{
 }
 
 a {
-  color: ${({ theme: { colors } }) => colors.link};
+
+color: ${({ theme: { colors } }) => colors.link};
   text-decoration: none;
-  background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(${({
-    theme: {
-      colors: { p3_15 }
-    }
-  }) => `${p3_15}, ${p3_15}`}); 
-  background-size: .05em 1px, .05em 1px, 1px 55%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-position: 0 85%, 100% 85%, 0 85%;
-  text-decoration: none
 }
-a:hover, a.active{
-  background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(${({
-    theme: {
-      colors: { p3 }
-    }
-  }) => `${p3}, ${p3}`}); 
-  background-position: 0 100%, 100% 100%, 0 100%;
+
+p > a, h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
+  border-bottom: 2px solid ${({ theme: { colors } }) => colors.black};
+  transition: top .1s ease-in-out;
+  position: relative; 
+  top: 0px;
+
+&:hover{
+    border-bottom-color: transparent;
+    border-bottom: 4px solid transparent;
+    position: relative; 
+    top: -2px;
+  }
+
 }
+
+a.active{
+  color:  ${({ theme: { colors } }) => colors.p1};
+}
+
 
 
 ul {
@@ -138,7 +142,7 @@ ul {
   }
 
 
-  `;
+`;
 
 const FontFace = ({ theme }) => {
   return <TypographyStyle />;

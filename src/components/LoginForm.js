@@ -95,7 +95,7 @@ const Loginform = ({ onLogin }) => {
               </Box>
 
               <Text textAlign="right">
-                <Button as="button" type="submit">
+                <Button variant="outline" as="button" type="submit">
                   Logg inn
                 </Button>
               </Text>

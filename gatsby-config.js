@@ -22,6 +22,10 @@ module.exports = {
     ],
     footerLinks: [
       {
+        name: "Sekvens.",
+        path: "/"
+      },
+      {
         name: "Hjelp",
         path: "/hjelp-support"
       },

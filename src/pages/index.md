@@ -81,10 +81,15 @@ blocks:
     link:
       ext: false
       link: /losninger
-      text: Se alle funksjoner
+      text: Se alle løsninger
     title: >-
       Sekvens gir deg full kontroll over produksjon, lagring og distribusjon av
       trykksaker.
     type: FunctionsBlock
+  - action: Kom i gang
+    full: true
+    success: /losninger
+    title: Snakk med vår salgsavdeling for å komme i gang med Sekvens
+    type: Chat    
 ---
 

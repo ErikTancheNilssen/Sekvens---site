@@ -39,11 +39,10 @@ blocks:
         introduction: 'Alle funksjoner i Standard og Enterprise pluss:'
     title: Løsninger
     type: Solutions
-  - action: Kontakt oss
+  - action: Kom i gang
     full: true
-    success: /Løsninger
-    title: Hvilken løsning passer for meg?
-    introduction: Snakk med vår salgsavdeling for å komme i gang!
+    success: /losninger
+    title: Snakk med vår salgsavdeling for å komme i gang med Sekvens
     type: Chat
 ---
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { Flex, Heading, Box } from "rebass";
+import { Flex, Box } from "rebass";
 import styled from "styled-components";
 import { withTheme } from "styled-components";
 import useSiteMetadata from "./SiteMetadata";
@@ -16,7 +16,6 @@ const List = styled(Flex)`
 `;
 
 const Menu = props => {
-  const { theme } = props;
   const { footerLinks } = useSiteMetadata();
   return (
     <StyledFlex
@@ -24,11 +23,6 @@ const Menu = props => {
       justifyContent="space-between"
       alignItems={["start", "end"]}
     >
-      <Heading mr={2} mt="-.5rem" fontSize={5} fontWeight="300">
-        <Link to="/">
-          <img alt="sekvens." src={theme.images.logo} />
-        </Link>
-      </Heading>
       <List
         justifyContent={["flex-end", "flex-end", "flex-end", "flex"]}
         fontWeight="100"

@@ -22,7 +22,7 @@ const FunctionsBlock = ({
   compact
 }) => (
   <Grid>
-    <Column p={[0, 0, 5]}>
+    <Column gridColumn={["1/span 4", "1/span 4", "2/span 10"]}>
       <Grid mt={[0, 0, -2, -7]} py={[3, 3, 7]} px={[3, 3, 6]} bg="p4_15">
         {items.map(({ title, description, image }, index) => (
           <Column
@@ -40,7 +40,7 @@ const FunctionsBlock = ({
             )}
             <Title
               color="p2"
-              fontSize={compact ? [2, 2, 3] : [3, 3, 4]}
+              fontSize={compact ? [2, 2, 3] : [3, 3, 5]}
               mb={compact ? 2 : 3}
             >
               {title}

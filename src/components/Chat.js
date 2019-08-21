@@ -1,12 +1,17 @@
-/*global Intercom */
 import React from "react";
 import { Heading, Text } from "rebass";
 import { Grid, Column } from "./Grid.js";
 import styled from "styled-components";
 import Button from "./Button.js";
+import { Link } from "gatsby";
 
 const LineBreaker = styled(Text)`
   max-width: 350px;
+  margin: auto;
+`;
+
+const Header = styled(Heading)`
+  max-width: 650px;
   margin: auto;
 `;
 
@@ -17,28 +22,18 @@ const TextBlock = styled(Column)`
 const Hero = ({ title, introduction, items, success, action }) => (
   <Grid>
     <TextBlock
-      my={4}
-      p="5"
-      gridColumn={["1/span 4", "1/span 4", "3/span 8"]}
+      my={[5, 5, 7]}
+      py="6"
+      gridColumn={["1/span 4", "1/span 4", "2/span 10"]}
       bg="p4"
     >
-      <Heading mb={3} fontSize={[4, 4, 5]}>
+      <Header mb={3} fontSize={[4, 4, 5]}>
         {title}
-      </Heading>
+      </Header>
 
       {!!introduction && <LineBreaker>{introduction}</LineBreaker>}
 
-      <Button
-        onClick={event => {
-          if (Intercom) {
-            Intercom("show");
-            event.preventDefault();
-          }
-        }}
-        mt={4}
-        as="a"
-        href={success}
-      >
+      <Button mt={4} as={Link} href={success}>
         {action}
       </Button>
     </TextBlock>
