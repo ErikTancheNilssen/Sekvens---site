@@ -4,7 +4,19 @@ import "./index.css";
 const TypographyStyle = createGlobalStyle`
 
 
+::selection {
+  color: ${({ theme: { colors } }) => colors.p1};
+  background:  ${({ theme: { colors } }) => colors.p4};
+}
+::-moz-selection {
+  color: black;
+  background:  ${({ theme: { colors } }) => colors.p3_15};
+}
+
+
+
 body {
+    background: ${({ theme: { colors } }) => colors.p4};
     padding: 0;
     margin: 0;
     color:  ${({ theme: { colors } }) => colors.text};
@@ -19,14 +31,8 @@ body {
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
     font-feature-settings: "kern", "liga", "clig", "calt";
 }
-
-::selection {
-  color: ${({ theme: { colors } }) => colors.p1};
-  background:  ${({ theme: { colors } }) => colors.p4};
-}
-::-moz-selection {
-  color: black;
-  background:  ${({ theme: { colors } }) => colors.p3_15};
+#___gatsby{
+  background: ${({ theme: { colors } }) => colors.white};
 }
 
 h1, h2, h3, h4, h5, h6, p, hr, ul {
