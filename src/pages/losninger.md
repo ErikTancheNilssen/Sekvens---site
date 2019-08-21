@@ -28,15 +28,15 @@ blocks:
           * Nettbutikk-løsning
           * Designtjenester
           * Profilhåndbok
-        title: Sekvens Enterprise
+        title: Sekvens Organisasjon
         introduction: 'Alle funksjoner i Standard pluss:'
       - active: true
         description: >-
           En enterprise-løsning der vi fjerner vår profilering, legger inn din
           og fremdeles kan stile løsningen i din kundes drakt - om du ønsker
           det.
-        title: Sekvens Bureau
-        introduction: 'Alle funksjoner i Standard og Enterprise pluss:'
+        title: Sekvens Byrå
+        introduction: 'Alle funksjoner i Standard og Organisasjon pluss:'
     title: Løsninger
     type: Solutions
   - action: Kom i gang
