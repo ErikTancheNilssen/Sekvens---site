@@ -7,7 +7,7 @@ introduction: >-
 hide: true
 blocks:
   - full: true
-    image: /images/cards.png
+    image: /images/visittkort.png
     title: 'Trykkeri, gjort enkelt'
     introduction: >-
       Sekvens er en helhetlig løsning for produksjon, lagring og distribusjon av
