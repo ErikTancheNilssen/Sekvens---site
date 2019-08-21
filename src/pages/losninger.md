@@ -1,6 +1,6 @@
 ---
 templateKey: Page
-title: Funksjoner
+title: Løsninger
 introduction: >-
   Visittkort, profilartikler, brevark, rollups, bannere, beachflagg konvolutter
   & brosjyrer.
@@ -41,10 +41,9 @@ blocks:
     type: Solutions
   - action: Kontakt oss
     full: true
-    success: mailto:kundeservice@etn.no
+    success: /Løsninger
     title: Hvilken løsning passer for meg?
-    introduction: >-
-       Snakk med vår salgsavdeling for å komme i gang!
-    type: Chat    
+    introduction: Snakk med vår salgsavdeling for å komme i gang!
+    type: Chat
 ---
 
