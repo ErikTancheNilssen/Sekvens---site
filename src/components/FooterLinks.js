@@ -23,16 +23,11 @@ const Menu = props => {
       justifyContent="space-between"
       alignItems={["start", "end"]}
     >
-      <List
-        justifyContent={["flex-end", "flex-end", "flex-end", "flex"]}
-        fontWeight="100"
-        as="ul"
-        textAlign="right"
-      >
+      <List flexDirection={["column", "row", "row"]} fontWeight="100" as="ul">
         {footerLinks.map(({ name, path, highlight }, index) => (
           <Box
             m={0}
-            pt={[5, 5, 0]}
+            pt={[2, 5, 0]}
             pr={[5, 5, 0]}
             pl={[0, 0, 5]}
             as="li"

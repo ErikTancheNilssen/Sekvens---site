@@ -23,7 +23,7 @@ const Hero = ({ title, introduction, items, success, action }) => (
   <Grid>
     <TextBlock
       my={[5, 5, 7]}
-      py="6"
+      p="6"
       gridColumn={["1/span 4", "1/span 4", "2/span 10"]}
       bg="p4"
     >
