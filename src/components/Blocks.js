@@ -38,7 +38,7 @@ const Blocks = ({ blocks }) =>
     return (
       <Box key={index}>
         {!full && (
-          <TextBox mt={[4, 4, 5, 7]}>
+          <TextBox mt={[5, 5, 6, 7]}>
             <Column columns={[4, 4, 6]}>
               <Heading fontSize={index === 0 ? [5, 5, 8] : [4, 4, 7]}>
                 {title}

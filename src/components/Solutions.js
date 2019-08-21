@@ -23,7 +23,7 @@ position relative;
 `;
 
 const Solutions = ({ items, compact }) => (
-  <Grid p={[1, 1, 5]}>
+  <Grid py={[1, 1, 5]}>
     {items.map(({ title, introduction, description, image, active }, index) => (
       <ShadowBox
         border="3px solid"
