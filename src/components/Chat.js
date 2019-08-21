@@ -33,7 +33,7 @@ const Hero = ({ title, introduction, items, success, action }) => (
 
       {!!introduction && <LineBreaker>{introduction}</LineBreaker>}
 
-      <Button mt={4} as={Link} href={success}>
+      <Button mt={4} as={Link} to={success}>
         {action}
       </Button>
     </TextBlock>

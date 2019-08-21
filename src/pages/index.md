@@ -88,7 +88,7 @@ blocks:
     type: FunctionsBlock
   - action: Kom i gang
     full: true
-    success: /losninger
+    success: /komIGang
     title: Snakk med vår salgsavdeling for å komme i gang med Sekvens
     type: Chat    
 ---
