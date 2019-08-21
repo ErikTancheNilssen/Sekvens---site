@@ -18,7 +18,7 @@ blocks:
           * Pakkesporing
           * Grafisk rådgivning
           * Support på e-post, chat og telefon
-        title: Sekvens Standard
+        title: Standard
         introduction: ''
       - description: |-
           * Tilgangskontroll med tilpassede brukernivåer
@@ -28,14 +28,14 @@ blocks:
           * Nettbutikk-løsning
           * Designtjenester
           * Profilhåndbok
-        title: Sekvens Organisasjon
+        title: Organisasjon
         introduction: 'Alle funksjoner i Standard pluss:'
       - active: true
         description: >-
           En enterprise-løsning der vi fjerner vår profilering, legger inn din
           og fremdeles kan stile løsningen i din kundes drakt - om du ønsker
           det.
-        title: Sekvens Byrå
+        title: Byrå
         introduction: 'Alle funksjoner i Standard og Organisasjon pluss:'
     title: Løsninger
     type: Solutions
