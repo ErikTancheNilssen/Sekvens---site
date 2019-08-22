@@ -54,8 +54,8 @@ const Company = ({ companyID, companyName }) => {
         {!!open &&
           !!users &&
           users.map(({ fullName, personID, userName }) => (
-            <Box ml="3" key={personID}>
-              <Text mt="3">
+            <Box m="3" key={personID}>
+              <Text>
                 {fullName} - {userName}
               </Text>
 
