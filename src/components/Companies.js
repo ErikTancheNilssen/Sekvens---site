@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Heading } from "rebass";
 import { Grid, Column } from "./Grid.js";
 import Company from "./Company.js";
 
-import { getProfile, getCompanies } from "../impleo/api.js";
+import { getCompanies } from "../impleo/api.js";
 
 const Companies = ({ token }) => {
-  const [{ fullName }, setProfile] = useState(false);
   const [companies, setCompanies] = useState([]);
 
   useEffect(() => {
-    getProfile().then(profile => setProfile(profile));
     getCompanies().then(companies =>
       setCompanies(
         (companies || [])
@@ -23,10 +20,7 @@ const Companies = ({ token }) => {
   }, [token]);
 
   return (
-    <Grid overflow="hidden" py={5}>
-      <Column>
-        <Heading>You are logged in {!!fullName && `as ${fullName}`}</Heading>
-      </Column>
+    <Grid p="0" overflow="hidden" py={5}>
       <Column>
         {companies.map(company => (
           <Company key={company.companyID} {...company} />
