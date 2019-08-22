@@ -1,7 +1,8 @@
 import React from "react";
 import Helmet from "react-helmet";
-
+import { Card } from "rebass";
 import useSiteMetadata from "./SiteMetadata";
+import BG from "../images/bg.svg";
 
 const TemplateWrapper = ({ title, introduction, children }) => {
   const { siteTitle, description } = useSiteMetadata();
@@ -15,7 +16,7 @@ const TemplateWrapper = ({ title, introduction, children }) => {
         <meta property="og:title" content={title} />
       </Helmet>
 
-      <div>{children}</div>
+      <Card background={`fixed no-repeat url(${BG})`}>{children}</Card>
     </>
   );
 };

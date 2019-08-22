@@ -13,8 +13,6 @@ const TypographyStyle = createGlobalStyle`
   background:  ${({ theme: { colors } }) => colors.p3_15};
 }
 
-
-
 body {
     background: ${({ theme: { colors } }) => colors.p4};
     padding: 0;
