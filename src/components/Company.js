@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Heading, Text, Box, Flex } from "rebass";
 import { Grid, Column } from "./Grid.js";
-import Orders from "./Orders.js";
+import User from "./User.js";
 import styled from "styled-components";
 import { getUsers } from "../impleo/api.js";
 
@@ -28,13 +28,14 @@ const Company = ({ companyID, companyName }) => {
   }, [companyID, open]);
 
   return (
-    <Grid my={4}>
+    <Grid my={2}>
       <Column gridColumn={["1/span 4", "1/span 4", "1/span 12"]}>
         <CompanyHeading
           py={3}
           onClick={() => {
             setOpen(!open);
           }}
+          mb="4"
         >
           <Heading
             color="p1"
@@ -47,19 +48,13 @@ const Company = ({ companyID, companyName }) => {
             {open ? "-" : "+"}
           </Heading>
 
-          <Heading>
-            {companyName} {companyID}
-          </Heading>
+          <Heading>{companyName}</Heading>
         </CompanyHeading>
         {!!open &&
           !!users &&
-          users.map(({ fullName, personID, userName }) => (
-            <Box m="3" key={personID}>
-              <Text>
-                {fullName} - {userName}
-              </Text>
-
-              <Orders personID={personID} />
+          users.map(user => (
+            <Box key={user.personID} my="2">
+              <User companyID={companyID} user={user} />
             </Box>
           ))}
 

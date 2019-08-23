@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Flex, Text, Box } from "rebass";
 import { format, parse } from "date-fns";
-
+import styled from "styled-components";
 import { getOrderLines } from "../impleo/api.js";
+
+const Toggle = styled(Flex)`
+  cursor: pointer;
+  user-select: none;
+`;
+
+const OrderBox = styled(Box)`
+  border-top: solid 1px ${({ theme: { colors } }) => colors.b_20};
+`;
 
 const Row = ({ value, title }) =>
   !!value && (
@@ -23,17 +32,18 @@ const OrderLine = ({
   price,
   template: { templateName, templateID }
 }) => (
-  <Box my="3" ml="3">
-    <Row value={quantity} title="Quantity" />
+  <OrderBox py="3">
+    <Row value={<strong>{quantity}</strong>} title="Quantity" />
     <Row value={templateName} title="TemplateName" />
     <Row value={ident} title="Ident" />
     <Row value={extItemNo} title="Ext" />
     <Row value={price} title="price" />
-  </Box>
+  </OrderBox>
 );
 
 const OrderLines = ({ orderID }) => {
   const [order, setOrder] = useState();
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     getOrderLines(orderID).then(order => {
@@ -41,8 +51,12 @@ const OrderLines = ({ orderID }) => {
     });
   }, [orderID]);
 
-  if (!order) return null;
-  if (200 === orderID) console.log(order);
+  if (!order)
+    return (
+      <Box ml="5" mt="3" mb="5">
+        <Text>Loading order {orderID}</Text>
+      </Box>
+    );
 
   const {
     date,
@@ -66,28 +80,50 @@ const OrderLines = ({ orderID }) => {
   } = order;
 
   return (
-    <Box ml="5" mt="3" mb="5">
-      <Row value={orderID} title="ID" />
-      <Row value={format(parse(date), "DD.MM.YYYY")} title="Date" />
-      <Row value={externalOrderID} title="Ext Order ID" />
+    <Box my="1">
+      <Toggle
+        p="2"
+        ml={-2}
+        bg={open ? "p4" : null}
+        onClick={() => {
+          setOpen(!open);
+        }}
+      >
+        <Text fontWeight="bold" color="p1" width="1rem">
+          {open ? "-" : "+"}
+        </Text>
 
-      <Row value={deliveryCompanyname} title="Company Name" />
-      <Row value={reference} title="Reference" />
-
-      <Row value={contactPerson} title="Contact" />
-      <Row value={contactEmail} title="Email" />
-      <Row value={contactPhone} title="Phone" />
-      <Row value={comment} title="Comment" />
-
-      <Row value={address1} title="Address 1" />
-      <Row value={address2} title="Address 2" />
-      <Row value={postalCode} title="Postal Code" />
-      <Row value={postalAddress} title="City" />
-      <Row value={countryName} title="Country" />
-
-      {templateOrderLines.map(orderLine => (
-        <OrderLine key={orderLine.templateOrderLinesID} {...orderLine} />
-      ))}
+        <Text fontWeight="bold"> {format(parse(date), "DD MMMM YYYY")} </Text>
+      </Toggle>
+      {!!open && (
+        <Box mt="4">
+          <Row value={orderID} title="Id" />
+          <Row value={externalOrderID} title="Ext Order ID" />
+          <Row value={contactEmail} title="Email" />
+          <Row value={contactPhone} title="Phone" />
+          <Row
+            value={
+              <Box mb="2">
+                <Text>{contactPerson}</Text>
+                <Text>{reference}</Text>
+                <Text>{deliveryCompanyname}</Text>
+                <Text>{address1}</Text>
+                <Text>{address2}</Text>
+                <Text>{postalCode}</Text>
+                <Text>{postalAddress}</Text>
+                <Text>{countryName}</Text>
+              </Box>
+            }
+            title="Address"
+          />
+          <Row value={comment} title="Comment" />
+          <Box my="4">
+            {templateOrderLines.map(orderLine => (
+              <OrderLine key={orderLine.templateOrderLinesID} {...orderLine} />
+            ))}
+          </Box>
+        </Box>
+      )}
     </Box>
   );
 };

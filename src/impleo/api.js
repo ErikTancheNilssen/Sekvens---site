@@ -23,6 +23,17 @@ export const getProfile = async () => {
   }
 };
 
+export const getUserInfo = async (companyid, id) => {
+  try {
+    const { data } = await impleo.get(
+      `/api/v1/companies/${companyid}/users/${id}`
+    );
+    return data;
+  } catch ({ response: { data } }) {
+    return { error: data };
+  }
+};
+
 export const getCompanies = async () => {
   try {
     const {

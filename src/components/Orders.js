@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import OrderLines from "./OrderLines.js";
-
+import { Box } from "rebass";
 import { getOrders } from "../impleo/api.js";
 
 const Orders = ({ personID }) => {
@@ -10,9 +10,13 @@ const Orders = ({ personID }) => {
     getOrders(personID).then(orders => setOrders(orders));
   }, [personID]);
 
-  return orders.map(({ orderID }) => (
-    <OrderLines key={orderID} orderID={orderID} />
-  ));
+  return (
+    <Box my="3">
+      {orders.map(({ orderID }) => (
+        <OrderLines key={orderID} orderID={orderID} />
+      ))}
+    </Box>
+  );
 };
 
 export default Orders;
