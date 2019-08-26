@@ -22,8 +22,8 @@ const Companies = ({ token }) => {
   return (
     <Grid p="0" overflow="hidden" py={5}>
       <Column>
-        {companies.map(company => (
-          <Company key={company.companyID} {...company} />
+        {companies.map((company, index) => (
+          <Company key={company.companyID + "_" + index} {...company} />
         ))}
       </Column>
     </Grid>

@@ -92,8 +92,13 @@ const OrderLines = ({ orderID }) => {
         <Text fontWeight="bold" color="p1" width="1rem">
           {open ? "-" : "+"}
         </Text>
-
-        <Text fontWeight="bold"> {format(parse(date), "DD MMMM YYYY")} </Text>
+        <Text width="150px" fontWeight="bold">
+          {format(parse(date), "DD MMMM'YY")}{" "}
+        </Text>
+        <Text width="200px" ml="4">
+          {contactPerson}
+        </Text>
+        <Text ml="4">{reference}</Text>
       </Toggle>
       {!!open && (
         <Box mt="4">

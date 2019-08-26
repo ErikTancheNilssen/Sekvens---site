@@ -52,8 +52,8 @@ const Company = ({ companyID, companyName }) => {
         </CompanyHeading>
         {!!open &&
           !!users &&
-          users.map(user => (
-            <Box key={user.personID} my="2">
+          users.map((user, index) => (
+            <Box key={user.personID + "_" + index} my="2">
               <User companyID={companyID} user={user} />
             </Box>
           ))}

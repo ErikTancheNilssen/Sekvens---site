@@ -31,12 +31,10 @@ const User = props => {
         <Text fontWeight="bold" fontSize="1" color="p1" width="1.5rem">
           {open ? "-" : "+"}
         </Text>
-        <Text mr="2" fontWeight="700" key={personID}>
+        <Text mr="2" fontWeight="700">
           {personID}
         </Text>
-        <Text fontWeight="700" key={personID}>
-          {fullName || userName}
-        </Text>
+        <Text fontWeight="700">{fullName || userName}</Text>
       </Toggle>
 
       {!!open && (

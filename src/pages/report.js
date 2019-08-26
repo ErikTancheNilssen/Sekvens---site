@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import Footer from "../components/Footer.js";
 import Menu from "../components/Menu.js";
 import { Grid, Column } from "../components/Grid.js";
-import { Box, Text } from "rebass";
+import { Box, Text, Heading } from "rebass";
 import Loginform from "../components/LoginForm.js";
 import Companies from "../components/Companies.js";
 import { checkLogin, logout, getProfile } from "../impleo/api.js";
@@ -39,22 +39,31 @@ const Report = () => {
           <Box>{!loggedIn && <Loginform onLogin={setloggedIn} />}</Box>
 
           {!!loggedIn && (
-            <Text color="b_60" as="p" mt="5" fontSize="1" textAlign="right">
-              Logget inn som {firstName}. Ikke deg?{" "}
-              <LogOut
-                onClick={e => {
-                  logout();
-                  setloggedIn();
-                  window.location.reload();
-                }}
-              >
-                Logg ut
-              </LogOut>
-              .
-            </Text>
-          )}
+            <Box>
+              <Text color="b_60" as="p" mt="5" fontSize="1" textAlign="right">
+                Logget inn som {firstName}. Ikke deg?{" "}
+                <LogOut
+                  onClick={e => {
+                    logout();
+                    setloggedIn();
+                    window.location.reload();
+                  }}
+                >
+                  Logg ut
+                </LogOut>
+                .
+              </Text>
 
-          <Box>{!!loggedIn && <Companies token={loggedIn} />}</Box>
+              <Grid mt={[5, 5, 6, 7]}>
+                <Column columns={[4, 4, 10]}>
+                  <Heading fontSize="8">Rapport</Heading>
+                </Column>
+                <Column gridColumn={["1/span 4", "1/span 4", "3/span 8"]}>
+                  {!!loggedIn && <Companies token={loggedIn} />}
+                </Column>
+              </Grid>
+            </Box>
+          )}
         </Column>
       </Grid>
       <Footer />
