@@ -1,5 +1,7 @@
 import axios from "axios";
 import store from "store2";
+import save from "save-csv";
+import { format } from "date-fns";
 
 export const impleo = axios.create({
   baseURL: "https://api.sekvens.app"
@@ -56,14 +58,149 @@ export const getUsers = async companyId => {
   }
 };
 
-//1265 // normal
-//1266 // Rek
+export const downloadExcel = async (start, end, companyId) => {
+  try {
+    const {
+      data: { items = [] }
+    } = await impleo.get(
+      `/api/v1/companies/${companyId}/ordersbydates/${format(
+        start,
+        "YYYY-MM-DD"
+      )}/${format(end, "YYYY-MM-DD")}`
+    );
+
+    const orders = await Promise.all(
+      items.map(({ orderID }) => getOrderLines(orderID))
+    );
+
+    save(
+      orders.map(
+        ({
+          date,
+          deliveryCompanyname,
+          externalOrderID,
+          reference,
+          contactPerson,
+          contactEmail,
+          contactPhone,
+          comment,
+          orderID,
+          deliveryAddress: {
+            address1,
+            address2,
+            postal: {
+              country: { countryName },
+              postalAddress,
+              postalCode
+            }
+          }
+        }) => ({
+          Date: format(date, "DD/MM/YY"),
+          ID: orderID,
+          "Ext ID": externalOrderID,
+          "Company name": deliveryCompanyname,
+          Person: contactPerson,
+          Email: contactEmail,
+          Phone: contactPhone,
+          Reference: reference,
+          "Address 1": address1,
+          "Address 2": address2,
+          City: postalAddress,
+          Code: postalCode,
+          "Country Name": countryName,
+          Comment: comment
+        })
+      ),
+      {
+        sep: ";",
+        filename: `addresses_${companyId}__${format(
+          start,
+          "DD-MM-YYYY"
+        )}__${format(end, "DD-MM-YYYY")}.tsv`
+      }
+    );
+
+    const cols = {
+      Order: "",
+      Date: "",
+      Address: "",
+      Quantity: "",
+      Product: ""
+    };
+    save(
+      orders.reduce(
+        (
+          out,
+          {
+            date,
+            deliveryCompanyname,
+            externalOrderID,
+            templateOrderLines,
+            reference,
+            contactPerson,
+            contactEmail,
+            contactPhone,
+            comment,
+            orderID,
+            deliveryAddress: {
+              address1,
+              address2,
+              postal: {
+                country: { countryName },
+                postalAddress,
+                postalCode
+              }
+            }
+          }
+        ) => [
+          ...out,
+          {
+            ...cols,
+            Order: orderID,
+            Date: format(date, "DD/MM/YY"),
+            Address:
+              deliveryCompanyname + " //  " + contactPerson + " // " + address1
+          },
+
+          ...templateOrderLines.map(
+            ({
+              ident,
+              extItemNo,
+              quantity,
+              template: { templateName, templateID }
+            }) => ({
+              ...cols,
+              Quantity: quantity,
+              Product: `${templateID} - ${templateName} ${
+                ident ? " - " + ident : ""
+              }`
+            })
+          ),
+          cols,
+          cols
+        ],
+        []
+      ),
+      {
+        sep: ";",
+        filename: `orders_${companyId}__${format(
+          start,
+          "YYYY-MM-DD"
+        )}__${format(end, "DD-MM-YYYY")}.tsv`
+      }
+    );
+  } catch (e) {
+    console.error(e);
+    return false;
+  }
+};
 
 export const getOrders = async personid => {
   try {
     const {
       data: { items }
     } = await impleo.get(`/api/v1/users/${personid}/orders/1/999`);
+
     return items;
   } catch ({ response: { data } }) {
     return [];
@@ -89,8 +226,8 @@ export const login = async formData => {
     updateToken(token);
     storeToken(token, expires);
     return { token };
-  } catch ({ response: { data } }) {
-    return { token: false, error: data };
+  } catch (e) {
+    return { token: false, error: e.data || { Message: "Error, try again" } };
   }
 };
 

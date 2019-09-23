@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Heading, Text, Box, Flex } from "rebass";
-import { Grid, Column } from "./Grid.js";
+import { Text, Box, Flex } from "rebass";
 import Orders from "./Orders.js";
 import styled from "styled-components";
 import { getUserInfo } from "../impleo/api.js";

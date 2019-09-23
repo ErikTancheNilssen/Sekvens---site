@@ -30,6 +30,7 @@ overflow: visible;
 
 const Loginform = ({ onLogin }) => {
   const [error, setError] = useState(false);
+  const [updating, isUpdating] = useState(false);
   return (
     <Grid overflow="hidden" py={5}>
       <ShadowBox
@@ -51,9 +52,12 @@ const Loginform = ({ onLogin }) => {
               onSubmit={async e => {
                 const data = new FormData(e.target);
                 e.preventDefault();
+                isUpdating(true);
                 const { token, error } = await login(data);
+                console.log(error);
                 onLogin(token);
                 setError(error);
+                isUpdating(false);
               }}
             >
               <Box my={4}>
@@ -95,9 +99,16 @@ const Loginform = ({ onLogin }) => {
               </Box>
 
               <Text textAlign="right">
-                <Button variant="outline" as="button" type="submit">
-                  Logg inn
-                </Button>
+                {!updating && (
+                  <Button variant="outline" as="button" type="submit">
+                    Logg inn
+                  </Button>
+                )}
+                {!!updating && (
+                  <Button variant="disabled" as="button">
+                    Logging in...
+                  </Button>
+                )}
               </Text>
             </form>
             <Link href="https://print.sekvens.app/login.aspx">

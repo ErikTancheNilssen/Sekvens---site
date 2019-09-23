@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Grid, Column } from "./Grid.js";
 import Company from "./Company.js";
-
+import DownLoad from "./DownLoad.js";
 import { getCompanies } from "../impleo/api.js";
 
 const Companies = ({ token }) => {
@@ -20,7 +20,10 @@ const Companies = ({ token }) => {
   }, [token]);
 
   return (
-    <Grid p="0" overflow="hidden" py={5}>
+    <Grid p="0" overflow="hidden" pb={5}>
+      <Column columns={[4, 4, 12]}>
+        <DownLoad companies={companies || []} />
+      </Column>
       <Column>
         {companies.map((company, index) => (
           <Company key={company.companyID + "_" + index} {...company} />

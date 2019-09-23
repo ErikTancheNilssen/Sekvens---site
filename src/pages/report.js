@@ -10,7 +10,7 @@ import Companies from "../components/Companies.js";
 import { checkLogin, logout, getProfile } from "../impleo/api.js";
 import styled from "styled-components";
 
-const LogOut = styled.a`
+const Link = styled.a`
   font-weight: bold;
   cursor: pointer;
 `;
@@ -42,15 +42,15 @@ const Report = () => {
             <Box>
               <Text color="b_60" as="p" mt="5" fontSize="1" textAlign="right">
                 Logget inn som {firstName}. Ikke deg?{" "}
-                <LogOut
+                <Link
                   onClick={e => {
                     logout();
-                    setloggedIn();
+                    setloggedIn(false);
                     window.location.reload();
                   }}
                 >
                   Logg ut
-                </LogOut>
+                </Link>
                 .
               </Text>
 
@@ -58,6 +58,7 @@ const Report = () => {
                 <Column columns={[4, 4, 10]}>
                   <Heading fontSize="8">Rapport</Heading>
                 </Column>
+
                 <Column gridColumn={["1/span 4", "1/span 4", "3/span 8"]}>
                   {!!loggedIn && <Companies token={loggedIn} />}
                 </Column>
