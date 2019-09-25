@@ -95,10 +95,10 @@ export const downloadExcel = async (start, end, companyId) => {
             }
           }
         }) => ({
+          Order: orderID,
           Date: format(date, "DD/MM/YY"),
-          ID: orderID,
-          "Ext ID": externalOrderID,
-          "Company name": deliveryCompanyname,
+          "Ext Id": externalOrderID,
+          Company: deliveryCompanyname,
           Person: contactPerson,
           Email: contactEmail,
           Phone: contactPhone,
@@ -107,7 +107,7 @@ export const downloadExcel = async (start, end, companyId) => {
           "Address 2": address2,
           City: postalAddress,
           Code: postalCode,
-          "Country Name": countryName,
+          Country: countryName,
           Comment: comment
         })
       ),
