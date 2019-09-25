@@ -136,6 +136,7 @@ export const downloadExcel = async (start, end, companyId) => {
             deliveryCompanyname,
             externalOrderID,
             templateOrderLines,
+            customOrderLines,
             reference,
             contactPerson,
             contactEmail,
@@ -172,7 +173,22 @@ export const downloadExcel = async (start, end, companyId) => {
               ...cols,
               Quantity: quantity,
               Product: `${templateID} - ${templateName} ${
-                ident ? " - " + ident : ""
+                ident ? '\n"' + ident + '"' : ""
+              }`
+            })
+          ),
+          ...customOrderLines.map(
+            ({
+              ident,
+              extItemNo,
+              quantity,
+              jobDescription,
+              uploadedFileType
+            }) => ({
+              ...cols,
+              Quantity: quantity,
+              Product: `${uploadedFileType}${ident ? '\n"' + ident + '"' : ""}${
+                jobDescription ? '\n"' + jobDescription + '"' : ""
               }`
             })
           ),

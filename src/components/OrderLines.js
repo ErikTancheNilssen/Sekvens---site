@@ -30,7 +30,7 @@ const OrderLine = ({
   extItemNo,
   quantity,
   price,
-  template: { templateName, templateID }
+  template: { templateName }
 }) => (
   <OrderBox py="3">
     <Row value={<strong>{quantity}</strong>} title="Quantity" />
@@ -38,6 +38,24 @@ const OrderLine = ({
     <Row value={ident} title="Ident" />
     <Row value={extItemNo} title="Ext" />
     <Row value={price} title="price" />
+  </OrderBox>
+);
+
+const CustomOrderLine = ({
+  ident,
+  extItemNo,
+  quantity,
+  price,
+  jobDescription,
+  uploadedFileType
+}) => (
+  <OrderBox py="3">
+    <Row value={<strong>{quantity}</strong>} title="Quantity" />
+    <Row value={uploadedFileType} title="Type" />
+    <Row value={ident} title="Ident" />
+    <Row value={extItemNo} title="Ext" />
+    <Row value={price} title="price" />
+    <Row value={jobDescription} title="Description" />
   </OrderBox>
 );
 
@@ -63,6 +81,7 @@ const OrderLines = ({ orderID }) => {
     deliveryCompanyname,
     externalOrderID,
     templateOrderLines,
+    customOrderLines,
     reference,
     contactPerson,
     contactEmail,
@@ -125,6 +144,11 @@ const OrderLines = ({ orderID }) => {
           <Box my="4">
             {templateOrderLines.map(orderLine => (
               <OrderLine key={orderLine.templateOrderLinesID} {...orderLine} />
+            ))}
+          </Box>
+          <Box my="4">
+            {customOrderLines.map(orderLine => (
+              <CustomOrderLine key={orderLine.statusUpdateID} {...orderLine} />
             ))}
           </Box>
         </Box>
