@@ -122,6 +122,7 @@ export const downloadExcel = async (start, end, companyId) => {
 
     const cols = {
       Order: "",
+      "S-Number": "",
       Date: "",
       Address: "",
       Quantity: "",
@@ -158,6 +159,7 @@ export const downloadExcel = async (start, end, companyId) => {
           {
             ...cols,
             Order: orderID,
+            "S-Number": externalOrderID,
             Date: format(date, "DD/MM/YY"),
             Address:
               deliveryCompanyname + " //  " + contactPerson + " // " + address1
