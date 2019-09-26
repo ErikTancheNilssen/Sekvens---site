@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Text, Box } from "rebass";
+import { Text, Box, Flex } from "rebass";
 import styled from "styled-components";
 import Button from "./Button.js";
-import { downloadExcel } from "../impleo/api.js";
+import { downloadAddresses, downloadOrders } from "../impleo/api.js";
 import { startOfWeek, endOfWeek, startOfYesterday } from "date-fns";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -57,29 +57,45 @@ const DownLoad = ({ companies }) => {
               ))}
             </StyledSelect>
           </Text>
+          <Flex flexDirection={["column", "column", "row"]} flexWrap="wrap">
+            <Box mr={4}>
+              <Text mt="4">From</Text>
+              <Box>
+                <StyledPicker
+                  selected={start}
+                  dateFormat="dd/MM/yyyy"
+                  onChange={setStart}
+                />
+              </Box>
+            </Box>
+            <Box>
+              <Text mt="4">To</Text>
+              <Box>
+                <StyledPicker
+                  selected={end}
+                  dateFormat="dd/MM/yyyy"
+                  onChange={setEnd}
+                />
+              </Box>
+            </Box>
+          </Flex>
 
-          <Text mt="4">From</Text>
-          <Box>
-            <StyledPicker
-              selected={start}
-              dateFormat="dd/MM/yyyy"
-              onChange={setStart}
-            />
-          </Box>
-          <Text mt="4">To</Text>
-          <Box>
-            <StyledPicker
-              selected={end}
-              dateFormat="dd/MM/yyyy"
-              onChange={setEnd}
-            />
-          </Box>
           {!!selectedCompany && (
-            <Text flexGrow="1" textAlign="right">
-              <Button
-                onClick={() => downloadExcel(start, end, selectedCompany)}
-              >
+            <Text flexGrow="1">
+              <Text mb="2" mt="4">
                 Download
+              </Text>
+              <Button
+                mr="2"
+                onClick={() => downloadAddresses(start, end, selectedCompany)}
+              >
+                Addresses
+              </Button>
+              <Button
+                ml="2"
+                onClick={() => downloadOrders(start, end, selectedCompany)}
+              >
+                Orders
               </Button>
             </Text>
           )}

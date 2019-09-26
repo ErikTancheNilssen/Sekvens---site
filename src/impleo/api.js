@@ -58,21 +58,26 @@ export const getUsers = async companyId => {
   }
 };
 
-export const downloadExcel = async (start, end, companyId) => {
+export const getOrderLine = async (start, end, companyId) => {
+  const {
+    data: { items = [] }
+  } = await impleo.get(
+    `/api/v1/companies/${companyId}/ordersbydates/${format(
+      start,
+      "YYYY-MM-DD"
+    )}/${format(end, "YYYY-MM-DD")}`
+  );
+
+  const orders = await Promise.all(
+    items.map(({ orderID }) => getOrderLines(orderID))
+  );
+
+  return orders;
+};
+
+export const downloadAddresses = async (start, end, companyId) => {
   try {
-    const {
-      data: { items = [] }
-    } = await impleo.get(
-      `/api/v1/companies/${companyId}/ordersbydates/${format(
-        start,
-        "YYYY-MM-DD"
-      )}/${format(end, "YYYY-MM-DD")}`
-    );
-
-    const orders = await Promise.all(
-      items.map(({ orderID }) => getOrderLines(orderID))
-    );
-
+    const orders = await getOrderLine(start, end, companyId);
     save(
       orders.map(
         ({
@@ -119,98 +124,102 @@ export const downloadExcel = async (start, end, companyId) => {
         )}__${format(end, "DD-MM-YYYY")}.tsv`
       }
     );
-
-    const cols = {
-      Order: "",
-      "S-Number": "",
-      Date: "",
-      Address: "",
-      Quantity: "",
-      Product: ""
-    };
-    save(
-      orders.reduce(
-        (
-          out,
-          {
-            date,
-            deliveryCompanyname,
-            externalOrderID,
-            templateOrderLines,
-            customOrderLines,
-            reference,
-            contactPerson,
-            contactEmail,
-            contactPhone,
-            comment,
-            orderID,
-            deliveryAddress: {
-              address1,
-              address2,
-              postal: {
-                country: { countryName },
-                postalAddress,
-                postalCode
-              }
-            }
-          }
-        ) => [
-          ...out,
-          {
-            ...cols,
-            Order: orderID,
-            "S-Number": externalOrderID,
-            Date: format(date, "DD/MM/YY"),
-            Address:
-              deliveryCompanyname + " //  " + contactPerson + " // " + address1
-          },
-
-          ...templateOrderLines.map(
-            ({
-              ident,
-              extItemNo,
-              quantity,
-              template: { templateName, templateID }
-            }) => ({
-              ...cols,
-              Quantity: quantity,
-              Product: `${templateID} - ${templateName} ${
-                ident ? '\n"' + ident + '"' : ""
-              }`
-            })
-          ),
-          ...customOrderLines.map(
-            ({
-              ident,
-              extItemNo,
-              quantity,
-              jobDescription,
-              uploadedFileType
-            }) => ({
-              ...cols,
-              Quantity: quantity,
-              Product: `${uploadedFileType}${ident ? '\n"' + ident + '"' : ""}${
-                jobDescription ? '\n"' + jobDescription + '"' : ""
-              }`
-            })
-          ),
-          cols,
-          cols
-        ],
-        []
-      ),
-      {
-        sep: ";",
-        filename: `orders_${companyId}__${format(
-          start,
-          "DD-MM-YYYY"
-        )}__${format(end, "DD-MM-YYYY")}.tsv`
-      }
-    );
   } catch (e) {
     console.error(e);
     return false;
   }
+};
+
+export const downloadOrders = async (start, end, companyId) => {
+  const orders = await getOrderLine(start, end, companyId);
+  const cols = {
+    Order: "",
+    "S-Number": "",
+    Date: "",
+    Address: "",
+    Quantity: "",
+    Product: ""
+  };
+
+  save(
+    orders.reduce(
+      (
+        out,
+        {
+          date,
+          deliveryCompanyname,
+          externalOrderID,
+          templateOrderLines,
+          customOrderLines,
+          reference,
+          contactPerson,
+          contactEmail,
+          contactPhone,
+          comment,
+          orderID,
+          deliveryAddress: {
+            address1,
+            address2,
+            postal: {
+              country: { countryName },
+              postalAddress,
+              postalCode
+            }
+          }
+        }
+      ) => [
+        ...out,
+        {
+          ...cols,
+          Order: orderID,
+          "S-Number": externalOrderID,
+          Date: format(date, "DD/MM/YY"),
+          Address:
+            deliveryCompanyname + " //  " + contactPerson + " // " + address1
+        },
+
+        ...templateOrderLines.map(
+          ({
+            ident,
+            extItemNo,
+            quantity,
+            template: { templateName, templateID }
+          }) => ({
+            ...cols,
+            Quantity: quantity,
+            Product: `${templateID} - ${templateName} ${
+              ident ? '\n"' + ident + '"' : ""
+            }`
+          })
+        ),
+        ...customOrderLines.map(
+          ({
+            ident,
+            extItemNo,
+            quantity,
+            jobDescription,
+            uploadedFileType
+          }) => ({
+            ...cols,
+            Quantity: quantity,
+            Product: `${uploadedFileType}${ident ? '\n"' + ident + '"' : ""}${
+              jobDescription ? '\n"' + jobDescription + '"' : ""
+            }`
+          })
+        ),
+        cols,
+        cols
+      ],
+      []
+    ),
+    {
+      sep: ";",
+      filename: `orders_${companyId}__${format(start, "DD-MM-YYYY")}__${format(
+        end,
+        "DD-MM-YYYY"
+      )}.tsv`
+    }
+  );
 };
 
 export const getOrders = async personid => {

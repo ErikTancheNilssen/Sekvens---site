@@ -21,7 +21,7 @@ const Companies = ({ token }) => {
 
   return (
     <Grid p="0" overflow="hidden" pb={5}>
-      <Column columns={[4, 4, 12]}>
+      <Column>
         <DownLoad companies={companies || []} />
       </Column>
       <Column>
