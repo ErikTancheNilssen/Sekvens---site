@@ -203,7 +203,7 @@ export const downloadExcel = async (start, end, companyId) => {
         sep: ";",
         filename: `orders_${companyId}__${format(
           start,
-          "YYYY-MM-DD"
+          "DD-MM-YYYY"
         )}__${format(end, "DD-MM-YYYY")}.tsv`
       }
     );
