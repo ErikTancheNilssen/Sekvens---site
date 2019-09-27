@@ -5,6 +5,7 @@ import Input from "./Input.js";
 import Button from "./Button.js";
 import styled from "styled-components";
 import { login } from "../impleo/api.js";
+import "formdata-polyfill";
 
 const Link = styled.a`
   color: ${({ theme: { colors } }) => colors.white};
@@ -53,8 +54,8 @@ const Loginform = ({ onLogin }) => {
                 const data = new FormData(e.target);
                 e.preventDefault();
                 isUpdating(true);
+                debugger;
                 const { token, error } = await login(data);
-                console.log(error);
                 onLogin(token);
                 setError(error);
                 isUpdating(false);

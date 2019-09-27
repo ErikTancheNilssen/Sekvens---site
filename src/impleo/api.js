@@ -2,6 +2,7 @@ import axios from "axios";
 import store from "store2";
 import save from "save-csv";
 import { format } from "date-fns";
+import serialize from "./serialize.js";
 
 export const impleo = axios.create({
   baseURL: "https://api.sekvens.app"
@@ -249,11 +250,16 @@ export const login = async formData => {
       data: {
         impleoToken: { token, expires }
       }
-    } = await impleo.post("/sts/v1/token", Object.fromEntries(formData));
+    } = await impleo.post("/sts/v1/token", {
+      password: formData.get("password"),
+      username: formData.get("username")
+    });
+
     updateToken(token);
     storeToken(token, expires);
     return { token };
   } catch (e) {
+    console.log(e);
     return { token: false, error: e.data || { Message: "Error, try again" } };
   }
 };

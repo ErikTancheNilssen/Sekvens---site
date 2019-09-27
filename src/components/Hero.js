@@ -8,8 +8,12 @@ const ImageBlock = styled(Column)`
   min-height: 400px;
 `;
 
+const BoxIE11 = styled(Box)`
+  overflow: hidden;
+`;
+
 const Hero = ({ title, introduction, image }) => (
-  <Box bg="p4">
+  <BoxIE11 bg="p4">
     <Grid>
       <Column
         order={[2, 2, 1]}
@@ -37,7 +41,7 @@ const Hero = ({ title, introduction, image }) => (
         />
       )}
     </Grid>
-  </Box>
+  </BoxIE11>
 );
 
 export default Hero;
