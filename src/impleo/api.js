@@ -2,7 +2,6 @@ import axios from "axios";
 import store from "store2";
 import save from "save-csv";
 import { format } from "date-fns";
-import serialize from "./serialize.js";
 
 export const impleo = axios.create({
   baseURL: "https://api.sekvens.app"
