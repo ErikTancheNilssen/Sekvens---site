@@ -1,7 +1,7 @@
 ---
 templateKey: Page
 title: Fra Markedsportalen til Sekvens
-hide: false
+hide: true
 blocks: []
 ---
 # Sekvens erstatter Markedsportalen - hvordan påvirker det meg?
