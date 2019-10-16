@@ -2,24 +2,17 @@
 templateKey: Page
 title: PresstoGo
 hide: false
-blocks:
-  - full: true
-    items:
-      - description: test
-        title: test
-    title: test
-    type: FAQ
+blocks: []
 ---
-ETN Grafisk har brukt Markedsportalen som kundeportal for trykksaksbestilling siden 2012. I løpet av disse årene har dere kommet med mange nyttige tilbakemeldinger. Vi har tatt konsekvensen av kunderesponsen og kommer i løpet av de neste månedene til å erstatte Markedsportalen med Sekvens.
+# Sekvens erstatter Markedsportalen - hvordan påvirker det meg?
 
+**Denne informasjonen gjelder eksisterende kunder av ETN Grafisk som fram til nå har brukt Markedsportalen**
 
+Kunder av ETN Grafisk har siden 2012 brukt Markedsportalen (PressToGo) for trykksakbestilling. Denne blir nå erstattet med Sekvens. 
 
 Sekvens har alle de funksjonene du er vant til i Markedsportalen, men brukergrensesnittet er mye bedre og motoren bak er mye kraftigere. Blant de mange forbedringene vil vi nevne spesielt at du ikke trenger Flash og at du har tilgang til alle funksjoner fra din mobil.
 
+Du behøver ikke forberede deg på problemer i overgangsfasen. Når vi nærmer oss flytting av din konto tar vi kontakt. Du vil få anledning til å teste den nye løsningen før vi fjerner din Markedsportal.
 
-
-NHO og Vy er allerede på plass i Sekvens. Erfaringene så langt er utelukkende positive. Du behøver ikke forberede deg på problemer i overgangsfasen. Etter alle solemerker kommer denne endringen til å oppleves som utelukkende positiv.
-
-
-
-Når vi nærmer oss flytting av din konto tar vi kontakt. Du vil få anledning til å teste den nye løsningen før vi fjerner din Markedsportal.
+Har du spørsmål rundt overgangen?
+Ta kontakt med <mailto:kundeservice@etn.no> eller ring [+47 35 90 40 60](<tel:+47 35 90 40 60>)
