@@ -2,7 +2,13 @@
 templateKey: Page
 title: PresstoGo
 hide: false
-blocks: []
+blocks:
+  - full: true
+    items:
+      - description: test
+        title: test
+    title: test
+    type: FAQ
 ---
 ETN Grafisk har brukt Markedsportalen som kundeportal for trykksaksbestilling siden 2012. I løpet av disse årene har dere kommet med mange nyttige tilbakemeldinger. Vi har tatt konsekvensen av kunderesponsen og kommer i løpet av de neste månedene til å erstatte Markedsportalen med Sekvens.
 
