@@ -217,7 +217,7 @@ export const downloadOrders = async (start, end, companyId) => {
       filename: `orders_${companyId}__${format(start, "DD-MM-YYYY")}__${format(
         end,
         "DD-MM-YYYY"
-      )}.tsv`
+      )}.csv`
     }
   );
 };
