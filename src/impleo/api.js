@@ -118,7 +118,7 @@ export const downloadAddresses = async (start, end, companyId) => {
       ),
       {
         sep: ";",
-        filename: `adresser_${companyID}__${format(
+        filename: `adresser_${companyId}__${format(
           start,
           "DD-MM-YYYY"
         )}__${format(end, "DD-MM-YYYY")}.csv`
