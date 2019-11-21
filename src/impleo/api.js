@@ -175,7 +175,7 @@ export const downloadOrders = async (start, end, companyId) => {
           "S-Nummer": externalOrderID,
           Dato: format(date, "DD/MM/YY"),
           Adresse:
-            deliveryCompanyname + " //  " + contactPerson + " // " + address1
+            deliveryCompanyname + " //  " + contactPerson + " // " + address1 + " // " + postalCode
         },
 
         ...templateOrderLines.map(
