@@ -100,25 +100,25 @@ export const downloadAddresses = async (start, end, companyId) => {
             }
           }
         }) => ({
-          Order: orderID,
-          Date: format(date, "DD/MM/YY"),
+          Ordrenummer: orderID,
+          Dato: format(date, "DD/MM/YY"),
           "Ext Id": externalOrderID,
-          Company: deliveryCompanyname,
-          Person: contactPerson,
-          Email: contactEmail,
-          Phone: contactPhone,
-          Reference: reference,
-          "Address 1": address1,
-          "Address 2": address2,
-          City: postalAddress,
-          Code: postalCode,
-          Country: countryName,
-          Comment: comment
+          Firma: deliveryCompanyname,
+          Kontaktperson: contactPerson,
+          "E-post": contactEmail,
+          Telefon: contactPhone,
+          Referanse: reference,
+          "Adresse 1": address1,
+          "Adresse 2": address2,
+          Sted: postalAddress,
+          Postnummer: postalCode,
+          Land: countryName,
+          Kommentar: comment
         })
       ),
       {
         sep: ";",
-        filename: `addresses_${companyId}__${format(
+        filename: `adresser_${companyId}__${format(
           start,
           "DD-MM-YYYY"
         )}__${format(end, "DD-MM-YYYY")}.csv`
