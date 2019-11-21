@@ -83,7 +83,6 @@ const Loginform = ({ onLogin }) => {
                   <Text
                     as="label"
                     htmlFor="Password"
-                    placeholder="maria@NHO.no"
                   >
                     Passord
                   </Text>
