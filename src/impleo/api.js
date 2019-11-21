@@ -133,12 +133,12 @@ export const downloadAddresses = async (start, end, companyId) => {
 export const downloadOrders = async (start, end, companyId) => {
   const orders = await getOrderLine(start, end, companyId);
   const cols = {
-    Order: "",
-    "S-Number": "",
-    Date: "",
-    Address: "",
-    Quantity: "",
-    Product: ""
+    Ordrenummer: "",
+    "S-Nummer": "",
+    Dato: "",
+    Adresse: "",
+    Antall: "",
+    Produkt: ""
   };
 
   save(
@@ -171,10 +171,10 @@ export const downloadOrders = async (start, end, companyId) => {
         ...out,
         {
           ...cols,
-          Order: orderID,
-          "S-Number": externalOrderID,
-          Date: format(date, "DD/MM/YY"),
-          Address:
+          Ordrenummer: orderID,
+          "S-Nummer": externalOrderID,
+          Dato: format(date, "DD/MM/YY"),
+          Adresse:
             deliveryCompanyname + " //  " + contactPerson + " // " + address1
         },
 
@@ -186,8 +186,8 @@ export const downloadOrders = async (start, end, companyId) => {
             template: { templateName, templateID }
           }) => ({
             ...cols,
-            Quantity: quantity,
-            Product: `${templateName} ${
+            Antall: quantity,
+            Produkt: `${templateName} ${
               ident ? '\n"' + ident + '"' : ""
             }`
           })
@@ -201,8 +201,8 @@ export const downloadOrders = async (start, end, companyId) => {
             uploadedFileType
           }) => ({
             ...cols,
-            Quantity: quantity,
-            Product: `${uploadedFileType}${ident ? '\n"' + ident + '"' : ""}${
+            Antall: quantity,
+            Produkt: `${uploadedFileType}${ident ? '\n"' + ident + '"' : ""}${
               jobDescription ? '\n"' + jobDescription + '"' : ""
             }`
           })
