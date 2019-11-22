@@ -46,7 +46,7 @@ const DownLoad = ({ companies }) => {
       </Toggle>
       {!!open && (
         <Box mt="6" p="4" bg="p4">
-          <Text mb="2">Company</Text>
+          <Text mb="2">Firma</Text>
           <Text>
             <StyledSelect onChange={e => setCompany(e.target.value)}>
               <option>Select a company</option>
@@ -59,7 +59,7 @@ const DownLoad = ({ companies }) => {
           </Text>
           <Flex flexDirection={["column", "column", "row"]} flexWrap="wrap">
             <Box mr={4}>
-              <Text mt="4">From</Text>
+              <Text mt="4">Fra</Text>
               <Box>
                 <StyledPicker
                   selected={start}
@@ -69,7 +69,7 @@ const DownLoad = ({ companies }) => {
               </Box>
             </Box>
             <Box>
-              <Text mt="4">To</Text>
+              <Text mt="4">Til</Text>
               <Box>
                 <StyledPicker
                   selected={end}
@@ -83,19 +83,19 @@ const DownLoad = ({ companies }) => {
           {!!selectedCompany && (
             <Text flexGrow="1">
               <Text mb="2" mt="4">
-                Download
+                Last ned
               </Text>
               <Button
                 mr="2"
                 onClick={() => downloadAddresses(start, end, selectedCompany)}
               >
-                Addresses
+                Adresser
               </Button>
               <Button
                 ml="2"
                 onClick={() => downloadOrders(start, end, selectedCompany)}
               >
-                Orders
+                Produkter
               </Button>
             </Text>
           )}
