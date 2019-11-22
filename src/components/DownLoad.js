@@ -49,7 +49,7 @@ const DownLoad = ({ companies }) => {
           <Text mb="2">Firma</Text>
           <Text>
             <StyledSelect onChange={e => setCompany(e.target.value)}>
-              <option>Select a company</option>
+              <option>Velg firma</option>
               {companies.map(({ companyName, companyID }) => (
                 <option key={companyID} value={companyID}>
                   {companyName}
