@@ -26,7 +26,7 @@ const Report = () => {
   }, [loggedIn]);
 
   return (
-    <Layout title="Report" introduction="Report of orders for Pasientreiser">
+    <Layout title="Rapport" introduction="Generer rapporter">
       <Box pt={5} pb={4} bg="p4">
         <Grid>
           <Column columns={[4, 4, 12]}>
