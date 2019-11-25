@@ -151,6 +151,7 @@ export const downloadOrders = async (start, end, companyId) => {
           date,
           deliveryCompanyname,
           externalOrderID,
+          extItemNo,
           templateOrderLines,
           customOrderLines,
           reference,
