@@ -189,7 +189,7 @@ export const downloadOrders = async (start, end, companyId) => {
           }) => ({
             ...cols,
             Antall: quantity,
-            Produkt: `${templateName} ${
+            Produkt: `${extItemNo} ${templateName} ${
               ident ? '\n"' + ident + '"' : ""
             }`
           })
