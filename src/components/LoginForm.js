@@ -105,7 +105,7 @@ const Loginform = ({ onLogin }) => {
                 )}
                 {!!updating && (
                   <Button variant="disabled" as="button">
-                    Logging in...
+                    Logger inn...
                   </Button>
                 )}
               </Text>
