@@ -253,19 +253,16 @@ export const pasientRapport = async (start, end, companyId) => {
         }) => ({
           Ordrenummer: orderID,
           Dato: format(date, "DD/MM/YY"),
-          "Ext Id": externalOrderID,
-          Firma: deliveryCompanyname,
-          Att: deliveryContactPerson,
-          "Adresse 1": address1,
-          "Adresse 2": address2,
-          Sted: postalAddress,
+          "Bestillers navn": contactPerson,
+          "HPR nummer": reference,
+          "Virksomhetens navn": deliveryCompanyname,
+          Avdeling: address2,
+          Leveringsadresse: address1,
           Postnummer: postalCode,
-          Land: countryName,
-          Referanse: reference,
-          Kontaktperson: contactPerson,
-          "E-post": contactEmail,
-          Telefon: contactPhone,
-          Kommentar: comment
+          Poststed: postalAddress,
+          "Bestillers e-post": contactEmail,
+          "Bestillers telefonnummer": contactPhone,
+          "Antall blokker": contactPerson
         })
       ),
       {
