@@ -225,7 +225,7 @@ export const downloadOrders = async (start, end, companyId) => {
   );
 };
 
-export const pasientRapport = async (start, end, companyId) => {
+export const pasientRapport2 = async (start, end, companyId) => {
   try {
     const orders = await getOrderLine(start, end, companyId);
     save(
@@ -277,6 +277,93 @@ export const pasientRapport = async (start, end, companyId) => {
     console.error(e);
     return false;
   }
+};
+
+export const pasientRapport = async (start, end, companyId) => {
+  const orders = await getOrderLine(start, end, companyId);
+  const cols = {
+    Ordrenummer: "",
+    Dato: "",
+    "Bestillers navn": "",
+    "HPR nummer": "",
+    "Virksomhetens navn": "",
+    Avdeling: "",
+    Leveringsadresse: "",
+    Postnummer: "",
+    Poststed: "",
+    "Bestillers e-post": "",
+    "Bestillers telefonnummer": "",
+    "Antall blokker": ""
+  };
+
+  save(
+    orders.reduce(
+      (
+        out,
+        {
+          date,
+          deliveryCompanyname,
+          externalOrderID,
+          extItemNo,
+          templateOrderLines,
+          customOrderLines,
+          reference,
+          contactPerson,
+          contactEmail,
+          contactPhone,
+          comment,
+          orderID,
+          deliveryAddress: {
+            address1,
+            address2,
+            postal: {
+              country: { countryName },
+              postalAddress,
+              postalCode
+            }
+          }
+        }
+      ) => [
+        ...out,
+        {
+          ...cols,
+          Ordrenummer: orderID,
+          Dato: format(date, "DD/MM/YY"),
+          "Bestillers navn": contactPerson,
+          "HPR nummer": reference,
+          "Virksomhetens navn": deliveryCompanyname,
+          Avdeling: address2,
+          Leveringsadresse: address1,
+          Postnummer: postalCode,
+          Poststed: postalAddress,
+          "Bestillers e-post": contactEmail,
+          "Bestillers telefonnummer": contactPhone
+        },
+
+        ...templateOrderLines.map(
+          ({
+            ident,
+            extItemNo,
+            quantity,
+            template: { templateName, templateID }
+          }) => ({
+            ...cols,
+            "Antall blokker": quantity
+          })
+        ),
+        cols,
+        cols
+      ],
+      []
+    ),
+    {
+      sep: ";",
+      filename: `pasientreiser2_${companyId}__${format(start, "DD-MM-YYYY")}__${format(
+        end,
+        "DD-MM-YYYY"
+      )}.csv`
+    }
+  );
 };
 
 export const getOrders = async personid => {
