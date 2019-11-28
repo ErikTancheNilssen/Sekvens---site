@@ -225,7 +225,7 @@ export const downloadOrders = async (start, end, companyId) => {
   );
 };
 
-export const pasientRapport2 = async (start, end, companyId) => {
+export const pasientRapport = async (start, end, companyId) => {
   try {
     const orders = await getOrderLine(start, end, companyId);
     save(
@@ -234,6 +234,7 @@ export const pasientRapport2 = async (start, end, companyId) => {
           date,
           deliveryCompanyname,
           externalOrderID,
+          quantity,
           reference,
           contactPerson,
           deliveryContactPerson,
@@ -262,7 +263,7 @@ export const pasientRapport2 = async (start, end, companyId) => {
           Poststed: postalAddress,
           "Bestillers e-post": contactEmail,
           "Bestillers telefonnummer": contactPhone,
-          "Antall blokker": contactPerson
+          "Antall blokker": quantity
         })
       ),
       {
@@ -279,7 +280,7 @@ export const pasientRapport2 = async (start, end, companyId) => {
   }
 };
 
-export const pasientRapport = async (start, end, companyId) => {
+export const pasientRapport2 = async (start, end, companyId) => {
   const orders = await getOrderLine(start, end, companyId);
   const cols = {
     Ordrenummer: "",
