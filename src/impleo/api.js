@@ -225,7 +225,7 @@ export const downloadOrders = async (start, end, companyId) => {
   );
 };
 
-export const pasientrapport = async (start, end, companyId) => {
+export const pasientRapport = async (start, end, companyId) => {
   try {
     const orders = await getOrderLine(start, end, companyId);
     save(
