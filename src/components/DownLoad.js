@@ -99,9 +99,9 @@ const DownLoad = ({ companies }) => {
               </Button>
               <Button
                 ml="2"
-                onClick={() => downloadOrders(start, end, selectedCompany)}
+                onClick={() => pasientrapport(start, end, selectedCompany)}
               >
-                Test
+                Pasientreiser
               </Button>
             </Text>
           )}
