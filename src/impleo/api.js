@@ -225,6 +225,63 @@ export const downloadOrders = async (start, end, companyId) => {
   );
 };
 
+export const pasientrapport = async (start, end, companyId) => {
+  try {
+    const orders = await getOrderLine(start, end, companyId);
+    save(
+      orders.map(
+        ({
+          date,
+          deliveryCompanyname,
+          externalOrderID,
+          reference,
+          contactPerson,
+          deliveryContactPerson,
+          contactEmail,
+          contactPhone,
+          comment,
+          orderID,
+          deliveryAddress: {
+            address1,
+            address2,
+            postal: {
+              country: { countryName },
+              postalAddress,
+              postalCode
+            }
+          }
+        }) => ({
+          Ordrenummer: orderID,
+          Dato: format(date, "DD/MM/YY"),
+          "Ext Id": externalOrderID,
+          Firma: deliveryCompanyname,
+          Att: deliveryContactPerson,
+          "Adresse 1": address1,
+          "Adresse 2": address2,
+          Sted: postalAddress,
+          Postnummer: postalCode,
+          Land: countryName,
+          Referanse: reference,
+          Kontaktperson: contactPerson,
+          "E-post": contactEmail,
+          Telefon: contactPhone,
+          Kommentar: comment
+        })
+      ),
+      {
+        sep: ";",
+        filename: `pasientreiser_${companyId}__${format(
+          start,
+          "DD-MM-YYYY"
+        )}__${format(end, "DD-MM-YYYY")}.csv`
+      }
+    );
+  } catch (e) {
+    console.error(e);
+    return false;
+  }
+};
+
 export const getOrders = async personid => {
   try {
     const {
