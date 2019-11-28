@@ -99,7 +99,7 @@ const DownLoad = ({ companies }) => {
               </Button>
               <Button
                 ml="2"
-                onClick={() => pasientrapport(start, end, selectedCompany)}
+                onClick={() => pasientRapport(start, end, selectedCompany)}
               >
                 Pasientreiser Rekvisisjon
               </Button>
