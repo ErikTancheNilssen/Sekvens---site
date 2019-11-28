@@ -97,6 +97,12 @@ const DownLoad = ({ companies }) => {
               >
                 Produkter
               </Button>
+              <Button
+                ml="2"
+                onClick={() => downloadOrders(start, end, selectedCompany)}
+              >
+                Test
+              </Button>
             </Text>
           )}
         </Box>
