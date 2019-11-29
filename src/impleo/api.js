@@ -291,7 +291,7 @@ export const pasientRapport = async (start, end, companyId) => {
     ),
     {
       sep: ";",
-      filename: `Pasientreiser_${deliveryCompanyname}__${format(start, "DD-MM-YYYY")}__${format(
+      filename: `Pasientreiser_Rekvisisjonsblokker__${format(start, "DD-MM-YYYY")}__${format(
         end,
         "DD-MM-YYYY"
       )}.csv`
