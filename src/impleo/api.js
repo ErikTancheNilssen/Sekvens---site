@@ -341,18 +341,6 @@ export const pasientRapport = async (start, end, companyId) => {
           "Bestillers telefonnummer": contactPhone,
           "Antall blokker": templateOrderLines[0].quantity
         },
-
-        /*...templateOrderLines.map(
-          ({
-            ident,
-            extItemNo,
-            quantity,
-            template: { templateName, templateID }
-          }) => ({
-            ...cols,
-            "Antall blokker": quantity
-          })
-        ), */
       ],
       []
     ),
