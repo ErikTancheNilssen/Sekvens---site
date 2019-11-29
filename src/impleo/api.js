@@ -338,10 +338,11 @@ export const pasientRapport = async (start, end, companyId) => {
           Postnummer: postalCode,
           Poststed: postalAddress,
           "Bestillers e-post": contactEmail,
-          "Bestillers telefonnummer": contactPhone
+          "Bestillers telefonnummer": contactPhone,
+          "Antall blokker": templateOrderLines[0].quantity
         },
 
-        ...templateOrderLines.map(
+        /*...templateOrderLines.map(
           ({
             ident,
             extItemNo,
@@ -351,9 +352,7 @@ export const pasientRapport = async (start, end, companyId) => {
             ...cols,
             "Antall blokker": quantity
           })
-        ),
-        // cols,
-        cols
+        ), */
       ],
       []
     ),
