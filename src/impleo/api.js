@@ -352,7 +352,7 @@ export const pasientRapport = async (start, end, companyId) => {
             "Antall blokker": quantity
           })
         ),
-        cols,
+        // cols,
         cols
       ],
       []
