@@ -284,7 +284,7 @@ export const pasientRapport = async (start, end, companyId) => {
           Poststed: postalAddress,
           "Bestillers e-post": contactEmail,
           "Bestillers telefonnummer": contactPhone,
-          "Antall blokker": templateOrderLines[0].quantity
+          "Antall blokker": templateOrderLines[0, 1, 2, 3, 4, 5].quantity
         },
       ],
       []
