@@ -88,9 +88,9 @@ blocks:
     items:
       - description: 
         title: Navn
-      - description: post@din-epost.no
+      - description: 
         title: E-post
-      - description: 'Fortel oss hva problem er. '
+      - description: 
         textarea: true
         title: Hva trenger du help til?
     title: Står du fast?
