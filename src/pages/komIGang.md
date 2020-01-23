@@ -9,7 +9,7 @@ blocks:
     items:
       - description: 
         title: Navn
-      - description: post@din-epost.no
+      - description: 
         title: E-post
     success: /suksess
     title: Kom i gang med Sekvens
