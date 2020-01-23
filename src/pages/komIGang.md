@@ -7,7 +7,7 @@ blocks:
     full: true
     image: /images/cards.png
     items:
-      - description: Maria Holte
+      - description: 
         title: Navn
       - description: post@din-epost.no
         title: E-post
