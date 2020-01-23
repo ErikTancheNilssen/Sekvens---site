@@ -86,7 +86,7 @@ blocks:
   - action: Send melding
     full: true
     items:
-      - description: Maria Holte
+      - description: 
         title: Navn
       - description: post@din-epost.no
         title: E-post
