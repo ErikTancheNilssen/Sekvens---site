@@ -62,7 +62,7 @@ const HelpForm = ({ title, introduction, items, success, action }) => (
                     type="text"
                     textArea={textarea}
                     width={1}
-                    required
+                   // required
                   />
                 </Box>
                 <Box>
