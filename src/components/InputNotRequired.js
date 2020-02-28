@@ -18,7 +18,7 @@ ThemedInput.defaultProps = {
   p: 3
 };
 
-const Input = props => {
+const InputNotRequired = props => {
   return (
     <ThemedInput
       fontSize={3}

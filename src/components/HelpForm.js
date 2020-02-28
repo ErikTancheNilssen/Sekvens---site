@@ -2,7 +2,7 @@ import React from "react";
 import { Heading, Text, Box } from "rebass";
 import { Grid, Column } from "./Grid.js";
 import Input from "./Input.js";
-import InputNotRequired from "./InputNotRequires.js";
+import InputNotRequired from "./InputNotRequired.js";
 import Button from "./Button.js";
 import styled from "styled-components";
 
@@ -61,7 +61,6 @@ const HelpForm = ({ title, introduction, items, success, action }) => (
                     name={title}
                     type="text"
                     textArea={textarea}
-                    placeholder={description}
                     width={1}
                     required
                   />
@@ -72,7 +71,6 @@ const HelpForm = ({ title, introduction, items, success, action }) => (
                     name={title}
                     type="text"
                     textArea={textarea}
-                    
                     width={1}
                    
                   />
