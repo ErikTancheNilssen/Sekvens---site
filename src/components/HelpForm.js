@@ -28,7 +28,7 @@ overflow: visible;
   }
 `;
 
-const HelpForm = ({ title, introduction, items, success, action }) => (
+const HelpForm = ({ title, title_1, introduction, items, success, action }) => (
   <Grid overflow="hidden" py={5}>
     <ShadowBox
       mr={[4, 4, 4, 0]}
@@ -62,13 +62,13 @@ const HelpForm = ({ title, introduction, items, success, action }) => (
                     type="text"
                     textArea={textarea}
                     width={1}
-                   // required
+                    //required
                   />
                 </Box>
                 <Box>
                   <InputNotRequired
                     id={index + title}
-                    name={title}
+                    name={title_1}
                     type="text"
                     textArea={textarea}
                     width={1}
