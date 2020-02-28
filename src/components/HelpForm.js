@@ -2,6 +2,7 @@ import React from "react";
 import { Heading, Text, Box } from "rebass";
 import { Grid, Column } from "./Grid.js";
 import Input from "./Input.js";
+import InputNotRequired from "./InputNotRequires.js";
 import Button from "./Button.js";
 import styled from "styled-components";
 
@@ -66,15 +67,17 @@ const HelpForm = ({ title, introduction, items, success, action }) => (
                   />
                 </Box>
                 <Box>
-                  <Input
+                  <InputNotRequired
                     id={index + title}
                     name={title}
                     type="text"
                     textArea={textarea}
-                    placeholder={description}
+                    
                     width={1}
+                   
                   />
                 </Box>
+                
               </Box>
             ))}
             <div hidden>
