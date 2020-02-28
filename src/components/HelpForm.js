@@ -65,6 +65,16 @@ const HelpForm = ({ title, introduction, items, success, action }) => (
                     required
                   />
                 </Box>
+                <Box>
+                  <Input
+                    id={index + title}
+                    name={title}
+                    type="text"
+                    textArea={textarea}
+                    placeholder={description}
+                    width={1}
+                  />
+                </Box>
               </Box>
             ))}
             <div hidden>
