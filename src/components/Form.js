@@ -62,7 +62,7 @@ const Hero = ({ title, introduction, image, items, success, action }) => (
                   textArea={textarea}
                   placeholder={description}
                   width={1}
-                  {...required}
+                  required={required || required == null ? "required" : null}
                 />
               </Box>
             </Box>
