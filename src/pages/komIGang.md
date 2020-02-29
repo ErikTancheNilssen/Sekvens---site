@@ -11,6 +11,9 @@ blocks:
         title: Navn
       - description: 
         title: E-post
+      - description:
+        title: Telefon
+        required: false
     success: /suksess
     title: Kom i gang med Sekvens
     introduction: >-
