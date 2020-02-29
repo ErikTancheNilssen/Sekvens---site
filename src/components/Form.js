@@ -38,8 +38,8 @@ const Hero = ({ title, introduction, image, items, success, action }) => (
       bg="p4_15"
       width={image ? [1, 1, 1, 0.5] : [1]}
     >
-      <TextBlock m={[4, 4, 5, 7]}>
-        <Heading mb={3} fontSize={[5, 5, 8]}>
+      <TextBlock m={[0, 0, 0, 0]}>
+        <Heading mb={0} fontSize={[5, 5, 7]}>
           {title}
         </Heading>
 
@@ -48,8 +48,8 @@ const Hero = ({ title, introduction, image, items, success, action }) => (
         )}
         <form name={title} method="post" data-netlify="true" action={success}>
           {(items || []).map(({ title, description, textarea, required }, index) => (
-            <Box my={4} key={index}>
-              <Box mb={2}>
+            <Box mb={3} key={index}>
+              <Box mb={0}>
                 <Text as="label" htmlFor={index + title}>
                   {title}
                 </Text>
