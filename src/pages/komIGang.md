@@ -7,13 +7,15 @@ blocks:
     full: true
     image: /images/cards.png
     items:
-      - description:
+      - description: null
+        required: true
         title: Navn
-      - description:
+      - description: null
+        required: true
         title: E-post
-      - description:
-        title: Telefon
+      - description: null
         required: false
+        title: Telefon
     success: /suksess
     title: Kom i gang med Sekvens
     introduction: >-
@@ -21,3 +23,4 @@ blocks:
       best for deg.
     type: Form
 ---
+
