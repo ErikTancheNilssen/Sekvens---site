@@ -136,7 +136,8 @@ collections:
                 widget: "list"
                 fields:
                   - {label: "Name", name: "title", widget: "string"}
-                  - {label: "Value", name: "description", widget: "string"}
+                  - {label: "Value", name: "description", widget: "string", required: false}
+                  - {label: "Required", name: "required", widget: "boolean", default: true, required: false}
                   - {label: "TextArea", name: "textarea", widget: "boolean", default: false, required: false}
           - label: "Success"
             name: "Success"

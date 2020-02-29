@@ -47,7 +47,7 @@ const Hero = ({ title, introduction, image, items, success, action }) => (
           <LineBreaker className="introduction">{introduction}</LineBreaker>
         )}
         <form name={title} method="post" data-netlify="true" action={success}>
-          {(items || []).map(({ title, description, textarea }, index) => (
+          {(items || []).map(({ title, description, textarea, required }, index) => (
             <Box my={4} key={index}>
               <Box mb={2}>
                 <Text as="label" htmlFor={index + title}>
@@ -62,7 +62,7 @@ const Hero = ({ title, introduction, image, items, success, action }) => (
                   textArea={textarea}
                   placeholder={description}
                   width={1}
-                  required
+                  required={required || required == null ? "required" : null}
                 />
               </Box>
             </Box>

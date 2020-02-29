@@ -7,9 +7,9 @@ blocks:
     full: true
     image: /images/cards.png
     items:
-      - description: 
+      - description:
         title: Navn
-      - description: 
+      - description:
         title: E-post
       - description:
         title: Telefon
@@ -21,4 +21,3 @@ blocks:
       best for deg.
     type: Form
 ---
-
