@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Text, Box, Flex } from "rebass";
 import styled from "styled-components";
 import Button from "./Button.js";
-import { downloadAddresses, downloadOrders, pasientRapport } from "../impleo/api.js";
+import { downloadAddresses, downloadOrders, interfloraOrders, pasientRapport } from "../impleo/api.js";
 import { startOfWeek, endOfWeek, startOfYesterday } from "date-fns";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -93,12 +93,21 @@ const DownLoad = ({ companies }) => {
               </Button>
               <Button
                 ml="2"
+                mt="2"
                 onClick={() => downloadOrders(start, end, selectedCompany)}
               >
-                Produkter
+                  Produkter
+              </Button>
+              <Button
+                  ml="2"
+                  mt="2"
+                  onClick={() => interfloraOrders(start, end, selectedCompany)}
+              >
+                InterFlora
               </Button>
               <Button
                 ml="2"
+                mt="2"
                 onClick={() => pasientRapport(start, end, selectedCompany)}
               >
                 Pasientreiser Rekvisisjon
