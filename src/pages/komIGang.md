@@ -7,10 +7,15 @@ blocks:
     full: true
     image: /images/cards.png
     items:
-      - description: Maria Holte
+      - description: null
+        required: true
         title: Navn
-      - description: post@din-epost.no
+      - description: null
+        required: true
         title: E-post
+      - description: null
+        required: false
+        title: Telefon
     success: /suksess
     title: Kom i gang med Sekvens
     introduction: >-

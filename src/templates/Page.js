@@ -65,6 +65,7 @@ export const pageQuery = graphql`
             description
             active
             textarea
+            required
             image {
               id
               publicURL

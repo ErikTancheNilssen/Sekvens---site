@@ -2,6 +2,7 @@ import React from "react";
 import { Heading, Text, Box } from "rebass";
 import { Grid, Column } from "./Grid.js";
 import Input from "./Input.js";
+import InputNotRequired from "./InputNotRequired.js";
 import Button from "./Button.js";
 import styled from "styled-components";
 
@@ -27,7 +28,7 @@ overflow: visible;
   }
 `;
 
-const HelpForm = ({ title, introduction, items, success, action }) => (
+const HelpForm = ({ title, title_1, introduction, items, success, action }) => (
   <Grid overflow="hidden" py={5}>
     <ShadowBox
       mr={[4, 4, 4, 0]}
@@ -60,11 +61,21 @@ const HelpForm = ({ title, introduction, items, success, action }) => (
                     name={title}
                     type="text"
                     textArea={textarea}
-                    placeholder={description}
                     width={1}
-                    required
+                    //required
                   />
                 </Box>
+                <Box>
+                  <InputNotRequired
+                    id={index + title}
+                    name={title_1}
+                    type="text"
+                    textArea={textarea}
+                    width={1}
+                   
+                  />
+                </Box>
+                
               </Box>
             ))}
             <div hidden>
