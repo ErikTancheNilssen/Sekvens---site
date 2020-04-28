@@ -420,9 +420,9 @@ export const interfloraOrders = async (start, end, companyId) => {
                         templateName: templateName,
                         ident: ident,
                         extItemNo: extItemNo,
-                        price: price.toLocaleString('nb-NO'),
-                        "Pluss moms": (price*1.25).toLocaleString('nb-NO'),
-                        costPrice: costPrice.toLocaleString('nb-NO'),
+                        price: price.toLocaleString('de-DE'), //using de-DE instead of no-NO due to thousand separator
+                        "Pluss moms": (price*1.25).toLocaleString('de-DE'),
+                        costPrice: costPrice.toLocaleString('de-DE'),
                         Antall: quantity,
                     })
                 ),
@@ -430,7 +430,7 @@ export const interfloraOrders = async (start, end, companyId) => {
                     ...cols,
                     templateName: 'Esker, pakking og ekspedisjon',
                     price: startupCost.toLocaleString('nb-NO'),
-                    "Pluss moms": (startupCost*1.25).toLocaleString('nb-NO'),
+                    "Pluss moms": (startupCost*1.25).toLocaleString('de-DE'),
                 },
                 {
                     ...cols,
@@ -439,7 +439,7 @@ export const interfloraOrders = async (start, end, companyId) => {
                 },
                 {
                     ...cols,
-                    totalPriceIncVAT: totalPriceIncVAT.toLocaleString('nb-NO')
+                    totalPriceIncVAT: totalPriceIncVAT.toLocaleString('de-DE')
                 },
                 {
                     ...cols,
