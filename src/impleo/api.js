@@ -368,18 +368,17 @@ export const interfloraOrders = async (start, end, companyId) => {
     const orders = await getOrderLine(start, end, companyId);
     const cols = {
         Ordrenummer: "",
-        extDatasetRef: "",
+        Medlemsnummer: "",
         Dato: "",
-        "deliveryCompanyname": "",
-        templateName: "",
-        ident: "",
-        extItemNo: "",
-        price: "",
-        "Pluss moms": "",
-        costPrice: "",
+        "Firmanavn": "",
+        Produkt: "",
+        Merknad: "",
+        Varenummer: "",
+        "Pris inkl mva": "",
         Antall: "",
-        totalPriceIncVAT: ""
+        "Total pris - eks porto": ""
     };
+
 
     save(
         orders.reduce(
@@ -401,8 +400,8 @@ export const interfloraOrders = async (start, end, companyId) => {
                     ...cols,
                     Ordrenummer: orderID,
                     Dato: format(date, "DD/MM/YY"),
-                    "extDatasetRef": extDatasetRef,
-                    "deliveryCompanyname": deliveryCompanyname,
+                    "Medlemsnummer": extDatasetRef,
+                    "Firmanavn": deliveryCompanyname,
                 },
 
                 ...templateOrderLines.map(
@@ -417,33 +416,27 @@ export const interfloraOrders = async (start, end, companyId) => {
                          },
                      }) => ({
                         ...cols,
-                        templateName: templateName,
-                        ident: ident,
-                        extItemNo: extItemNo,
-                        price: price.toLocaleString('de-DE'), //using de-DE instead of de-DE due to thousand separator
-                        "Pluss moms": (price*1.25).toLocaleString('de-DE'),
-                        costPrice: costPrice.toLocaleString('de-DE'),
+                        Produkt: templateName,
+                        Merknad: ident.replace(/\r\n/g,' / '),
+                        Varenummer: extItemNo,
+                        //using de-DE instead of de-DE due to thousand separator
+                        "Pris inkl mva": (price*1.25).toLocaleString('de-DE').replace('.',''),
                         Antall: quantity,
                     })
                 ),
                 {
                     ...cols,
-                    templateName: 'Esker, pakking og ekspedisjon',
-                    price: startupCost.toLocaleString('de-DE'),
-                    "Pluss moms": (startupCost*1.25).toLocaleString('de-DE'),
+                    Produkt: 'Esker, pakking og ekspedisjon',
+                    "Pris inkl mva": (startupCost*1.25).toLocaleString('de-DE').replace('.',''),
                 },
                 {
                     ...cols,
-                    templateName: "Porto",
-                    "Pluss moms": 0
+                    "Total pris - eks porto": totalPriceIncVAT.toLocaleString('de-DE').replace('.','')
                 },
                 {
                     ...cols,
-                    totalPriceIncVAT: totalPriceIncVAT.toLocaleString('de-DE')
-                },
-                {
-                    ...cols,
-                    totalPriceIncVAT: "Autosummer"
+                    Produkt: "Porto",
+                    "Pris inkl mva": 0
                 },
                 cols,
 
