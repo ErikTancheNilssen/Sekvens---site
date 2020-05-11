@@ -284,8 +284,17 @@ export const pasientRapport = async (start, end, companyId) => {
           Poststed: postalAddress,
           "Bestillers e-post": contactEmail,
           "Bestillers telefonnummer": contactPhone,
-          "Antall blokker": templateOrderLines[0].quantity
         },
+          ...templateOrderLines.map(
+              ({
+
+                   quantity,
+
+               }) => ({
+                  ...cols,
+                  "Antall blokker": quantity,
+              })
+          ),
       ],
       []
     ),
