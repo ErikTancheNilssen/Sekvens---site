@@ -415,7 +415,6 @@ export const interfloraOrders = async (start, end, companyId) => {
 
                 ...templateOrderLines.map(
                     ({
-                      extDatasetRef,
                       ident,
                         extItemNo,
                         price,
@@ -426,7 +425,6 @@ export const interfloraOrders = async (start, end, companyId) => {
                          },
                      }) => ({
                         ...cols,
-                        "Medlemsnummer": extDatasetRef,
                         Produkt: templateName,
                         Merknad: ident.replace(/\r\n/g,' / '),
                         Varenummer: extItemNo,
