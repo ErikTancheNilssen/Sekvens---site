@@ -436,15 +436,18 @@ export const interfloraOrders = async (start, end, companyId) => {
                 ),
                 {
                     ...cols,
+                    "Medlemsnummer": extDatasetRef,
                     Produkt: 'Esker, pakking og ekspedisjon',
                     "Pris inkl mva": (startupCost*1.25).toLocaleString('de-DE').replace('.',''),
                 },
                 {
                     ...cols,
+                    "Medlemsnummer": extDatasetRef,
                     "Total pris - eks porto": totalPriceIncVAT.toLocaleString('de-DE').replace('.','')
                 },
                 {
                     ...cols,
+                    "Medlemsnummer": extDatasetRef,
                     Produkt: "Porto",
                     "Pris inkl mva": 0
                 },
