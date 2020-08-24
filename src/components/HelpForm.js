@@ -65,17 +65,7 @@ const HelpForm = ({ title, title_1, introduction, items, success, action }) => (
                     //required
                   />
                 </Box>
-                <Box>
-                  <InputNotRequired
-                    id={index + title}
-                    name={title_1}
-                    type="text"
-                    textArea={textarea}
-                    width={1}
-                   
-                  />
-                </Box>
-                
+
               </Box>
             ))}
             <div hidden>
