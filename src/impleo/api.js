@@ -474,11 +474,7 @@ export const ifJulebrosjyreRapport = async (start, end, companyId) => {
       Dato: "",
       "Firmanavn": "",
       Produkt: "",
-      Merknad: "",
-      Varenummer: "",
-      "Pris inkl mva": "",
-      Antall: "",
-      "Total pris - eks porto": ""
+      Antall: ""
   };
 
 
@@ -520,10 +516,6 @@ export const ifJulebrosjyreRapport = async (start, end, companyId) => {
                       ...cols,
                       "Medlemsnummer": extDatasetRef,
                       Produkt: templateName,
-                      Merknad: ident.replace(/\r\n/g,' / '),
-                      Varenummer: extItemNo,
-                      //using de-DE instead of de-DE due to thousand separator
-                      "Pris inkl mva": (price*1.25).toLocaleString('de-DE').replace('.',''),
                       Antall: quantity,
                   })
               ),
