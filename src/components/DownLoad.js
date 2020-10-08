@@ -112,6 +112,13 @@ const DownLoad = ({ companies }) => {
               >
                 Pasientreiser Rekvisisjon
               </Button>
+              <Button
+                ml="2"
+                mt="2"
+                onClick={() => ifJulebrosjyreRapport(start, end, selectedCompany)}
+              >
+                Interflora julebrosjyre
+              </Button>
             </Text>
           )}
         </Box>
