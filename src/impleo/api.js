@@ -465,3 +465,96 @@ export const interfloraOrders = async (start, end, companyId) => {
         }
     );
 };
+
+export const ifJulebrosjyreRapport = async (start, end, companyId) => {
+  const orders = await getOrderLine(start, end, companyId);
+  const cols = {
+      Ordrenummer: "",
+      Medlemsnummer: "",
+      Dato: "",
+      "Firmanavn": "",
+      Produkt: "",
+      Merknad: "",
+      Varenummer: "",
+      "Pris inkl mva": "",
+      Antall: "",
+      "Total pris - eks porto": ""
+  };
+
+
+  save(
+      orders.reduce(
+          (
+              out,
+              {
+                  orderID,
+                  date,
+                  invoiceExtCustomerNo,
+                  deliveryCompanyname,
+                  extDatasetRef,
+                  templateOrderLines, // ident, extItemNo, price, costPrice, quantity, template
+                  startupCost,
+                  totalPriceIncVAT
+              }
+          ) => [
+              ...out,
+              {
+                  ...cols,
+                  Ordrenummer: orderID,
+                  Dato: format(date, "DD/MM/YY"),
+                  "Medlemsnummer": extDatasetRef,
+                  "Firmanavn": deliveryCompanyname,
+              },
+
+              ...templateOrderLines.map(
+                  ({
+                    ident,
+                      extItemNo,
+                      price,
+                      costPrice,
+                      quantity,
+                      template: {
+                          templateName,
+                       },
+                   }) => ({
+                      ...cols,
+                      "Medlemsnummer": extDatasetRef,
+                      Produkt: templateName,
+                      Merknad: ident.replace(/\r\n/g,' / '),
+                      Varenummer: extItemNo,
+                      //using de-DE instead of de-DE due to thousand separator
+                      "Pris inkl mva": (price*1.25).toLocaleString('de-DE').replace('.',''),
+                      Antall: quantity,
+                  })
+              ),
+              {
+                  ...cols,
+                  "Medlemsnummer": extDatasetRef,
+                  Produkt: 'Esker, pakking og ekspedisjon',
+                  "Pris inkl mva": (startupCost*1.25).toLocaleString('de-DE').replace('.',''),
+              },
+              {
+                  ...cols,
+                  "Medlemsnummer": extDatasetRef,
+                  "Total pris - eks porto": totalPriceIncVAT.toLocaleString('de-DE').replace('.','')
+              },
+              {
+                  ...cols,
+                  "Medlemsnummer": extDatasetRef,
+                  Produkt: "Porto",
+                  "Pris inkl mva": 0
+              },
+              cols,
+
+          ],
+          []
+      ),
+      {
+          sep: ";",
+          filename: `interflora__${format(start, "DD-MM-YYYY")}__${format(
+              end,
+              "DD-MM-YYYY"
+          )}.csv`
+      }
+  );
+};

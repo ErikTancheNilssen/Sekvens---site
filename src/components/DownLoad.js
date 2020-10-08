@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Text, Box, Flex } from "rebass";
 import styled from "styled-components";
 import Button from "./Button.js";
-import { downloadAddresses, downloadOrders, interfloraOrders, pasientRapport } from "../impleo/api.js";
+import { downloadAddresses, downloadOrders, interfloraOrders, pasientRapport, ifJulebrosjyreRapport } from "../impleo/api.js";
 import { startOfWeek, endOfWeek, startOfYesterday } from "date-fns";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
