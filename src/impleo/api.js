@@ -472,9 +472,10 @@ export const ifJulebrosjyreRapport = async (start, end, companyId) => {
       Ordrenummer: "",
       Medlemsnummer: "",
       Dato: "",
-      "Firmanavn": "",
+      Firmanavn: "",
       Leveringsadresse: "",
-      Leveringsadresse: "",
+      "Leveringsadresse 2": "",
+      "Postnummer/Sted": "",
       Produkt: "",
       Antall: ""
   };
@@ -491,8 +492,6 @@ export const ifJulebrosjyreRapport = async (start, end, companyId) => {
                   deliveryCompanyname,
                   extDatasetRef,
                   templateOrderLines, // ident, extItemNo, price, costPrice, quantity, template
-                  startupCost,
-                  totalPriceIncVAT,
                   deliveryAddress: {
                     address1,
                     address2,
@@ -509,8 +508,8 @@ export const ifJulebrosjyreRapport = async (start, end, companyId) => {
                   ...cols,
                   Ordrenummer: orderID,
                   Dato: format(date, "DD/MM/YY"),
-                  "Medlemsnummer": extDatasetRef,
-                  "Firmanavn": deliveryCompanyname,
+                  Medlemsnummer: extDatasetRef,
+                  Firmanavn: deliveryCompanyname,
               },
 
               ...templateOrderLines.map(
