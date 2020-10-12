@@ -473,6 +473,8 @@ export const ifJulebrosjyreRapport = async (start, end, companyId) => {
       Medlemsnummer: "",
       Dato: "",
       "Firmanavn": "",
+      Leveringsadresse: "",
+      Leveringsadresse: "",
       Produkt: "",
       Antall: ""
   };
@@ -490,7 +492,16 @@ export const ifJulebrosjyreRapport = async (start, end, companyId) => {
                   extDatasetRef,
                   templateOrderLines, // ident, extItemNo, price, costPrice, quantity, template
                   startupCost,
-                  totalPriceIncVAT
+                  totalPriceIncVAT,
+                  deliveryAddress: {
+                    address1,
+                    address2,
+                    postal: {
+                      country: { countryName },
+                      postalAddress,
+                      postalCode
+                    }
+                  }
               }
           ) => [
               ...out,
@@ -519,31 +530,13 @@ export const ifJulebrosjyreRapport = async (start, end, companyId) => {
                       Antall: quantity,
                   })
               ),
-              {
-                  ...cols,
-                  "Medlemsnummer": extDatasetRef,
-                  Produkt: 'Esker, pakking og ekspedisjon',
-                  "Pris inkl mva": (startupCost*1.25).toLocaleString('de-DE').replace('.',''),
-              },
-              {
-                  ...cols,
-                  "Medlemsnummer": extDatasetRef,
-                  "Total pris - eks porto": totalPriceIncVAT.toLocaleString('de-DE').replace('.','')
-              },
-              {
-                  ...cols,
-                  "Medlemsnummer": extDatasetRef,
-                  Produkt: "Porto",
-                  "Pris inkl mva": 0
-              },
               cols,
-
           ],
           []
       ),
       {
           sep: ";",
-          filename: `interflora__${format(start, "DD-MM-YYYY")}__${format(
+          filename: `IF_Julebrosjyre__${format(start, "DD-MM-YYYY")}__${format(
               end,
               "DD-MM-YYYY"
           )}.csv`
