@@ -519,10 +519,6 @@ export const ifJulebrosjyreRapport = async (start, end, companyId) => {
 
               ...templateOrderLines.map(
                   ({
-                    ident,
-                      extItemNo,
-                      price,
-                      costPrice,
                       quantity,
                       template: {
                           templateName,
@@ -533,7 +529,7 @@ export const ifJulebrosjyreRapport = async (start, end, companyId) => {
                       Antall: quantity
                   })
               ),
-              cols,
+              // cols,
           ],
           []
       ),
