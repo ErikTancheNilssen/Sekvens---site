@@ -529,7 +529,7 @@ export const ifJulebrosjyreRapport = async (start, end, companyId) => {
                       Antall: quantity
                   })
               ),
-              // cols,
+              cols,
           ],
           []
       ),
