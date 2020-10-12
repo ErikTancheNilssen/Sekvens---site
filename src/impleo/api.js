@@ -514,7 +514,9 @@ export const ifJulebrosjyreRapport = async (start, end, companyId) => {
                   Leveringsadresse: address1,
                   "Leveringsadresse 2": address2,
                   Postnummer: postalCode,
-                  Poststed: postalAddress
+                  Poststed: postalAddress,
+                  Produkt: templateName,
+                  Antall: quantity
               },
 
               ...templateOrderLines.map(
