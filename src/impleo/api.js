@@ -475,7 +475,8 @@ export const ifJulebrosjyreRapport = async (start, end, companyId) => {
       Firmanavn: "",
       Leveringsadresse: "",
       "Leveringsadresse 2": "",
-      "Postnummer/Sted": "",
+      "Postnummer": "",
+      "Poststed": "",
       Produkt: "",
       Antall: ""
   };
@@ -507,9 +508,13 @@ export const ifJulebrosjyreRapport = async (start, end, companyId) => {
               {
                   ...cols,
                   Ordrenummer: orderID,
-                  Dato: format(date, "DD/MM/YY"),
                   Medlemsnummer: extDatasetRef,
+                  Dato: format(date, "DD/MM/YY"),
                   Firmanavn: deliveryCompanyname,
+                  Leveringsadresse: address1,
+                  "Leveringsadresse 2": address2,
+                  Postnummer: postalCode,
+                  Poststed: postalAddress
               },
 
               ...templateOrderLines.map(
@@ -526,7 +531,7 @@ export const ifJulebrosjyreRapport = async (start, end, companyId) => {
                       ...cols,
                       "Medlemsnummer": extDatasetRef,
                       Produkt: templateName,
-                      Antall: quantity,
+                      Antall: quantity
                   })
               ),
               cols,
