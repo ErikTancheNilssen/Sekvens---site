@@ -515,8 +515,6 @@ export const ifJulebrosjyreRapport = async (start, end, companyId) => {
                   "Leveringsadresse 2": address2,
                   Postnummer: postalCode,
                   Poststed: postalAddress,
-                  Produkt: templateName,
-                  Antall: quantity
               },
 
               ...templateOrderLines.map(
@@ -531,7 +529,6 @@ export const ifJulebrosjyreRapport = async (start, end, companyId) => {
                        },
                    }) => ({
                       ...cols,
-                      "Medlemsnummer": extDatasetRef,
                       Produkt: templateName,
                       Antall: quantity
                   })
