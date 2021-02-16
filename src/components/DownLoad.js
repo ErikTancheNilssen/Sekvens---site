@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Text, Box, Flex } from "rebass";
 import styled from "styled-components";
 import Button from "./Button.js";
-import { downloadAddresses, downloadOrders, interfloraOrders, pasientRapport, ifJulebrosjyreRapport } from "../impleo/api.js";
+import { downloadAddresses, downloadOrders, interfloraOrders, pasientRapport, nbfRapport } from "../impleo/api.js";
 import { startOfWeek, endOfWeek, startOfYesterday } from "date-fns";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -115,7 +115,7 @@ const DownLoad = ({ companies }) => {
               <Button
                 ml="2"
                 mt="2"
-                onClick={() => ifJulebrosjyreRapport(start, end, selectedCompany)}
+                onClick={() => nbfRapport(start, end, selectedCompany)}
               >
                 Interflora julebrosjyre
               </Button>

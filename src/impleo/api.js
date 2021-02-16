@@ -466,79 +466,60 @@ export const interfloraOrders = async (start, end, companyId) => {
     );
 };
 
-export const ifJulebrosjyreRapport = async (start, end, companyId) => {
-  const orders = await getOrderLine(start, end, companyId);
-  const cols = {
-      Ordrenummer: "",
-      Medlemsnummer: "",
-      Dato: "",
-      Firmanavn: "",
-      Leveringsadresse: "",
-      "Leveringsadresse 2": "",
-      "Postnummer": "",
-      "Poststed": "",
-      Produkt: "",
-      Antall: ""
-  };
 
-
-  save(
-      orders.reduce(
-          (
-              out,
-              {
-                  orderID,
-                  date,
-                  invoiceExtCustomerNo,
-                  deliveryCompanyname,
-                  extDatasetRef,
-                  templateOrderLines, // ident, extItemNo, price, costPrice, quantity, template
-                  deliveryAddress: {
-                    address1,
-                    address2,
-                    postal: {
-                      country: { countryName },
-                      postalAddress,
-                      postalCode
-                    }
-                  }
-              }
-          ) => [
-              ...out,
-              {
-                  ...cols,
-                  Ordrenummer: orderID,
-                  Medlemsnummer: extDatasetRef,
-                  Dato: format(date, "DD/MM/YY"),
-                  Firmanavn: deliveryCompanyname,
-                  Leveringsadresse: address1,
-                  "Leveringsadresse 2": address2,
-                  Postnummer: postalCode,
-                  Poststed: postalAddress,
-              },
-
-              ...templateOrderLines.map(
-                  ({
-                      quantity,
-                      template: {
-                          templateName,
-                       },
-                   }) => ({
-                      ...cols,
-                      Produkt: templateName,
-                      Antall: quantity
-                  })
-              ),
-              cols,
-          ],
-          []
+export const nbfRapport = async (start, end, companyId) => {
+  try {
+    const orders = await getOrderLine(start, end, companyId);
+    save(
+      orders.map(
+        ({
+          date,
+          deliveryCompanyname,
+          externalOrderID,
+          reference,
+          contactPerson,
+          deliveryContactPerson,
+          contactEmail,
+          contactPhone,
+          comment,
+          orderID,
+          deliveryAddress: {
+            address1,
+            address2,
+            postal: {
+              country: { countryName },
+              postalAddress,
+              postalCode
+            }
+          }
+        }) => ({
+          Ordrenummer: orderID,
+          Dato: format(date, "DD/MM/YY"),
+          "Ext Id": externalOrderID,
+          Firma: deliveryCompanyname,
+          Att: deliveryContactPerson,
+          "Adresse 1": address1,
+          "Adresse 2": address2,
+          Sted: postalAddress,
+          Postnummer: postalCode,
+          Land: countryName,
+          Referanse: reference,
+          Kontaktperson: contactPerson,
+          "E-post": contactEmail,
+          Telefon: contactPhone,
+          Kommentar: comment
+        })
       ),
       {
-          sep: ";",
-          filename: `IF_Julebrosjyre__${format(start, "DD-MM-YYYY")}__${format(
-              end,
-              "DD-MM-YYYY"
-          )}.csv`
+        sep: ";",
+        filename: `adresser_${companyId}__${format(
+          start,
+          "DD-MM-YYYY"
+        )}__${format(end, "DD-MM-YYYY")}.csv`
       }
-  );
+    );
+  } catch (e) {
+    console.error(e);
+    return false;
+  }
 };
