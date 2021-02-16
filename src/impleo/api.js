@@ -479,10 +479,12 @@ export const nbfRapport = async (start, end, companyId) => {
           reference,
           contactPerson,
           deliveryContactPerson,
+          deliveryEmail,
           contactEmail,
           contactPhone,
           comment,
           orderID,
+          deliveryPhone,
           deliveryAddress: {
             address1,
             address2,
@@ -504,15 +506,17 @@ export const nbfRapport = async (start, end, companyId) => {
           Postnummer: postalCode,
           Land: countryName,
           Referanse: reference,
-          Kontaktperson: contactPerson,
-          "E-post": contactEmail,
-          Telefon: contactPhone,
+          "Leveranse telefon": deliveryPhone, 
+          "Leveranse e-post": deliveryEmail, 
+          Bestiller: contactPerson,
+          "Bestiller e-post": contactEmail,
+          "Bestiller telefon": contactPhone,
           Kommentar: comment
         })
       ),
       {
         sep: ";",
-        filename: `adresser_${companyId}__${format(
+        filename: `NBF_adresser_${companyId}__${format(
           start,
           "DD-MM-YYYY"
         )}__${format(end, "DD-MM-YYYY")}.csv`
