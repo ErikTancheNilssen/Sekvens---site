@@ -475,7 +475,6 @@ export const nbfRapport = async (start, end, companyId) => {
         ({
           date,
           deliveryCompanyname,
-          externalOrderID,
           reference,
           contactPerson,
           deliveryContactPerson,
@@ -497,7 +496,6 @@ export const nbfRapport = async (start, end, companyId) => {
         }) => ({
           Ordrenummer: orderID,
           Dato: format(date, "DD/MM/YY"),
-          "Ext Id": externalOrderID,
           Firma: deliveryCompanyname,
           Att: deliveryContactPerson,
           "Adresse 1": address1,
