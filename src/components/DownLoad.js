@@ -117,7 +117,7 @@ const DownLoad = ({ companies }) => {
                 mt="2"
                 onClick={() => nbfRapport(start, end, selectedCompany)}
               >
-                Interflora julebrosjyre
+                NBF adresserapport
               </Button>
             </Text>
           )}
